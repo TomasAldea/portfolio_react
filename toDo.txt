@@ -1,0 +1,3 @@
+
+- Instalar AOS por npm y exportarlo a los components para inciarlo en el useEftect
+- Ordenar y refactoriar el css del efecto de vuelta

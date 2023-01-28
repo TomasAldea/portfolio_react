@@ -7,6 +7,7 @@ import { Contacto } from '../components/Contacto'
 import { Servicios } from '../components/Servicios'
 import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
+import { DetalleProyecto } from '../components/DetalleProyecto'
 
 export const MisRutas = () => {
   return (
@@ -16,12 +17,14 @@ export const MisRutas = () => {
 
         {/* contenido central */}
         <Routes>
-            <Route path='/' element={<Navigate to="/inicio"/>}></Route>
-            <Route path='/inicio' element={<Inicio/>}></Route>
-            <Route path='/portafolio' element={<Portafolio/>}></Route>
-            <Route path='/servicios' element={<Servicios/>}></Route>
-            <Route path='/curriculum' element={<Curriculum/>}></Route>
-            <Route path='/contacto' element={<Contacto/>}></Route>
+            <Route path='/' element={<Navigate to="/inicio"/>}/>
+            <Route path='/inicio' element={<Inicio/>}/>
+            <Route path='/portafolio' element={<Portafolio/>}/>
+            <Route path='/servicios' element={<Servicios/>}/>
+            <Route path='/curriculum' element={<Curriculum/>}/>
+            <Route path='/contacto' element={<Contacto/>}/>
+            <Route path='/proyecto/:id' element={<DetalleProyecto/>}/>
+            <Route path='*'element={<h1 className='heading'>Error 404</h1>}/>
         </Routes>
 
         {/* footer */}

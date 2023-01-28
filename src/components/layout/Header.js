@@ -3,10 +3,9 @@ import { NavLink } from "react-router-dom"
 
 export const Header = () => {
     return (
-        <header className='header'>
+        <section className='header'>
             <div className='logo'>
-                <span>V</span>
-                <h3>Tomás Aldea Moral</h3>
+                <span>aqui ira el logo</span>
             </div>
             <nav>
                 <ul>
@@ -27,6 +26,6 @@ export const Header = () => {
                     </li>
                 </ul>
             </nav>
-        </header>
+        </section>
     )
 }

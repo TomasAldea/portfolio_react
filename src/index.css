@@ -1,18 +1,136 @@
-body {
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Bold.ttf") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Bold.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Regular.ttf") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.button1 {
+  background-image: none;
+  letter-spacing: 1px;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-style: none;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 100px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  margin: 34px auto 0 0;
+  padding: 15px 97px 15px 95px;
+  background-color: #f7914d;
+  border-radius: 8px;
+  animation-fill-mode: both;
+  border-width: 0;
+  color: white;
+  will-change: transform, opacity;
+  animation-duration: 1500ms;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+}
+.button1:hover {
+  color: #ffffff;
+  background-color: #5e5a63;
+}
+.pre-title {
+  font-size: 4rem;
+}
+.title {
+  font: 400 8rem/8rem "Poppins", serif;
+  letter-spacing: -0.1rem;
+}
+@media (max-width: 1025px) {
+  .title {
+    font: 400 5rem/5.2rem "Poppins", serif;
+  }
+}
+@media (max-width: 551px) {
+  .title {
+    font: 400 4rem/4.2rem "Poppins", serif;
+  }
+}
+.sub-title {
+  font-size: 1.6rem;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #3b383f;
+}
+html body {
+  font: 14px "";
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+@media (min-width: 1921px) and (max-height: 600px) {
+  html {
+    font-size: 55.5%;
+  }
+}
+body {
+  cursor: default;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+section {
+  color: #f5f5f5;
+  line-height: 1.2;
 }
+section:not(.header, .footer) {
+  width: calc(100vw - 20rem);
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+ul {
+  list-style-type: none;
+}
+/********/
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #b5adad;
+  background-color: #2d2933;
+  padding: 1rem 3rem;
+  height: 8rem;
 }
 .header nav {
   width: 59%;
@@ -22,21 +140,182 @@ code {
   flex-direction: row;
   justify-content: space-around;
 }
-.header nav ul li a.active {
-  color: red;
+.header nav ul li::marker {
+  display: none;
 }
-.layout {
-  width: 85%;
-  margin: 0 auto;
+.header nav ul li a {
+  text-shadow: 0 0 6px #00000082;
+  text-transform: uppercase;
+  color: #f5f5f5;
+}
+.header nav ul li a.active {
+  color: #f7914d;
 }
 .footer {
+  width: 100%;
   position: fixed;
-  width: 85%;
   margin: 0 auto;
   bottom: 0;
   height: 57px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #b5adad;
+  background-color: #2d2933;
+}
+/*************************** SECTION INICIO *****************************/
+.section-inicio {
+  height: calc(100vh - 14rem);
+  display: flex;
+  align-items: center;
+}
+.section-inicio .left,
+.section-inicio .right {
+  width: 50%;
+}
+.section-inicio .left .col {
+  max-width: 53rem;
+}
+.section-inicio .left .col .title-container {
+  border-bottom: 2px solid #f5f5f570;
+  padding: 3rem 0;
+}
+.section-inicio .left .col .title-container .sub-title {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 2rem;
+  letter-spacing: 0px;
+}
+.section-inicio .left .col .personal-info {
+  max-width: 53rem;
+}
+.section-inicio .left .col .personal-info .row {
+  justify-content: space-between;
+  align-items: center;
+}
+.section-inicio .left .col .personal-info .row p,
+.section-inicio .left .col .personal-info .row a {
+  font-family: 'Open Sans', sans-serif;
+  opacity: 0.9;
+}
+.section-inicio .left .col .personal-info .row p.strong,
+.section-inicio .left .col .personal-info .row a.strong {
+  margin-right: 1rem;
+  font-weight: 600;
+}
+.section-inicio .left .col .personal-info .row p:last-child,
+.section-inicio .left .col .personal-info .row a:last-child {
+  opacity: 0.6;
+}
+.section-inicio .left .col .personal-info .btn-container {
+  margin-top: 4.5rem;
+}
+.section-inicio .img-container {
+  height: 100%;
+  position: relative;
+  right: -10rem;
+}
+.section-inicio .img-container .img {
+  background-image: url('../public/images/ownerPhoto.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/*************************** SECTION INICIO *****************************/
+.section-listproyectos {
+  display: flex;
+  place-content: center;
+  height: calc(100vh - 14rem);
+  align-items: center;
+}
+.section-listproyectos .slider-container {
+  width: calc(100vw - 31rem);
+  margin: auto;
+}
+.section-listproyectos .slider-container .slider-control-bottomcenter {
+  position: absolute;
+  bottom: -5rem;
+}
+.section-listproyectos .slider-container .slider-frame .card {
+  height: 100%;
+  height: 50rem;
+}
+.section-listproyectos .slider-container .slider-frame .card.reverse {
+  flex-direction: row-reverse;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-img {
+  width: 50%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-info .container {
+  padding: 5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-info .container .title {
+  font-size: 5rem;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-info .container .list {
+  display: flex;
+  flex-direction: row;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-info .container .list .icon {
+  width: 3rem;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-info .container .list .icon:not(:last-child) {
+  margin-right: 2rem;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-info .container .pre-title {
+  font-size: 3rem;
+}
+.section-listproyectos .slider-container .slider-frame .card .card-info .container .button1 {
+  font-size: 1.3rem;
+  padding: 8px 3rem 8px 3rem;
+}
+.section-listproyectos .slider-container .slider-control-centerright {
+  position: absolute;
+  bottom: -5rem;
+  right: -5rem;
+}
+.section-listproyectos .slider-container .slider-control-centerright button {
+  background-image: url('../public/icons/arrow-simple.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  height: 6rem;
+  width: 6rem;
+  background-color: #f7914d !important;
+  color: transparent !important;
+  -webkit-tap-highlight-color: transparent;
+  transform: rotate(180deg);
+}
+.section-listproyectos .slider-container .slider-control-centerleft {
+  position: absolute;
+  bottom: -5rem;
+  right: 2rem;
+}
+.section-listproyectos .slider-container .slider-control-centerleft button {
+  background-image: url('../public/icons/arrow-simple.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  height: 6rem;
+  width: 6rem;
+  background-color: #f7914d !important;
+  color: transparent !important;
+  -webkit-tap-highlight-color: transparent;
 }
