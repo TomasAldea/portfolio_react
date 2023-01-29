@@ -225,7 +225,7 @@ ul {
   width: 100%;
   height: 100%;
 }
-/*************************** SECTION INICIO *****************************/
+/*************************** SECTION PORTFOLIO *****************************/
 .section-listproyectos {
   display: flex;
   place-content: center;
@@ -318,4 +318,94 @@ ul {
   background-color: #f7914d !important;
   color: transparent !important;
   -webkit-tap-highlight-color: transparent;
+}
+/*************************** SECTION SKILLS *****************************/
+.section-servicios {
+  height: calc(100vh - 14rem);
+  display: flex;
+  align-items: center;
+}
+.section-servicios .left {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  height: calc(100% - 10rem);
+}
+.section-servicios .left .card {
+  width: 29.3%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.section-servicios .left .card .img {
+  height: 22rem;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section-servicios .left .card .text {
+  background-color: white;
+  color: #817d87;
+  font: 400 2rem/3rem "Poppins", serif;
+  letter-spacing: 0.05rem;
+  font-size: 2rem;
+  padding: 2rem 3rem;
+  text-align-last: center;
+}
+@media (max-width: 1025px) {
+  .section-servicios .left .card .text {
+    font-size: 1.8rem;
+  }
+}
+.section-servicios .right {
+  height: calc(100% - 10rem);
+  width: 40%;
+  position: relative;
+}
+.section-servicios .right .circle {
+  background: #f7914d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font: 400 2rem/3rem "Poppins", serif;
+  letter-spacing: 0.05rem;
+}
+@media (max-width: 1025px) {
+  .section-servicios .right .circle {
+    font-size: 1.8rem;
+  }
+}
+.section-servicios .right .circle.case1 {
+  width: 15rem;
+  height: 15rem;
+  top: 0;
+  left: 0;
+}
+.section-servicios .right .circle.case2 {
+  width: 18rem;
+  height: 18rem;
+  bottom: 3rem;
+  left: 32rem;
+}
+.section-servicios .right .circle.case3 {
+  width: 19rem;
+  height: 19rem;
+  top: 5rem;
+  left: 26rem;
+}
+.section-servicios .right .circle.case4 {
+  width: 15rem;
+  height: 15rem;
+  bottom: 10rem;
+  left: 6rem;
+}
+.section-servicios .right .circle.case5 {
+  width: 15rem;
+  height: 15rem;
+  bottom: 30rem;
+  left: 21rem;
 }

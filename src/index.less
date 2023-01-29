@@ -341,16 +341,17 @@ ul {
       height: 100%;
     }
   }
+
+  @media @tabletH {}
+
+  @media @tabletV {}
+
+  @media @mobile {}
 }
 
 
-@media @tabletH {}
 
-@media @tabletV {}
-
-@media @mobile {}
-
-/*************************** SECTION INICIO *****************************/
+/*************************** SECTION PORTFOLIO *****************************/
 
 .section-listproyectos {
   display: flex;
@@ -364,8 +365,9 @@ ul {
 
     .slider-control-bottomcenter {
       position: absolute;
-    bottom: -5rem;
+      bottom: -5rem;
     }
+
     .slider-frame {
       .card {
         height: 100%;
@@ -396,6 +398,7 @@ ul {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+
             .title {
               font-size: 5rem;
             }
@@ -403,8 +406,10 @@ ul {
             .list {
               display: flex;
               flex-direction: row;
+
               .icon {
                 width: 3rem;
+
                 &:not(:last-child) {
                   margin-right: 2rem;
                 }
@@ -463,10 +468,102 @@ ul {
       }
     }
   }
+
+  @media @tabletH {}
+
+  @media @tabletV {}
+
+  @media @mobile {}
 }
 
-@media @tabletH {}
 
-@media @tabletV {}
+/*************************** SECTION SKILLS *****************************/
 
-@media @mobile {}
+.section-servicios {
+  height: calc(100vh - 14rem);
+  display: flex;
+  align-items: center;
+
+  .left {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    height: calc(100% - 10rem);
+
+    .card {
+      width: 29.3%;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+
+      .img {
+        height: 22rem;
+        width: 100%;
+        .basic-bg();
+      }
+
+      .text {
+        background-color: white;
+        color: #817d87;
+        .m-text1();
+        font-size: 2rem;
+        padding: 2rem 3rem;
+        text-align-last: center;
+      }
+    }
+  }
+
+  .right {
+    height: calc(100% - 10rem);
+    width: 40%;
+    position: relative;
+    .circle {
+      background: #f7914d;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      .m-text1();
+
+      &.case1 {
+        width: 15rem;
+        height: 15rem;
+        top: 0;
+        left: 0;
+      }
+      &.case2 {
+        width: 18rem;
+        height: 18rem;
+        bottom: 3rem;
+        left: 32rem;
+      }
+      &.case3 {
+        width: 19rem;
+        height: 19rem;
+        top: 5rem;
+        left: 26rem;
+      }
+      &.case4 {
+        width: 15rem;
+        height: 15rem;
+        bottom: 10rem;
+        left: 6rem;
+      }
+      &.case5 {
+        width: 15rem;
+        height: 15rem;
+        bottom: 30rem;
+        left: 21rem;
+      }
+    }
+
+    @media @tabletH {}
+
+    @media @tabletV {}
+
+    @media @mobile {}
+
+  }
+}

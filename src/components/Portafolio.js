@@ -38,7 +38,7 @@ export const Portafolio = () => {
                       {
                         trabajo.tecnologias.map(function (tecnologia, index) {
                           delay += 250;
-                          return <img key={index} data-aos-duration="500" data-aos-delay={delay} data-aos="zoom-in" className='icon' src={`/icons/${tecnologia}.svg`}></img>
+                          return <img alt="project-img" key={index} data-aos-duration="500" data-aos-delay={delay} data-aos="zoom-in" className='icon' src={`/icons/${tecnologia}.svg`}></img>
                         }
                         )
                       }

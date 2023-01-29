@@ -4,7 +4,7 @@ import { Curriculum } from '../components/Curriculum'
 import { Inicio } from '../components/Inicio'
 import { Portafolio } from '../components/Portafolio'
 import { Contacto } from '../components/Contacto'
-import { Servicios } from '../components/Servicios'
+import { Skills } from '../components/Skills'
 import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
 import { DetalleProyecto } from '../components/DetalleProyecto'
@@ -20,7 +20,7 @@ export const MisRutas = () => {
             <Route path='/' element={<Navigate to="/inicio"/>}/>
             <Route path='/inicio' element={<Inicio/>}/>
             <Route path='/portafolio' element={<Portafolio/>}/>
-            <Route path='/servicios' element={<Servicios/>}/>
+            <Route path='/skills' element={<Skills/>}/>
             <Route path='/curriculum' element={<Curriculum/>}/>
             <Route path='/contacto' element={<Contacto/>}/>
             <Route path='/proyecto/:id' element={<DetalleProyecto/>}/>

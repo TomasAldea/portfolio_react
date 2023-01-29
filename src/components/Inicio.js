@@ -21,7 +21,7 @@ export const Inicio = () => {
           <div className='personal-info'>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
               <p className='strong'>Fecha de nacimiento:</p>
-              <p> Abr 15, 1990 ({new Date().getFullYear() - 1990})</p>
+              <p> Abr 15, 1990 ({new Date().getFullYear() - 1991})</p>
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
               <p className='strong'>Dirección:</p>
