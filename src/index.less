@@ -138,7 +138,6 @@
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
-  margin: 34px auto 0 0;
   padding: 15px 97px 15px 95px;
   background-color: #f7914d;
   border-radius: 8px;
@@ -518,6 +517,7 @@ ul {
     height: calc(100% - 10rem);
     width: 40%;
     position: relative;
+
     .circle {
       background: #f7914d;
       border-radius: 50%;
@@ -533,24 +533,28 @@ ul {
         top: 0;
         left: 0;
       }
+
       &.case2 {
         width: 18rem;
         height: 18rem;
         bottom: 3rem;
         left: 32rem;
       }
+
       &.case3 {
         width: 19rem;
         height: 19rem;
         top: 5rem;
         left: 26rem;
       }
+
       &.case4 {
         width: 15rem;
         height: 15rem;
         bottom: 10rem;
         left: 6rem;
       }
+
       &.case5 {
         width: 15rem;
         height: 15rem;
@@ -565,5 +569,144 @@ ul {
 
     @media @mobile {}
 
+  }
+}
+
+
+/*************************** SECTION CONTACTO *****************************/
+
+.section-contacto {
+  height: calc(100vh - 14rem);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90rem;
+    &.hide {
+      transition: all 0.5s ease-out;
+      opacity: 0;
+      display: none;
+    }
+    .title {}
+
+    .subtitle {
+      .m-text2();
+      margin: 4rem 1rem 4rem 1rem;
+      text-align: center;
+    }
+
+    .form-contacto {
+      width: 100%;
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+        label {
+          font-family: @font2;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        input,
+        textarea {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          padding: 1rem 1rem;
+          background-color: transparent;
+          border: none;
+          border-bottom: 2px solid #ffffff6b;
+          .m-text2();
+          font-weight: 600;
+          color: #757575;
+          &:focus-visible {
+            outline: none;
+          }
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+          -webkit-text-fill-color: #757575 !important;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+      }
+
+      .submit {
+        width: 100%;
+        display: grid;
+        place-items: center;
+        .static {
+          display: block;
+          &.hide {
+            display: none !important;
+          }
+        }
+        .typing {
+          display: none;
+          animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+          animation-iteration-count: infinite;
+          width: 22ch;
+          white-space: nowrap;
+          overflow: hidden;
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .send-success {
+    display: none;
+    align-items: center;
+    &.show {
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      width: 14rem;
+    }
+    .text {
+      .m-text1();
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .button1 {
+      margin-top: 3rem;
+    }
+
+  }
+
+  @media @tabletH {}
+
+  @media @tabletV {
+    width: calc(100vw - 13rem) !important;
+
+  }
+
+  @media @mobile {
+    width: calc(100vw - 7rem) !important;
+
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
 }

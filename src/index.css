@@ -47,7 +47,6 @@
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
-  margin: 34px auto 0 0;
   padding: 15px 97px 15px 95px;
   background-color: #f7914d;
   border-radius: 8px;
@@ -408,4 +407,157 @@ ul {
   height: 15rem;
   bottom: 30rem;
   left: 21rem;
+}
+/*************************** SECTION CONTACTO *****************************/
+.section-contacto {
+  height: calc(100vh - 14rem);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-contacto .section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90rem;
+}
+.section-contacto .section-container.hide {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+  display: none;
+}
+.section-contacto .section-container .subtitle {
+  font: 400 1.8rem/2.8rem 'Open Sans', sans-serif;
+  letter-spacing: 0.05rem;
+  margin: 4rem 1rem 4rem 1rem;
+  text-align: center;
+}
+@media (max-width: 769px) {
+  .section-contacto .section-container .subtitle {
+    font: 400 1.6rem/2.6rem 'Open Sans', sans-serif;
+  }
+}
+@media (max-width: 551px) {
+  .section-contacto .section-container .subtitle {
+    font: 400 1.5rem/2.5rem 'Open Sans', sans-serif;
+  }
+}
+.section-contacto .section-container .form-contacto {
+  width: 100%;
+}
+.section-contacto .section-container .form-contacto .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.section-contacto .section-container .form-contacto .input-group label {
+  font-family: "Poppins", serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section-contacto .section-container .form-contacto .input-group input,
+.section-contacto .section-container .form-contacto .input-group textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 1rem 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff6b;
+  font: 400 1.8rem/2.8rem 'Open Sans', sans-serif;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+  color: #757575;
+}
+@media (max-width: 769px) {
+  .section-contacto .section-container .form-contacto .input-group input,
+  .section-contacto .section-container .form-contacto .input-group textarea {
+    font: 400 1.6rem/2.6rem 'Open Sans', sans-serif;
+  }
+}
+@media (max-width: 551px) {
+  .section-contacto .section-container .form-contacto .input-group input,
+  .section-contacto .section-container .form-contacto .input-group textarea {
+    font: 400 1.5rem/2.5rem 'Open Sans', sans-serif;
+  }
+}
+.section-contacto .section-container .form-contacto .input-group input:focus-visible,
+.section-contacto .section-container .form-contacto .input-group textarea:focus-visible {
+  outline: none;
+}
+.section-contacto .section-container .form-contacto .input-group input:-webkit-autofill,
+.section-contacto .section-container .form-contacto .input-group input:-webkit-autofill:hover,
+.section-contacto .section-container .form-contacto .input-group input:-webkit-autofill:focus,
+.section-contacto .section-container .form-contacto .input-group input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  -webkit-text-fill-color: #757575 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.section-contacto .section-container .form-contacto .submit {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.section-contacto .section-container .form-contacto .submit .static {
+  display: block;
+}
+.section-contacto .section-container .form-contacto .submit .static.hide {
+  display: none !important;
+}
+.section-contacto .section-container .form-contacto .submit .typing {
+  display: none;
+  animation: typing 3s steps(22), blink 0.5s step-end infinite alternate;
+  animation-iteration-count: infinite;
+  width: 22ch;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.section-contacto .section-container .form-contacto .submit .typing.active {
+  display: block;
+}
+.section-contacto .send-success {
+  display: none;
+  align-items: center;
+}
+.section-contacto .send-success.show {
+  display: flex;
+  flex-direction: column;
+}
+.section-contacto .send-success img {
+  width: 14rem;
+}
+.section-contacto .send-success .text {
+  font: 400 2rem/3rem "Poppins", serif;
+  letter-spacing: 0.05rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+@media (max-width: 1025px) {
+  .section-contacto .send-success .text {
+    font-size: 1.8rem;
+  }
+}
+.section-contacto .send-success .button1 {
+  margin-top: 3rem;
+}
+@media (max-width: 769px) {
+  .section-contacto {
+    width: calc(100vw - 13rem) !important;
+  }
+}
+@media (max-width: 551px) {
+  .section-contacto {
+    width: calc(100vw - 7rem) !important;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }

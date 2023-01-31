@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Curriculum = () => {
+export const AboutMe = () => {
   return (
-    <section className='section-curriculum'>
+    <section className='section-aboutme'>
       <h1>
-        Curriculum
+      AboutMe
       </h1>
       <h2>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus felis vitae urna sodales, quis congue nulla convallis. Ut non justo quis enim aliquam varius at sit amet justo.
