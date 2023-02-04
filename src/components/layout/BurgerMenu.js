@@ -3,14 +3,7 @@ import { NavLink } from "react-router-dom";
 import AOS from "aos";
 
 
-export const Header = () => {
-
-  useEffect(() => {
-    setTimeout(() => {
-        AOS.init();
-    }, 800);
-
-  }, [])
+export const BurgerMenu = () => {
 
   return (
     <section className="header">

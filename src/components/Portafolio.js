@@ -2,11 +2,9 @@ import React, {useEffect, useState} from 'react'
 import Carousel from 'nuka-carousel/lib/carousel.js';
 import { trabajos } from '../data/trabajos.js'
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faVoicemail } from '@fortawesome/free-solid-svg-icons';
+
 import AOS from 'aos';
 
-{/* <FontAwesomeIcon icon={faEnvelope} /> */}
 
 
 export const Portafolio = () => {
@@ -16,13 +14,14 @@ export const Portafolio = () => {
     AOS.init();
   }, [])
 
-  const resetAos = () => {
-    AOS.init();
-  }
+  // reset de aos despues del slide
 
+  const beforeSlide = (e) => {
+    console.log('entra');
+  }
   return (
     <section className='section-listproyectos'>
-      <Carousel beforeSlide={resetAos}>
+      <Carousel beforeSlide={() => {console.log('hola');}}>
         {
           trabajos.map(function (trabajo, i) {
             delay = 0

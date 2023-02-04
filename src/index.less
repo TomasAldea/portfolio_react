@@ -363,74 +363,78 @@ ul {
   place-content: center;
   height: calc(100vh - 14rem);
   align-items: center;
-
+  width: 100% !important;
+  
   .slider-container {
-    width: calc(100vw - 31rem);
+    width: calc(100vw - 25%);
     margin: auto;
-
+    max-width: 138rem;
     .slider-control-bottomcenter {
       position: absolute;
       bottom: -5rem;
     }
 
     .slider-frame {
-      .card {
-        height: 100%;
-        height: 50rem;
+      .slider-list {
+        .card {
 
-        &.reverse {
-          flex-direction: row-reverse;
-        }
-
-        .card-img {
-          width: 50%;
           height: 100%;
-          background-size: contain;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-
-        .card-info {
-          width: 50%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-
-          .container {
-            padding: 5rem;
+          height: 50rem;
+  
+          &.reverse {
+            flex-direction: row-reverse;
+          }
+  
+          .card-img {
+            width: 50%;
+            height: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+  
+          .card-info {
+            width: 50%;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-
-            .title {
-              font-size: 5rem;
-            }
-
-            .list {
+            justify-content: center;
+  
+            .container {
+              padding: 5rem;
+              height: 100%;
               display: flex;
-              flex-direction: row;
-
-              .icon {
-                width: 3rem;
-
-                &:not(:last-child) {
-                  margin-right: 2rem;
+              flex-direction: column;
+              justify-content: space-evenly;
+  
+              .title {
+                font-size: 5rem;
+              }
+  
+              .list {
+                display: flex;
+                flex-direction: row;
+  
+                .icon {
+                  width: 3rem;
+  
+                  &:not(:last-child) {
+                    margin-right: 2rem;
+                  }
                 }
               }
-            }
-
-            .pre-title {
-              font-size: 3rem;
-
-            }
-
-            .sub-title {}
-
-            .button1 {
-              font-size: 1.3rem;
-              padding: 8px 3rem 8px 3rem;
+  
+              .pre-title {
+                font-size: 3rem;
+  
+              }
+  
+              .sub-title {}
+  
+              .button1 {
+                font-size: 1.3rem;
+                padding: 8px 3rem 8px 3rem;
+              }
             }
           }
         }
@@ -474,7 +478,46 @@ ul {
     }
   }
 
-  @media @tabletH {}
+  @media @tabletH {
+
+    .slider-container {
+      width: calc(100vw - 11%);
+      .slider-frame {
+        .slider-list {
+          .card {
+            flex-direction: column !important;
+            align-items: center;
+            height: 80rem;
+            .card-img {
+              width: 70%;
+            }
+            
+            .card-info {
+              width: 100%;
+              .container {
+                padding: 0 5rem;
+                align-items: center;
+                  .sub-title {
+                    text-align: center;
+                  }
+              }
+            }
+          }
+        }
+      }  
+      .slider-control-centerright {
+        right: 5rem;
+        top: 36rem;
+      }
+      .slider-control-centerleft {
+        left: 5rem;
+        top: 36rem;
+      }
+      .slider-control-bottomcenter {
+        display: none;
+      }
+    }
+  }
 
   @media @tabletV {}
 

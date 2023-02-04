@@ -237,60 +237,62 @@ ul {
   place-content: center;
   height: calc(100vh - 14rem);
   align-items: center;
+  width: 100% !important;
 }
 .section-listproyectos .slider-container {
-  width: calc(100vw - 31rem);
+  width: calc(100vw - 25%);
   margin: auto;
+  max-width: 138rem;
 }
 .section-listproyectos .slider-container .slider-control-bottomcenter {
   position: absolute;
   bottom: -5rem;
 }
-.section-listproyectos .slider-container .slider-frame .card {
+.section-listproyectos .slider-container .slider-frame .slider-list .card {
   height: 100%;
   height: 50rem;
 }
-.section-listproyectos .slider-container .slider-frame .card.reverse {
+.section-listproyectos .slider-container .slider-frame .slider-list .card.reverse {
   flex-direction: row-reverse;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-img {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-img {
   width: 50%;
   height: 100%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-info {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-info {
   width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-info .container {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container {
   padding: 5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-info .container .title {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .title {
   font-size: 5rem;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-info .container .list {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .list {
   display: flex;
   flex-direction: row;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-info .container .list .icon {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .list .icon {
   width: 3rem;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-info .container .list .icon:not(:last-child) {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .list .icon:not(:last-child) {
   margin-right: 2rem;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-info .container .pre-title {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .pre-title {
   font-size: 3rem;
 }
-.section-listproyectos .slider-container .slider-frame .card .card-info .container .button1 {
+.section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .button1 {
   font-size: 1.3rem;
   padding: 8px 3rem 8px 3rem;
 }
@@ -324,6 +326,40 @@ ul {
   background-color: #f7914d !important;
   color: transparent !important;
   -webkit-tap-highlight-color: transparent;
+}
+@media (max-width: 1025px) {
+  .section-listproyectos .slider-container {
+    width: calc(100vw - 11%);
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card {
+    flex-direction: column !important;
+    align-items: center;
+    height: 80rem;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-img {
+    width: 70%;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-info {
+    width: 100%;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container {
+    padding: 0 5rem;
+    align-items: center;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .sub-title {
+    text-align: center;
+  }
+  .section-listproyectos .slider-container .slider-control-centerright {
+    right: 5rem;
+    top: 36rem;
+  }
+  .section-listproyectos .slider-container .slider-control-centerleft {
+    left: 5rem;
+    top: 36rem;
+  }
+  .section-listproyectos .slider-container .slider-control-bottomcenter {
+    display: none;
+  }
 }
 /*************************** SECTION SKILLS *****************************/
 .section-servicios {
