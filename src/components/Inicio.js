@@ -11,12 +11,11 @@ export const Inicio = () => {
   
   return (
     <section className='section-inicio '>
-      <div className='left'>
+      <div className='container'>
         <div className='col'>
           <div className='title-container col'>
             <div className='pre-title' data-aos-duration="2000" data-aos="fade-down">Hola, soy desarrollador web</div>
             <div className='title' data-aos-duration="500" data-aos-delay="1500" data-aos="zoom-in">Tomás Aldea</div>
-            <span className='sub-title' data-aos-duration="2000" data-aos="fade-right">No se que poner aqui</span>
           </div>
           <div className='personal-info'>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
@@ -40,9 +39,6 @@ export const Inicio = () => {
             </div>
           </div>
         </div >
-      </div>
-      <div className='img-container right' data-aos-duration="2000" data-aos="fade-left">
-        <div className='img'></div>
       </div>
     </section>
   )

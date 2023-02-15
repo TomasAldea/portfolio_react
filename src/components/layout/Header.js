@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <section className="header">
       <div className="logo">
-        <span>aqui ira el logo</span>
+       TA
       </div>
       <nav>
         <ul>

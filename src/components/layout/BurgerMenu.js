@@ -8,7 +8,7 @@ export const BurgerMenu = () => {
   return (
     <section className="header">
       <div className="logo">
-        <span>aqui ira el logo</span>
+        <span>TA</span>
       </div>
       <nav>
         <ul>
