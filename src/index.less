@@ -126,9 +126,11 @@
   text-transform: uppercase;
   padding: 1rem 3rem;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: url("../public/svg/icons8-react-native-dark.svg") 100 100, pointer;
+  /* 👇 PNG fallback */
+  cursor: -webkit-image-set(url("../public/svg/icons8-react-native-dark.svg") 2x) 32 32, pointer;
   transition: all 0.3s ease;
-
+  border: none;
   &:hover {
     color: #ffffff;
     background-color: @teal;
@@ -137,16 +139,24 @@
 
 //? Medidas
 html {
+  overflow: hidden;
   font-size: 62.5%;
-  overflow-x: hidden;
   margin: 0;
   background-color: @columbia-blue;
 
+    cursor: url("../public/svg/icons8-react-native-dark.svg") 100 100, pointer;
+    /* 👇 PNG fallback */
+    cursor: -webkit-image-set(url("../public/svg/icons8-react-native-dark.svg") 2x) 32 32, pointer;
+  
   body {
     font: 14px "";
     width: 100%;
     margin: auto;
     overflow: hidden;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
   }
 
   @media (min-width: 1921px) and (max-height: 600px) {
@@ -158,25 +168,19 @@ html {
   // }
 }
 
-body {
-  cursor: default;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
-}
 
 section {
   color: @gunmetal;
   line-height: 1.2;
 }
 /* #root {
-  background-image: url('../public/svg/svg-bg1.svg');
+  background-image: url('../public/svg/animatedShapeHome.svg');
   .basic-bg();
 } */
+
 section:not(.header, .footer) {
 
-  width: calc(100vw - 20rem);
+ /*  width: calc(100vw - 20rem); */
   margin: auto;
   position: relative;
   margin: 8rem auto auto auto;
@@ -206,6 +210,24 @@ ul {
   width: 100%;
   top: 0;
   box-shadow: 0px 1px 20px 3px #001821;
+  cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
+  /* 👇 PNG fallback */
+  cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
+  .mouse-follower-header {
+    content: " ";
+    position: absolute;
+    background-color: #64ffda;
+    width: 10rem;
+    height: 5px;
+    bottom: 0;
+    border-radius: 9px 9px 0 0;
+    transition-timing-function: ease;
+
+    /* Also the same as */
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  }
+
   .logo {
     
   }
@@ -226,10 +248,15 @@ ul {
           .m-text();
           text-transform: uppercase;
           color: @lavender-web;
+          transition: all 0.2s ease;
+          cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
+          cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
           &.active {
             color: @teal;
           }
-          
+          &:hover {
+            color: @teal;
+          }
         }
       }
     }
@@ -250,6 +277,17 @@ ul {
   background-color: @gunmetal;
   color: @lavender-web;
   .m-text();
+  cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
+  cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
+  .mouse-follower-footer {
+    content: " ";
+    position: absolute;
+    background-color: #64ffda;
+    width: 10rem;
+    height: 5px;
+    top: 0;
+    border-radius: 0 0 9px 9px;
+  }
 }
 
 /*************************** SECTION INICIO *****************************/
@@ -618,7 +656,10 @@ ul {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
+  background-image: url('../public/svg/animatedShapeContacto.svg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
   .section-container {
     display: flex;
     flex-direction: column;
@@ -629,7 +670,9 @@ ul {
       opacity: 0;
       display: none;
     }
-    .title {}
+    .title {
+      .m-title();
+    }
 
     .subtitle {
       .m-text();
@@ -650,6 +693,14 @@ ul {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          color:   @gunmetal;
+
+
+         /*  @gunmetal: #022b3aff;
+          @teal: #1f7a8cff;
+          @columbia-blue: #bfdbf7ff;
+          @lavender-web: #e1e5f2ff;
+          @white: #f5f5f5; */
         }
 
         input,
@@ -659,12 +710,18 @@ ul {
           padding: 1rem 1rem;
           background-color: transparent;
           border: none;
-          border-bottom: 2px solid #ffffff6b;
+          border-bottom: 2px solid #1f7a8c52;
           .m-text();
           font-weight: 600;
-          color: #757575;
+          color: @teal;
           &:focus-visible {
             outline: none;
+          }
+          &::placeholder {
+            color: @gunmetal;
+            opacity: 0.8;
+            font-size: 1.3rem;
+
           }
         }
 
@@ -673,7 +730,7 @@ ul {
         input:-webkit-autofill:focus,
         input:-webkit-autofill:active {
           -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-          -webkit-text-fill-color: #757575 !important;
+          -webkit-text-fill-color:  @teal !important;
           transition: background-color 5000s ease-in-out 0s;
         }
       }
@@ -783,3 +840,15 @@ ul {
   }
 /* } */
 
+#wheel-window {
+  position: fixed;
+  .m-subtitle();
+  transition: all 0.5s ease;
+  z-index: -9;
+  opacity: 0;
+
+  &.show {
+    z-index: +9;
+    opacity: 1;
+  }
+}

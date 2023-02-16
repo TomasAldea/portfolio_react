@@ -14,8 +14,9 @@ export const Header = () => {
 
   return (
     <section className="header">
+      <div className="mouse-follower-header"></div>
       <div className="logo">
-       TA
+       
       </div>
       <nav>
         <ul>

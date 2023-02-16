@@ -17,6 +17,9 @@ export const Contacto = () => {
   });
 
   useEffect(() => {
+    const shape = document.querySelector('#mainshape');
+    shape.style.display = 'none';
+
     AOS.init();
   }, [])
 
@@ -88,7 +91,7 @@ export const Contacto = () => {
           </div>
           <div className="input-group" data-aos-delay="500" data-aos-duration="500" data-aos="zoom-in">
             <label htmlFor="message">¿Cual es el motivo de contacto?
-              <FontAwesomeIcon icon="fa-solid fa-text" />
+             
             </label>
             <textarea
               required

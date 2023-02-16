@@ -4,8 +4,10 @@ import { Portafolio } from '../components/Portafolio'
 import AOS from 'aos';
 
 export const Inicio = () => {
-
+ 
   useEffect(() => {
+    const shape = document.querySelector('#mainshape');
+    shape.style.display = 'block';
     AOS.init();
   }, [])
   
