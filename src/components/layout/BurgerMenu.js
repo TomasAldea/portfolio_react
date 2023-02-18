@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import AOS from "aos";
 
 
 export const BurgerMenu = () => {
-
+  const [burger, setBurger] = useState(false)
   return (
-    <section className="header">
-      <div className="logo">
-        <span>TA</span>
+    <section className="burger-menu">
+
+      <div id="nav-icon3" onClick={() => setBurger(!burger)} className={(burger) ? 'open': 'close'}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <nav>
         <ul>

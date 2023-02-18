@@ -42,8 +42,8 @@ export const Portafolio = () => {
                         )
                       }
                     </div>
-                    <a href={trabajo.url} className='pre-title' target="_blank" rel="noopener noreferrer">{trabajo.url.replace('https://', '')}</a>
-                    <div className='sub-title'>{trabajo.descripcion}</div>
+                    <a href={trabajo.url} className='url' target="_blank" rel="noopener noreferrer">{trabajo.url.replace('https://', '')}</a>
+                    <div className='text'>{trabajo.descripcion}</div>
 
                     <Link className='button1' to={`/proyecto/${trabajo.id}`}>Ver proyecto</Link>
                   </div>

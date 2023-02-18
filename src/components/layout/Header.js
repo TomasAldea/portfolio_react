@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";
+import { BurgerMenu } from "./BurgerMenu";
 
 
 export const Header = () => {
@@ -18,6 +19,7 @@ export const Header = () => {
       <div className="logo">
        
       </div>
+      <BurgerMenu/>
       <nav>
         <ul>
           <li>

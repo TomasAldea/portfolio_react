@@ -5,7 +5,7 @@ export const trabajos = [
         'url': 'https://www.google.com',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus felis vitae urna sodales, quis congue nulla convallis. Ut non justo quis enim aliquam varius at sit amet justo. Vestibulum ultrices aliquet odio, sed convallis neque vulputate sit amet.'
+        'descripcion': 'Web internacional multidioma con efectos de css controlados por scroll'
     },
     {
         'id': 'proyecto2',
