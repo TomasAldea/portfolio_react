@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import CountUp from "react-countup";
 import AOS from "aos";
+import { ProviderContext } from '../context/ProviderContext';
 
 export const Skills = () => {
+  const {setOpenMenu} =  useContext(ProviderContext);
+
   useEffect(() => {
+    setOpenMenu(false);
     AOS.init();
   }, []);
 

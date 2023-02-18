@@ -1,14 +1,16 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, useContext } from "react";
 import { send } from "emailjs-com";
 import AOS from "aos";
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faTextWidth } from '@fortawesome/free-solid-svg-icons'
+import { ProviderContext } from '../context/ProviderContext';
 
 export const Contacto = () => {
   const [sendButton, setSendButton] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
-
+  const {setOpenMenu,openMenu} =  useContext(ProviderContext);
+  
   const [toSend, setToSend] = useState({
     from_name: "",
     to_name: "Tomas",
@@ -17,8 +19,11 @@ export const Contacto = () => {
   });
 
   useEffect(() => {
+    setOpenMenu(false);
     const shape = document.querySelector('#mainshape');
     shape.style.display = 'none';
+    const shapeMobile = document.querySelector('#mainshapeMobile');
+    shapeMobile.style.display = 'none';
 
     AOS.init();
   }, [])

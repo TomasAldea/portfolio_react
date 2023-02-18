@@ -1,10 +1,18 @@
 import Carousel from 'nuka-carousel/lib/carousel.js';
-import React from 'react'
+import React, { useState,useEffect, useContext } from "react";
 import { Link } from 'react-router-dom';
 import { trabajos } from '../data/trabajos.js'
+import { ProviderContext } from '../context/ProviderContext';
 
 
 export const ListadoProyectos = () => {
+  const {setOpenMenu} =  useContext(ProviderContext);
+
+  useEffect(() => {
+    setOpenMenu(false);
+
+  }, [])
+
   return (
     <div className='section-listproyectos'>
       <Carousel>

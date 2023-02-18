@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState,useEffect, useContext } from "react";
+import { ProviderContext } from '../context/ProviderContext';
 
 export const AboutMe = () => {
+  const {setOpenMenu} =  useContext(ProviderContext);
+
+  useEffect(() => {
+    setOpenMenu(false);
+
+  }, [])
+  
   return (
     <section className='section-aboutme'>
       <h1>

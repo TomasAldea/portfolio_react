@@ -20,7 +20,7 @@ export const Header = () => {
        
       </div>
       <BurgerMenu/>
-      <nav>
+      <nav className="nav-desktop">
         <ul>
           <li>
             <NavLink

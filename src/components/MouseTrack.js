@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ProviderContext } from '../context/ProviderContext';
 
 export const MouseTrack = () => {
+    const {setOpenMenu,openMenu} =  useContext(ProviderContext);
 
     let interval = 0;
     let timer = 0;
@@ -17,23 +19,27 @@ export const MouseTrack = () => {
         document.querySelector('.mouse-follower-footer').style.left = mouseX-50 + "px";
     };
 
-    onwheel = () => {
-        interval++;
-
-        if (interval >= timer) {
-
-            timer += 15;
-            //openMenu();
-
-            document.querySelector('#wheel-window').style.left = mouseX + "px";
-            document.querySelector('#wheel-window').style.top = mouseY + "px";
-            document.querySelector('#wheel-window').classList.add("show");
-
-            setTimeout(() => {
-                document.querySelector('#wheel-window').classList.remove("show");
-            }, 2500);
-        }
-    };
+    if (window.innerWidth > 769) {
+        onwheel = () => {
+            interval++;
+    
+            if (interval >= timer) {
+                timer += 15;
+                document.querySelector('#wheel-window').style.left = mouseX + "px";
+                document.querySelector('#wheel-window').style.top = mouseY + "px";
+                document.querySelector('#wheel-window').classList.add("show");
+    
+                setTimeout(() => {
+                    document.querySelector('#wheel-window').classList.remove("show");
+                }, 2500);
+            }
+        };
+    } else {
+        window.addEventListener('touchmove', e => {
+            interval++;
+            setOpenMenu(true);
+        })
+    }
 
     return (
         <>

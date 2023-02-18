@@ -5,7 +5,7 @@ export const Footer = () => {
     <section className='footer'>
             <div className="mouse-follower-footer"></div>
 
-        Portafolio Tomás Aldea WEB &copy; Máster en React 2025
+      <span>Diseñado y creado por Tomás Aldea  &copy; 2023</span>
     </section>
   )
 }

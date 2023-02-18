@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Portafolio } from '../components/Portafolio'
+import React, { useEffect,useContext } from 'react'
 import AOS from 'aos';
+import { ProviderContext } from '../context/ProviderContext';
 
 export const Inicio = () => {
- 
+  const {setOpenMenu} =  useContext(ProviderContext);
+
   useEffect(() => {
+    setOpenMenu(false);
     const shape = document.querySelector('#mainshape');
     shape.style.display = 'block';
-    AOS.init();
+    const shapeMobile = document.querySelector('#mainshapeMobile');
+    shapeMobile.style.display = 'block';
+
+    AOS.init( {offset: 0} );
   }, [])
   
   return (

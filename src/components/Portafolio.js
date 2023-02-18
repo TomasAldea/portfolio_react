@@ -1,16 +1,17 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useContext} from 'react'
 import Carousel from 'nuka-carousel/lib/carousel.js';
 import { trabajos } from '../data/trabajos.js'
 import { Link } from 'react-router-dom';
-
 import AOS from 'aos';
-
-
+import { ProviderContext } from '../context/ProviderContext';
 
 export const Portafolio = () => {
+  const {setOpenMenu} =  useContext(ProviderContext);
+
   let delay = 0;
 
   useEffect(() => {
+    setOpenMenu(false);
     AOS.init();
   }, [])
 
