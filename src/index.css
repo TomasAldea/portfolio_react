@@ -288,6 +288,11 @@ ul {
 .burger-menu .nav-mobile ul li a.active {
   color: #64ffda;
 }
+@media (max-height: 700px) {
+  .burger-menu .nav-mobile ul {
+    margin-top: 12rem;
+  }
+}
 .footer {
   box-shadow: -3px 0px 20px 3px #001821;
   width: 100%;
@@ -464,10 +469,10 @@ ul {
 }
 @media (max-width: 551px) {
   .section-inicio .container {
-    padding: 3.4rem 3rem;
+    padding: 0.4rem 2rem 2.4rem 2rem;
   }
   .section-inicio .container .col {
-    max-width: 29rem;
+    max-width: 27rem;
   }
   .section-inicio .container .col .personal-info .row a,
   .section-inicio .container .col .personal-info .row p {
