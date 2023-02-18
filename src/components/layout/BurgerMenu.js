@@ -14,6 +14,7 @@ export const BurgerMenu = () => {
         <span></span>
         <span></span>
       </div>
+      <div className={`blur-zone ${(openMenu) ? 'active': ''}`}></div>
       <nav className={`nav-mobile ${(openMenu) ? 'active': ''}`}>
         <ul>
           <li>

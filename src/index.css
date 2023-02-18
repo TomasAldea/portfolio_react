@@ -237,6 +237,19 @@ ul {
   width: 0%;
   left: 50%;
 }
+.burger-menu .blur-zone {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  right: -3rem;
+  transform: translateZ(-10px);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.burger-menu .blur-zone.active {
+  display: block;
+}
 .burger-menu .nav-mobile {
   transform: translateZ(-10px);
   background-color: #1f7a8cff;

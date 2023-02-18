@@ -365,51 +365,67 @@ ul {
     width: 0%;
     left: 50%;
   }
-  .nav-mobile {
-    transform: translateZ(-10px);
-    background-color: @teal;
-    position: fixed;
-    height: 100vh;
-    width: 72vw;
-    right: -38rem;
-    transition: all 0.5s ease;
-    &.active {
+    .blur-zone {
+      display: none;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
       right: -3rem;
+      transform: translateZ(-10px);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      &.active {
+        display: block;
+      }
     }
-    ul {
-      margin-top: 17rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 0;
-      align-items: center;
-      li {
-        max-width: fit-content;
+    .nav-mobile {
+      transform: translateZ(-10px);
+      
+      background-color: @teal;
+      position: fixed;
+      height: 100vh;
+      width: 72vw;
+      right: -38rem;
+      transition: all 0.5s ease;
+      &.active {
+        right: -3rem;
+      }
+      ul {
+        margin-top: 17rem;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
         align-items: center;
-        margin-bottom: 2rem;
-        font-weight: 600 !important;
-        span {
-          color: @electricBlue;
-        }
-        &::marker {
-          display: none;
-        }
-        .m-text();
-        font-size: 2rem !important;
-        a {
-          margin-top: 1rem;
-          text-transform: uppercase;
-          color: @gunmetal;
-          transition: all 0.2s ease;
-          &.active {
+        li {
+          max-width: fit-content;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 2rem;
+          font-weight: 600 !important;
+          span {
             color: @electricBlue;
+          }
+          &::marker {
+            display: none;
+          }
+          .m-text();
+          font-size: 2rem !important;
+          a {
+            margin-top: 1rem;
+            text-transform: uppercase;
+            color: @gunmetal;
+            transition: all 0.2s ease;
+            &.active {
+              color: @electricBlue;
+            }
           }
         }
       }
-    }
-  } 
+    } 
+  
+  
  @media (min-width: 769px) {
   display: none;
  }
