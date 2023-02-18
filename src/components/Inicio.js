@@ -1,6 +1,8 @@
 import React, { useEffect,useContext } from 'react'
 import AOS from 'aos';
 import { ProviderContext } from '../context/ProviderContext';
+import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Inicio = () => {
   const {setOpenMenu} =  useContext(ProviderContext);
@@ -41,7 +43,9 @@ export const Inicio = () => {
               <a href='tel:690322287'>690322287</a>
             </div>
             <div className='btn-container' data-aos-duration="2000" data-aos="fade-up">
-              <a className='button1'>Descargar cv</a>
+              <a className='button1'>Descargar cv 
+              <FontAwesomeIcon icon={faFileDownload} /> 
+              </a>
             </div>
           </div>
         </div >
