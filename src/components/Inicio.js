@@ -5,7 +5,7 @@ import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Inicio = () => {
-  const {setOpenMenu} =  useContext(ProviderContext);
+  const {setOpenMenu,firstUserLoad} =  useContext(ProviderContext);
 
   useEffect(() => {
     setOpenMenu(false);
@@ -14,8 +14,18 @@ export const Inicio = () => {
     const shapeMobile = document.querySelector('#mainshapeMobile');
     shapeMobile.style.display = 'block';
 
-    AOS.init( {offset: 0} );
   }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (firstUserLoad) {
+         AOS.init( {offset: 0} );
+        const shapeMobile = document.querySelector('#loading-page');
+        shapeMobile.style.display = 'none';
+      } 
+
+    }, 500);
+  }, [firstUserLoad])
   
   return (
     <section className='section-inicio '>

@@ -1,22 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import AOS from "aos";
 import { BurgerMenu } from "./BurgerMenu";
 
 
 export const Header = () => {
 
-  useEffect(() => {
-    setTimeout(() => {
-        AOS.init();
-    }, 800);
-
-  }, [])
 
   return (
     <section className="header">
       <div className="mouse-follower-header"></div>
-      <div className="logo">
+      <div id="logo">
        <img src="icons/main-logo.png"></img>
       </div>
       <BurgerMenu/>

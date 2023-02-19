@@ -86,10 +86,15 @@ section {
   .basic-bg();
 } */
 section:not(.header, .footer, .burger-menu) {
-  /*  width: calc(100vw - 20rem); */
-  margin: auto;
+  height: calc(100vh - 14rem);
   position: relative;
   margin: 8rem auto auto auto;
+}
+@media (max-width: 551px) {
+  section:not(.header, .footer, .burger-menu) {
+    height: calc(100vh - 12rem);
+    margin: 6rem auto auto auto;
+  }
 }
 a {
   text-decoration: none;
@@ -129,11 +134,16 @@ ul {
   /* Also the same as */
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.header .logo {
+.header #logo {
   width: 9rem;
   margin-top: 9px;
+  opacity: 0;
 }
-.header .logo img {
+.header #logo.active {
+  transition: all 0.5s ease-in;
+  opacity: 1;
+}
+.header #logo img {
   width: 100%;
   height: 100%;
 }
@@ -151,7 +161,7 @@ ul {
 .header .nav-desktop ul li a {
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #e1e5f2ff;
   transition: all 0.2s ease;
   cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
@@ -192,8 +202,8 @@ ul {
   transform-style: preserve-3d;
 }
 .burger-menu #nav-icon3 {
-  width: 5rem;
-  height: 3.5rem;
+  width: 4rem;
+  height: 3.2rem;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -207,7 +217,7 @@ ul {
 .burger-menu #nav-icon3 span {
   display: block;
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 100%;
   background: #64ffda;
   border-radius: 9px;
@@ -310,8 +320,8 @@ ul {
   }
 }
 .burger-menu .nav-mobile ul li a {
+  text-transform: capitalize;
   margin-top: 1rem;
-  text-transform: uppercase;
   color: #022b3aff;
   transition: all 0.2s ease;
 }
@@ -323,12 +333,20 @@ ul {
     display: none;
   }
 }
+@media (max-width: 769px) {
+  .burger-menu .nav-mobile {
+    right: -58rem;
+    width: 58vw;
+  }
+}
 @media (max-height: 800px) {
   .burger-menu .nav-mobile ul {
     margin-top: 12rem;
   }
 }
 .footer {
+  box-sizing: border-box;
+  padding: 3rem 5rem 3rem 3rem;
   box-shadow: -3px 0px 20px 3px #001821;
   width: 100%;
   position: fixed;
@@ -338,9 +356,9 @@ ul {
   height: 57px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #022b3aff;
+  justify-content: space-between;
   color: #e1e5f2ff;
+  background-color: #022b3aff;
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
@@ -360,6 +378,11 @@ ul {
   top: 0;
   border-radius: 0 0 9px 9px;
 }
+.footer .rrss img {
+  width: 2.4rem;
+  margin-right: 2rem;
+  height: 100%;
+}
 .footer span {
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
@@ -373,6 +396,16 @@ ul {
 @media (max-width: 769px) {
   .footer .mouse-follower-footer {
     display: none;
+  }
+}
+@media (max-width: 551px) {
+  .footer {
+    padding: 3rem 2rem 3rem 2rem;
+  }
+  .footer span {
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 #mainshape {
@@ -404,7 +437,6 @@ ul {
 }
 /*************************** SECTION INICIO *****************************/
 .section-inicio {
-  height: calc(100vh - 14rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -509,6 +541,14 @@ ul {
   -webkit-animation: bounce-top 0.9s both;
   animation: bounce-top 0.9s both;
 }
+@media (max-width: 769px) {
+  .section-inicio {
+    padding: 0 2rem;
+  }
+  .section-inicio .container {
+    padding: 2rem 3rem 6rem 3rem;
+  }
+}
 @media (max-width: 551px) {
   .section-inicio .container {
     padding: 0.4rem 2rem 2.4rem 2rem;
@@ -522,6 +562,7 @@ ul {
   }
   .section-inicio .container .col .personal-info .row p:last-child {
     text-align: end;
+    max-width: 16rem;
   }
 }
 /*************************** SECTION PORTFOLIO *****************************/
@@ -843,7 +884,7 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   color: #022b3aff;
-  /*  @gunmetal: #022b3aff;
+  /*  @darkBlue: #022b3aff;
           @teal: #1f7a8cff;
           @columbia-blue: #bfdbf7ff;
           @lavender-web: #e1e5f2ff;
@@ -958,39 +999,37 @@ ul {
     border-color: transparent;
   }
 }
-/* .cortain {
-  width: 100%;
-  height: 100%;
+#cortain {
+  width: 100vw;
+  height: calc(100vh - 14rem);
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+  background-color: transparent;
+  /* background: transparent; */
+}
+#cortain .left-cortain {
   position: absolute;
-  z-index: 1; */
-.left-cortain {
-  position: fixed;
-  z-index: 1;
-  width: 100vw;
-  height: 100%;
-  background: conic-gradient(at 100% 0%, transparent 83deg, red 0, red 238deg, transparent 0);
-  transition: all 2s ease;
-  top: -104vh;
-  transform: rotate(180deg);
+  width: 50%;
   left: 0;
-}
-.left-cortain.active {
-  top: 10rem;
-}
-.right-cortain {
-  position: fixed;
-  z-index: 1;
-  width: 100vw;
+  background-color: red;
   height: 100%;
-  background: conic-gradient(at 100% 0%, transparent 83deg, black 0, black 238deg, transparent 0);
-  transition: all 2s ease;
-  bottom: -104vh;
+  transition: all 1.5s ease;
 }
-.right-cortain.active {
-  bottom: 2rem;
+#cortain .right-cortain {
+  position: absolute;
+  width: 50%;
   right: 0;
+  background-color: blue;
+  height: 100%;
+  transition: all 1.5s ease;
 }
-/* } */
+#cortain.active .right-cortain {
+  right: -80rem;
+}
+#cortain.active .left-cortain {
+  left: -80rem;
+}
 #wheel-window {
   position: fixed;
   font: 400 4rem/4.8rem "XanhMono", sans-serif;
@@ -1013,12 +1052,66 @@ ul {
   z-index: 9;
   opacity: 1;
 }
-/* ----------------------------------------------
- * Generated by Animista on 2023-2-18 16:56:27
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
+#loading-page {
+  cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
+  cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: #022b3aff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9;
+  top: 0;
+}
+#load-gif {
+  width: 9rem;
+  z-index: 90;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#load-gif.off {
+  -webkit-animation: diagonal 1.3s;
+  -moz-animation: diagonal 1.3s;
+  -o-animation: diagonal 1.3s;
+  animation: diagonal 1.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index: 99;
+}
+#load-gif.hide {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+}
+@keyframes diagonal {
+  from {
+    top: 50%;
+    left: 50%;
+  }
+  to {
+    top: 40px;
+    left: 75px;
+  }
+}
+@media (max-width: 551px) {
+  #load-gif {
+    width: 7rem;
+  }
+  @keyframes diagonal {
+    from {
+      top: 50%;
+      left: 50%;
+    }
+    to {
+      top: 31px;
+      left: 55px;
+    }
+  }
+}
 /**
  * ----------------------------------------
  * animation bounce-top
