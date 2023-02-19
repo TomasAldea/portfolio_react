@@ -1,10 +1,12 @@
 import React, { useEffect, useContext, useState } from 'react'
 import { ProviderContext } from '../context/ProviderContext';
+import AOS from 'aos';
 
 export const LoadingPage = () => {
     const { setfirstUserLoad, firstUserLoad } = useContext(ProviderContext);
     const [logo, setLogo] = useState(false);
 
+    // TODO Se puede hacer esto sin tanto timeouts?
     useEffect(() => {
         
         setTimeout(() => {
@@ -16,6 +18,19 @@ export const LoadingPage = () => {
             setLogo(true);
         }, 4300);
     }, [])
+
+    useEffect(() => {
+
+        setTimeout(() => {
+          // Elimina el loading-page cuando se actualiza el estado de firstUserLoad
+          if (firstUserLoad) {
+             AOS.init( {offset: 0} );
+            const shapeMobile = document.querySelector('#loading-page');
+            shapeMobile.style.display = 'none';
+          } 
+    
+        }, 500);
+      }, [firstUserLoad])
 
     return (
         <>

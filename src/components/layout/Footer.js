@@ -8,8 +8,8 @@ export const Footer = () => {
       <div className="mouse-follower-footer"></div>
 
       <div className='rrss row'>
-       <a href="https://github.com/TomasAldea" target="_blank" rel="noopener noreferrer"><img src="/icons/linkedin.svg" /></a>
-       <a href="https://www.linkedin.com/in/tomas-aldeamoral/" target="_blank" rel="noopener noreferrer"><img src="/icons/github.svg" /></a>
+       <a href="https://www.linkedin.com/in/tomas-aldeamoral/" target="_blank" rel="noopener noreferrer"><img src="/icons/linkedin.svg" /></a>
+       <a href="https://github.com/TomasAldea" target="_blank" rel="noopener noreferrer"><img src="/icons/github.svg" /></a>
       </div>
       <span>Diseñado y creado por Tomás Aldea&nbsp;
         <FontAwesomeIcon icon={faCopyright} />&nbsp;2023

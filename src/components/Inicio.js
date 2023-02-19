@@ -1,33 +1,16 @@
 import React, { useEffect,useContext } from 'react'
-import AOS from 'aos';
 import { ProviderContext } from '../context/ProviderContext';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Inicio = () => {
-  const {setOpenMenu,firstUserLoad} =  useContext(ProviderContext);
+  const {setOpenMenu} =  useContext(ProviderContext);
 
   useEffect(() => {
     setOpenMenu(false);
-    const shape = document.querySelector('#mainshape');
-    shape.style.display = 'block';
-    const shapeMobile = document.querySelector('#mainshapeMobile');
-    shapeMobile.style.display = 'block';
-
   }, [])
 
-  useEffect(() => {
 
-    setTimeout(() => {
-      // Elimina el loading-page cuando se actualiza el estado de firstUserLoad
-      if (firstUserLoad) {
-         AOS.init( {offset: 0} );
-        const shapeMobile = document.querySelector('#loading-page');
-        shapeMobile.style.display = 'none';
-      } 
-
-    }, 500);
-  }, [firstUserLoad])
   
   return (
     <section className='section-inicio '>

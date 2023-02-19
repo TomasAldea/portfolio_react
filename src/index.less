@@ -243,10 +243,12 @@ ul {
     width: 9rem;
     margin-top: 9px;
     opacity: 0;
+
     &.active {
       transition: all 0.5s ease-in;
       opacity: 1;
     }
+
     img {
       width: 100%;
       height: 100%;
@@ -273,6 +275,7 @@ ul {
           transition: all 0.2s ease;
           cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
           cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
+          padding: 2rem;
 
           &.active {
             color: @electricBlue;
@@ -446,6 +449,7 @@ ul {
         font-size: 2rem !important;
 
         a {
+
           text-transform: capitalize;
           margin-top: 1rem;
           color: @darkBlue;
@@ -510,8 +514,8 @@ ul {
 
   .rrss {
     img {
-      width: 2.4rem;
-      margin-right: 2rem;
+      width: 2.6rem;
+      margin-right: 3rem;
       height: 100%
     }
   }
@@ -541,6 +545,7 @@ ul {
 }
 
 #mainshape {
+  display: none;
   position: absolute;
   z-index: -9;
   background: transparent;
@@ -556,6 +561,7 @@ ul {
 }
 
 #mainshapeMobile {
+  display: none;
   position: absolute;
   z-index: -9;
   background: transparent;
@@ -574,6 +580,12 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-image: url('../public/svg/AnimatedShapeHome.svg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
 
   .container {
     &::before {
@@ -679,6 +691,7 @@ ul {
   }
 
   @media @mobile {
+    background-image: url('../public/svg/shapeHomeMobile.svg');
 
     .container {
       padding: 0.4rem 2rem 2.4rem 2rem;
@@ -896,99 +909,27 @@ ul {
 
 /*************************** SECTION SKILLS *****************************/
 
-.section-servicios {
-  height: calc(100vh - 14rem);
+.section-skills {
+  margin-top: 50rem !important;
   display: flex;
   align-items: center;
 
-  .left {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    height: calc(100% - 10rem);
+  .sub-section {  
+    width: 50%;
+    span {}
 
-    .card {
-      width: 29.3%;
-      margin-right: 2rem;
-      margin-bottom: 2rem;
+    .tecnology {
+      .title-tecnology {}
 
-      .img {
-        height: 22rem;
-        width: 100%;
-        .basic-bg();
-      }
-
-      .text {
-        background-color: white;
-        color: #817d87;
-        .m-text();
-        font-size: 2rem;
-        padding: 2rem 3rem;
-        text-align-last: center;
+      .bar {
+        
       }
     }
   }
 
-  .right {
-    height: calc(100% - 10rem);
-    width: 40%;
-    position: relative;
+  @media @tabletV {}
 
-    .circle {
-      background: @teal;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      .m-text();
-      color: @lavender-web;
-
-      &.case1 {
-        width: 15rem;
-        height: 15rem;
-        top: 0;
-        left: 0;
-      }
-
-      &.case2 {
-        width: 18rem;
-        height: 18rem;
-        bottom: 3rem;
-        left: 32rem;
-      }
-
-      &.case3 {
-        width: 19rem;
-        height: 19rem;
-        top: 5rem;
-        left: 26rem;
-      }
-
-      &.case4 {
-        width: 15rem;
-        height: 15rem;
-        bottom: 10rem;
-        left: 6rem;
-      }
-
-      &.case5 {
-        width: 15rem;
-        height: 15rem;
-        bottom: 30rem;
-        left: 21rem;
-      }
-    }
-
-    @media @tabletH {}
-
-    @media @tabletV {}
-
-    @media @mobile {}
-
-  }
+  @media @mobile {}
 }
 
 
@@ -1041,7 +982,7 @@ ul {
           flex-direction: row;
           justify-content: space-between;
           color: @darkBlue;
-
+          font-weight: 600;
 
           /*  @darkBlue: #022b3aff;
           @teal: #1f7a8cff;
@@ -1148,6 +1089,9 @@ ul {
   @media @mobile {
     width: calc(100vw - 7rem) !important;
 
+    .section-container .subtitle {
+      margin: 1rem 0rem 2rem;
+    }
   }
 }
 
@@ -1228,14 +1172,15 @@ ul {
   width: 100vw;
   z-index: 9;
   top: 0;
-  &.off { 
+
+  &.off {
     transition: all 0.5s ease-out;
     opacity: 0;
   }
 }
 
 #load-gif {
-  width: 9rem;
+  width: 18rem;
   z-index: 90;
   position: absolute;
   top: 50%;
@@ -1252,6 +1197,7 @@ ul {
     animation-fill-mode: forwards;
     z-index: 99;
   }
+
   &.hide {
     transition: all 0.5s ease-out;
     opacity: 0;
@@ -1259,24 +1205,31 @@ ul {
 
   @keyframes diagonal {
     from {
+      width: 18rem;
       top: 50%;
       left: 50%;
     }
 
     to {
+      width: 9rem;
       top: 40px;
       left: 75px
     }
   }
+
   @media @mobile {
-    width: 7rem;
+
+    width: 15rem;
+
     @keyframes diagonal {
       from {
+        width: 15rem;
         top: 50%;
         left: 50%;
       }
-  
+
       to {
+        width: 7rem;
         top: 31px;
         left: 55px;
       }

@@ -6,7 +6,6 @@ export const AboutMe = () => {
 
   useEffect(() => {
     setOpenMenu(false);
-
   }, [])
   
   return (

@@ -166,6 +166,7 @@ ul {
   transition: all 0.2s ease;
   cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
   cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
+  padding: 2rem;
 }
 @media (max-width: 551px) {
   .header .nav-desktop ul li a {
@@ -379,8 +380,8 @@ ul {
   border-radius: 0 0 9px 9px;
 }
 .footer .rrss img {
-  width: 2.4rem;
-  margin-right: 2rem;
+  width: 2.6rem;
+  margin-right: 3rem;
   height: 100%;
 }
 .footer span {
@@ -424,6 +425,7 @@ ul {
   }
 }
 #mainshapeMobile {
+  display: none;
   position: absolute;
   z-index: -9;
   background: transparent;
@@ -440,6 +442,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('../public/svg/AnimatedShapeHome.svg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .section-inicio .container {
   --b: 2px;
@@ -550,6 +556,9 @@ ul {
   }
 }
 @media (max-width: 551px) {
+  .section-inicio {
+    background-image: url('../public/svg/shapeHomeMobile.svg');
+  }
   .section-inicio .container {
     padding: 0.4rem 2rem 2.4rem 2rem;
   }
@@ -731,95 +740,13 @@ ul {
   }
 }
 /*************************** SECTION SKILLS *****************************/
-.section-servicios {
-  height: calc(100vh - 14rem);
+.section-skills {
+  margin-top: 50rem !important;
   display: flex;
   align-items: center;
 }
-.section-servicios .left {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  height: calc(100% - 10rem);
-}
-.section-servicios .left .card {
-  width: 29.3%;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-}
-.section-servicios .left .card .img {
-  height: 22rem;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.section-servicios .left .card .text {
-  background-color: white;
-  color: #817d87;
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  font-size: 2rem;
-  padding: 2rem 3rem;
-  text-align-last: center;
-}
-@media (max-width: 551px) {
-  .section-servicios .left .card .text {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
-  }
-}
-.section-servicios .right {
-  height: calc(100% - 10rem);
-  width: 40%;
-  position: relative;
-}
-.section-servicios .right .circle {
-  background: #1f7a8cff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  color: #e1e5f2ff;
-}
-@media (max-width: 551px) {
-  .section-servicios .right .circle {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
-  }
-}
-.section-servicios .right .circle.case1 {
-  width: 15rem;
-  height: 15rem;
-  top: 0;
-  left: 0;
-}
-.section-servicios .right .circle.case2 {
-  width: 18rem;
-  height: 18rem;
-  bottom: 3rem;
-  left: 32rem;
-}
-.section-servicios .right .circle.case3 {
-  width: 19rem;
-  height: 19rem;
-  top: 5rem;
-  left: 26rem;
-}
-.section-servicios .right .circle.case4 {
-  width: 15rem;
-  height: 15rem;
-  bottom: 10rem;
-  left: 6rem;
-}
-.section-servicios .right .circle.case5 {
-  width: 15rem;
-  height: 15rem;
-  bottom: 30rem;
-  left: 21rem;
+.section-skills .sub-section {
+  width: 50%;
 }
 /*************************** SECTION CONTACTO *****************************/
 .section-contacto {
@@ -884,6 +811,7 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   color: #022b3aff;
+  font-weight: 600;
   /*  @darkBlue: #022b3aff;
           @teal: #1f7a8cff;
           @columbia-blue: #bfdbf7ff;
@@ -988,6 +916,9 @@ ul {
   .section-contacto {
     width: calc(100vw - 7rem) !important;
   }
+  .section-contacto .section-container .subtitle {
+    margin: 1rem 0rem 2rem;
+  }
 }
 @keyframes typing {
   from {
@@ -1071,7 +1002,7 @@ ul {
   opacity: 0;
 }
 #load-gif {
-  width: 9rem;
+  width: 18rem;
   z-index: 90;
   position: absolute;
   top: 50%;
@@ -1093,24 +1024,28 @@ ul {
 }
 @keyframes diagonal {
   from {
+    width: 18rem;
     top: 50%;
     left: 50%;
   }
   to {
+    width: 9rem;
     top: 40px;
     left: 75px;
   }
 }
 @media (max-width: 551px) {
   #load-gif {
-    width: 7rem;
+    width: 15rem;
   }
   @keyframes diagonal {
     from {
+      width: 15rem;
       top: 50%;
       left: 50%;
     }
     to {
+      width: 7rem;
       top: 31px;
       left: 55px;
     }

@@ -2,7 +2,6 @@ import React, {useEffect, useContext} from 'react'
 import Carousel from 'nuka-carousel/lib/carousel.js';
 import { trabajos } from '../data/trabajos.js'
 import { Link } from 'react-router-dom';
-import AOS from 'aos';
 import { ProviderContext } from '../context/ProviderContext';
 
 export const Portafolio = () => {
@@ -12,7 +11,6 @@ export const Portafolio = () => {
 
   useEffect(() => {
     setOpenMenu(false);
-    AOS.init();
   }, [])
 
   // reset de aos despues del slide

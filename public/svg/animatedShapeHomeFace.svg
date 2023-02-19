@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="1440" height="700" preserveAspectRatio="none" viewBox="0 0 1440 700"><g mask="url(&quot;#SvgjsMask1049&quot;)" fill="none">
+<path d="M201.907,644.221C220.369,642.984,237.117,635.05,247.566,619.78C259.813,601.883,269.978,579.156,259.372,560.241C248.627,541.079,223.827,536.887,201.907,538.352C182.705,539.636,166.884,551.009,156.367,567.126C144.499,585.315,133.213,608.001,144.259,626.701C155.207,645.235,180.429,645.66,201.907,644.221" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"/>
+
+<path d="M1188.142,376.183C1249.279,378.377,1304.604,341.973,1335.683,289.28C1367.294,235.686,1372.752,169.358,1342.053,115.236C1310.969,60.436,1251.138,28.283,1188.142,29.164C1126.629,30.024,1069.925,64.876,1041.51,119.439C1014.991,170.361,1029.398,229.452,1057.872,279.308C1086.636,329.672,1130.18,374.102,1188.142,376.183" fill="url(#img1)" class="triangle-float2">
+</path>
+<defs>
+  <pattern id="img1" patternUnits="objectBoundingBox" width="1" height="1">
+    <image href="../images/testface.jpg" x="0" y="0" width="27%" height="55%"/>
+  </pattern>
+</defs>
+
+
+<path d="M417.813,588.886C443.378,589.848,466.848,574.595,479.354,552.277C491.588,530.443,490.54,503.65,477.567,482.246C465.058,461.607,441.946,450.925,417.813,450.74C393.319,450.552,368.345,459.905,356.446,481.316C344.815,502.245,351.934,527.133,363.799,547.931C375.799,568.966,393.613,587.976,417.813,588.886" fill="rgba(28, 83, 142, 0.4)" class="triangle-float3"/>
+<path d="M539.702,506.635C593.783,509.119,655.576,506.144,683.881,459.995C712.993,412.531,694.143,351.728,663.041,305.543C635.7,264.944,588.643,245.149,539.702,245.898C492.188,246.625,447.451,268.636,422.731,309.22C396.966,351.521,391.522,405.115,416.77,447.727C441.595,489.626,491.052,504.401,539.702,506.635" fill="rgba(28, 83, 142, 0.4)" class="triangle-float2"/></g><defs><mask id="SvgjsMask1049"><rect width="1440" height="700" fill="#ffffff"/></mask><style>
+            @keyframes float1 {
+                0%{transform: translate(0, 0)}
+                50%{transform: translate(-100px, 0)}
+                100%{transform: translate(0, 0)}
+            }
+
+            .triangle-float1 {
+                animation: float1 5s infinite;
+            }
+
+            @keyframes float2 {
+                0%{transform: translate(0, 0)}
+                50%{transform: translate(-50px, -5px)}
+                100%{transform: translate(0, 0)}
+            }
+
+            .triangle-float2 {
+                animation: float2 4s infinite;
+            }
+
+            @keyframes float3 {
+                0%{transform: translate(0, 0)}
+                50%{transform: translate(0, -100px)}
+                100%{transform: translate(0, 0)}
+            }
+
+            .triangle-float3 {
+                animation: float3 6s infinite;
+            }
+        </style></defs><!-- Code injected by live-server -->
+</svg>
