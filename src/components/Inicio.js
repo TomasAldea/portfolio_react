@@ -17,7 +17,9 @@ export const Inicio = () => {
   }, [])
 
   useEffect(() => {
+
     setTimeout(() => {
+      // Elimina el loading-page cuando se actualiza el estado de firstUserLoad
       if (firstUserLoad) {
          AOS.init( {offset: 0} );
         const shapeMobile = document.querySelector('#loading-page');

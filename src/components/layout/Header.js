@@ -10,7 +10,7 @@ export const Header = () => {
     <section className="header">
       <div className="mouse-follower-header"></div>
       <div id="logo">
-       <img src="icons/main-logo.png"></img>
+       
       </div>
       <BurgerMenu/>
       <nav className="nav-desktop">

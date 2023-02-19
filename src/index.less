@@ -304,7 +304,7 @@ ul {
   @media @mobile {
     padding: 3rem 3rem 3rem 2rem;
 
-    .logo {
+    #logo {
       width: 7rem;
       margin-top: 7px;
     }
@@ -1228,6 +1228,10 @@ ul {
   width: 100vw;
   z-index: 9;
   top: 0;
+  &.off { 
+    transition: all 0.5s ease-out;
+    opacity: 0;
+  }
 }
 
 #load-gif {

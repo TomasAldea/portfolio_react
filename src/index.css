@@ -193,7 +193,7 @@ ul {
   .header {
     padding: 3rem 3rem 3rem 2rem;
   }
-  .header .logo {
+  .header #logo {
     width: 7rem;
     margin-top: 7px;
   }
@@ -1065,6 +1065,10 @@ ul {
   width: 100vw;
   z-index: 9;
   top: 0;
+}
+#loading-page.off {
+  transition: all 0.5s ease-out;
+  opacity: 0;
 }
 #load-gif {
   width: 9rem;
