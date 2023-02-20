@@ -3,6 +3,8 @@ import Carousel from 'nuka-carousel/lib/carousel.js';
 import { trabajos } from '../data/trabajos.js'
 import { Link } from 'react-router-dom';
 import { ProviderContext } from '../context/ProviderContext';
+import { Player } from 'video-react';
+// TODO video mocka
 
 export const Portafolio = () => {
   const {setOpenMenu} =  useContext(ProviderContext);

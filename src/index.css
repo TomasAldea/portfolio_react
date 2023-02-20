@@ -687,6 +687,8 @@ ul {
   position: absolute;
   bottom: -5rem;
   right: -5rem;
+  width: fit-content;
+  height: fit-content;
 }
 .section-listproyectos .slider-container .slider-control-centerright button {
   background-image: url('../public/icons/arrow-simple.svg') !important;
@@ -703,6 +705,8 @@ ul {
   position: absolute;
   bottom: -5rem;
   right: 2rem;
+  width: fit-content;
+  height: fit-content;
 }
 .section-listproyectos .slider-container .slider-control-centerleft button {
   background-image: url('../public/icons/arrow-simple.svg') !important;
@@ -746,6 +750,48 @@ ul {
   }
   .section-listproyectos .slider-container .slider-control-bottomcenter {
     display: none;
+  }
+}
+@media (max-width: 551px) {
+  .section-listproyectos .slider-container .slider-control-centerright {
+    right: 0rem;
+    top: 26rem;
+  }
+  .section-listproyectos .slider-container .slider-control-centerright button {
+    height: 4rem;
+    width: 4rem;
+  }
+  .section-listproyectos .slider-container .slider-control-centerleft {
+    left: 0rem;
+    top: 26rem;
+  }
+  .section-listproyectos .slider-container .slider-control-centerleft button {
+    height: 4rem;
+    width: 4rem;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-info {
+    height: auto;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container {
+    justify-content: space-between;
+    height: auto;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .text {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-info .container .button1 {
+    width: 100%;
+    text-align-last: center;
+  }
+  .section-listproyectos .slider-container .slider-frame .slider-list .card .card-img {
+    margin-bottom: 2rem;
+    height: 35%;
+    width: 94%;
   }
 }
 /*************************** SECTION SKILLS *****************************/

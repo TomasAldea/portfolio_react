@@ -546,6 +546,7 @@ ul {
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+
     .rrss {
       img {
         width: 2rem;
@@ -831,7 +832,9 @@ ul {
       position: absolute;
       bottom: -5rem;
       right: -5rem;
-
+      width: fit-content;
+      height: fit-content;
+  
       button {
         background-image: url('../public/icons/arrow-simple.svg') !important;
         background-repeat: no-repeat !important;
@@ -849,7 +852,9 @@ ul {
       position: absolute;
       bottom: -5rem;
       right: 2rem;
-
+      width: fit-content;
+      height: fit-content;
+  
       button {
         background-image: url('../public/icons/arrow-simple.svg') !important;
         background-repeat: no-repeat !important;
@@ -914,7 +919,60 @@ ul {
 
   @media @tabletV {}
 
-  @media @mobile {}
+  @media @mobile {
+
+    .slider-container {
+      .slider-control-centerright {
+        right: 0rem;
+        top: 26rem;
+
+        button {
+          height: 4rem;
+          width: 4rem;
+        }
+      }
+
+      .slider-control-centerleft {
+        left: 0rem;
+        top: 26rem;
+
+        button {
+          height: 4rem;
+          width: 4rem;
+        }
+      }
+
+      .slider-frame .slider-list .card {
+        .card-info {
+          height: auto;
+
+          .container {
+            justify-content: space-between;
+            height: auto;
+            .title {
+              font-size: 3rem;
+              margin-bottom: 1rem;
+            }
+            .text {
+              text-align: center;
+              margin: 1rem 0;
+            }
+            .button1 {
+              width: 100%;
+              text-align-last: center;
+            }
+          }
+        }
+
+        .card-img {
+
+          margin-bottom: 2rem;
+          height: 35%;
+          width: 94%;
+        }
+      }
+    }
+  }
 }
 
 
@@ -928,6 +986,7 @@ ul {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+
   div[role="progressbar"] {
     span:last-child {
       color: @darkBlue;
@@ -974,13 +1033,14 @@ ul {
             display: flex;
             flex-direction: row;
             margin-bottom: 5px;
-            
+
 
             img {
               width: 2.6rem;
               margin-right: 1rem;
 
             }
+
             span {
               .m-text();
             }
@@ -1004,9 +1064,11 @@ ul {
   @media @mobile {
     .row {
       width: 88%;
+
       &:not(:last-child) {
         margin-bottom: 1rem;
       }
+
       .sub-section {
         &.minheight {
           min-height: 24rem;
@@ -1021,6 +1083,7 @@ ul {
         .tecnology .col {
           flex-direction: row;
           align-items: center;
+
           div[role="progressbar"] {
             width: 61%;
           }
@@ -1031,6 +1094,7 @@ ul {
             img {
               width: 2rem;
             }
+
             span {
 
               display: none;
