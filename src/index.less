@@ -6,7 +6,7 @@
 
 
 @darkBlue: #022b3aff;
-@teal: #1f7a8cff;
+@mediumBlue: #1f7a8cff;
 @columbia-blue: #bfdbf7ff;
 @lavender-web: #e1e5f2ff;
 @white: #f5f5f5;
@@ -136,7 +136,7 @@
 
   &:hover {
     color: #ffffff;
-    background-color: @teal;
+    background-color: @mediumBlue;
   }
 }
 
@@ -189,7 +189,7 @@ section:not(.header, .footer, .burger-menu) {
   position: relative;
   margin: 8rem auto auto auto;
 
-  
+
   @media @mobile {
     height: calc(100vh - 12rem);
     margin: 6rem auto auto auto;
@@ -283,14 +283,18 @@ ul {
           }
 
           &:hover {
-            color: @teal;
+            color: @mediumBlue;
           }
         }
       }
     }
   }
 
-  @media @tabletH {}
+  @media (max-width: 1250px) {
+    .nav-desktop {
+      width: auto;
+    }
+  }
 
   @media @tabletV {
     justify-content: space-between;
@@ -411,7 +415,7 @@ ul {
   .nav-mobile {
     transform: translateZ(-10px);
 
-    background-color: @teal;
+    background-color: @mediumBlue;
     position: fixed;
     height: 100vh;
     width: 72vw;
@@ -516,7 +520,7 @@ ul {
   .rrss {
     img {
       width: 2.6rem;
-      margin-right: 3rem;
+      margin-right: 2.5rem;
       height: 100%
     }
   }
@@ -541,6 +545,12 @@ ul {
       font-size: 1.2rem;
       text-overflow: ellipsis;
       white-space: nowrap;
+    }
+    .rrss {
+      img {
+        width: 2rem;
+        margin-right: 1.5rem;
+      }
     }
   }
 }
@@ -911,26 +921,125 @@ ul {
 /*************************** SECTION SKILLS *****************************/
 
 .section-skills {
-  margin-top: 50rem !important;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-image: url('../public/svg/animatedShapeSkills.svg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  div[role="progressbar"] {
+    span:last-child {
+      color: @darkBlue;
+    }
+  }
 
-  .sub-section {  
-    width: 50%;
-    span {}
+  .row {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
 
-    .tecnology {
-      .title-tecnology {}
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
 
-      .bar {
-        
+    .sub-section {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      &.minheight {
+        min-height: 38rem;
       }
+
+      &.minheight2 {
+        //  min-height: 20.5rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+
+      .title {
+        .m-subtitle();
+        margin-bottom: 2rem
+      }
+
+      .tecnology {
+        .col {
+          margin-bottom: 1rem;
+
+          .title-tecnology {
+            margin-left: 2rem;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 5px;
+            
+
+            img {
+              width: 2.6rem;
+              margin-right: 1rem;
+
+            }
+            span {
+              .m-text();
+            }
+          }
+
+          .bar {}
+        }
+
+      }
+    }
+
+    .separacion {
+      width: 100%;
+      height: 1rem;
+      background-color: red;
     }
   }
 
   @media @tabletV {}
 
-  @media @mobile {}
+  @media @mobile {
+    .row {
+      width: 88%;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      .sub-section {
+        &.minheight {
+          min-height: 24rem;
+        }
+
+        &.minheight2 {}
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        .tecnology .col {
+          flex-direction: row;
+          align-items: center;
+          div[role="progressbar"] {
+            width: 61%;
+          }
+
+          .title-tecnology {
+            margin-left: 0;
+
+            img {
+              width: 2rem;
+            }
+            span {
+
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -986,7 +1095,7 @@ ul {
           font-weight: 600;
 
           /*  @darkBlue: #022b3aff;
-          @teal: #1f7a8cff;
+          @mediumBlue: #1f7a8cff;
           @columbia-blue: #bfdbf7ff;
           @lavender-web: #e1e5f2ff;
           @white: #f5f5f5; */
@@ -1002,7 +1111,7 @@ ul {
           border-bottom: 2px solid #1f7a8c52;
           .m-text();
           font-weight: 600;
-          color: @teal;
+          color: @mediumBlue;
 
           &:focus-visible {
             outline: none;
@@ -1021,7 +1130,7 @@ ul {
         input:-webkit-autofill:focus,
         input:-webkit-autofill:active {
           -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-          -webkit-text-fill-color: @teal  !important;
+          -webkit-text-fill-color: @mediumBlue  !important;
           transition: background-color 5000s ease-in-out 0s;
         }
       }

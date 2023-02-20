@@ -179,6 +179,11 @@ ul {
 .header .nav-desktop ul li a:hover {
   color: #1f7a8cff;
 }
+@media (max-width: 1250px) {
+  .header .nav-desktop {
+    width: auto;
+  }
+}
 @media (max-width: 769px) {
   .header {
     justify-content: space-between;
@@ -381,7 +386,7 @@ ul {
 }
 .footer .rrss img {
   width: 2.6rem;
-  margin-right: 3rem;
+  margin-right: 2.5rem;
   height: 100%;
 }
 .footer span {
@@ -407,6 +412,10 @@ ul {
     font-size: 1.2rem;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .footer .rrss img {
+    width: 2rem;
+    margin-right: 1.5rem;
   }
 }
 #mainshape {
@@ -741,12 +750,107 @@ ul {
 }
 /*************************** SECTION SKILLS *****************************/
 .section-skills {
-  margin-top: 50rem !important;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-image: url('../public/svg/animatedShapeSkills.svg');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.section-skills .sub-section {
+.section-skills div[role="progressbar"] span:last-child {
+  color: #022b3aff;
+}
+.section-skills .row {
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.section-skills .row:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.section-skills .row .sub-section {
+  display: flex;
+  flex-direction: column;
   width: 50%;
+}
+.section-skills .row .sub-section.minheight {
+  min-height: 38rem;
+}
+.section-skills .row .sub-section:not(:last-child) {
+  margin-right: 4rem;
+}
+.section-skills .row .sub-section .title {
+  font: 400 4rem/4.8rem "XanhMono", sans-serif;
+  letter-spacing: -0.1rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 769px) {
+  .section-skills .row .sub-section .title {
+    line-height: 4.5rem "XanhMono", sans-serif;
+  }
+}
+@media (max-width: 551px) {
+  .section-skills .row .sub-section .title {
+    font: 400 3rem/3.5rem "XanhMono", sans-serif;
+  }
+}
+.section-skills .row .sub-section .tecnology .col {
+  margin-bottom: 1rem;
+}
+.section-skills .row .sub-section .tecnology .col .title-tecnology {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.section-skills .row .sub-section .tecnology .col .title-tecnology img {
+  width: 2.6rem;
+  margin-right: 1rem;
+}
+.section-skills .row .sub-section .tecnology .col .title-tecnology span {
+  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+}
+@media (max-width: 551px) {
+  .section-skills .row .sub-section .tecnology .col .title-tecnology span {
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+  }
+}
+.section-skills .row .separacion {
+  width: 100%;
+  height: 1rem;
+  background-color: red;
+}
+@media (max-width: 551px) {
+  .section-skills .row {
+    width: 88%;
+  }
+  .section-skills .row:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .section-skills .row .sub-section.minheight {
+    min-height: 24rem;
+  }
+  .section-skills .row .sub-section:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .section-skills .row .sub-section .tecnology .col {
+    flex-direction: row;
+    align-items: center;
+  }
+  .section-skills .row .sub-section .tecnology .col div[role="progressbar"] {
+    width: 61%;
+  }
+  .section-skills .row .sub-section .tecnology .col .title-tecnology {
+    margin-left: 0;
+  }
+  .section-skills .row .sub-section .tecnology .col .title-tecnology img {
+    width: 2rem;
+  }
+  .section-skills .row .sub-section .tecnology .col .title-tecnology span {
+    display: none;
+  }
 }
 /*************************** SECTION CONTACTO *****************************/
 .section-contacto {
@@ -813,7 +917,7 @@ ul {
   color: #022b3aff;
   font-weight: 600;
   /*  @darkBlue: #022b3aff;
-          @teal: #1f7a8cff;
+          @mediumBlue: #1f7a8cff;
           @columbia-blue: #bfdbf7ff;
           @lavender-web: #e1e5f2ff;
           @white: #f5f5f5; */
