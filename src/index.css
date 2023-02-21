@@ -583,6 +583,31 @@ ul {
     max-width: 16rem;
   }
 }
+/*************************** SECTION ABOUT ME *****************************/
+.section-aboutme .row .description .title {
+  font: 400 8rem/8rem "XanhMonoTitle", sans-serif;
+  letter-spacing: -0.1rem;
+  font-size: 4rem;
+}
+@media (max-width: 1025px) {
+  .section-aboutme .row .description .title {
+    font: 400 5rem/5.2rem "XanhMonoTitle", sans-serif;
+  }
+}
+@media (max-width: 551px) {
+  .section-aboutme .row .description .title {
+    font: 400 4rem/4.2rem "XanhMonoTitle", sans-serif;
+  }
+}
+.section-aboutme .row .description .text {
+  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+}
+@media (max-width: 551px) {
+  .section-aboutme .row .description .text {
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+  }
+}
 /*************************** SECTION PORTFOLIO *****************************/
 .section-listproyectos {
   display: flex;
@@ -1309,4 +1334,7 @@ ul {
     animation-timing-function: ease-out;
     opacity: 1;
   }
+}
+.paging-item.active button {
+  fill: #022b3aff !important;
 }

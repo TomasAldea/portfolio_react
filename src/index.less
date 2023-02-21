@@ -734,7 +734,21 @@ ul {
   }
 }
 
+/*************************** SECTION ABOUT ME *****************************/
 
+.section-aboutme {
+  .row {
+    .description {
+      .title {
+        .m-title();
+        font-size: 4rem;
+      }
+      .text {
+        .m-text();
+      }
+    }
+  }
+}
 
 /*************************** SECTION PORTFOLIO *****************************/
 
@@ -1536,5 +1550,11 @@ ul {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
     opacity: 1;
+  }
+}
+
+.paging-item.active {
+  button {
+    fill: @darkBlue !important;
   }
 }

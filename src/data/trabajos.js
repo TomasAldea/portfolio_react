@@ -1,5 +1,14 @@
 export const trabajos = [
     {
+        'id': 'stayunique',
+        'nombre': 'Stay unique',
+        'url': 'https://www.stay-u-nique.com/es/',
+        'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
+        'categorias': 'frontend',
+        'descripcion': 'Aplicacion tipo Airbnb con API propia, buscador, contratacion, etc...'
+
+    },
+    {
         'id': 'sateliot',
         'nombre': 'Sateliot',
         'url': 'https://sateliot.space/en/',
@@ -8,39 +17,30 @@ export const trabajos = [
         'descripcion': 'Web internacional multidioma con efectos de css controlados por scroll'
     },
     {
-        'id': 'stayunique',
-        'nombre': 'Stay unique',
-        'url': 'https://www.stay-u-nique.com/es/',
+        'id': 'padierna',
+        'nombre': 'Villa Padierna',
+        'url': 'https://www.villapadierna.es/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        'descripcion': 'Web de gran hotel con seguimiento de torneos, inscripciónes, blog, pequeño ecommerce'
 
     },
     {
-        'id': 'proyecto3',
-        'nombre': 'Proyecto 3',
-        'url': 'https://www.google.com',
+        'id': 'valentin',
+        'nombre': 'Valentin Imperial',
+        'url': 'https://www.valentinmaya.com/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus felis vitae urna sodales, quis congue nulla convallis. Ut non justo quis enim aliquam varius at sit amet justo. Vestibulum ultrices aliquet odio, sed convallis neque vulputate sit amet.'
+        'descripcion': 'Web de hotel en riviera maya con reserva online.'
 
     },
     {
-        'id': 'proyecto4',
-        'nombre': 'Proyecto 4',
-        'url': 'https://www.google.com',
+        'id': '7portes',
+        'nombre': '7 Portes',
+        'url': 'https://7portes.com/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus felis vitae urna sodales, quis congue nulla convallis. Ut non justo quis enim aliquam varius at sit amet justo. Vestibulum ultrices aliquet odio, sed convallis neque vulputate sit amet.'
+        'descripcion': 'Web de famoso restaurante en Barcelona con pequeño ecommerce online'
 
     },
-    {
-        'id': '18157057',
-        'nombre': 'Proyecto 4',
-        'url': 'https://www.google.com',
-        'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
-        'categorias': 'frontend',
-        'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempus felis vitae urna sodales, quis congue nulla convallis. Ut non justo quis enim aliquam varius at sit amet justo. Vestibulum ultrices aliquet odio, sed convallis neque vulputate sit amet.'
-
-    }
 ]
