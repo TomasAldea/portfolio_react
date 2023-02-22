@@ -13,7 +13,7 @@ export const Skills = () => {
 
   return (
     <section className="section-skills col">
-      <div className="row">
+      <div className="row" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div className="sub-section frontend">
           <span className="title"  data-aos-duration="1500" data-aos="zoom-in">Front-end</span>
           <div className="tecnology">
@@ -142,7 +142,7 @@ export const Skills = () => {
         </div>
       </div>
 
-      <div className="row">
+      <div className="row" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div className="sub-section bbdd">
           <span className="title"  data-aos-duration="1500" data-aos="zoom-in">Database</span>
           <div className="tecnology">

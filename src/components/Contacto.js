@@ -53,8 +53,8 @@ export const Contacto = () => {
 
   return (
     <section className="section-contacto">
-      <div className={`section-container ${sendSuccess ? "hide" : ""}`}>
-        <div className="title" data-aos-delay="500" data-aos-duration="500" data-aos="fade-down">Contacto</div>
+      <div className={`section-container ${sendSuccess ? "hide" : ""}`} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+        <div className="title" data-aos-delay="500" data-aos-duration="1000" data-aos="fade-down">Contacto</div>
         <div className="subtitle">
           Crees que puedo encajar en algún proyecto en mente? 
           tienes alguna duda sobre mis capacidades o motivaciones?
@@ -62,7 +62,7 @@ export const Contacto = () => {
         </div>
 
         <form className="form-contacto col" onSubmit={onSubmit}>
-          <div className="input-group" data-aos-delay="500" data-aos-duration="500" data-aos="zoom-in">
+          <div className="input-group" data-aos-delay="500" data-aos-duration="1000" data-aos="zoom-in">
             <label htmlFor="from_name">Nombre
               <FontAwesomeIcon icon={faUser} /> 
             </label>
@@ -76,7 +76,7 @@ export const Contacto = () => {
               value={toSend.from_name}
             />
           </div>
-          <div className="input-group" data-aos-delay="500" data-aos-duration="500" data-aos="zoom-in">
+          <div className="input-group" data-aos-delay="500" data-aos-duration="1000" data-aos="zoom-in">
             <label htmlFor="reply_to">Email
               <FontAwesomeIcon icon={faEnvelope} /> 
             </label>
@@ -90,7 +90,7 @@ export const Contacto = () => {
               value={toSend.reply_to}
             />
           </div>
-          <div className="input-group" data-aos-delay="500" data-aos-duration="500" data-aos="zoom-in">
+          <div className="input-group" data-aos-delay="500" data-aos-duration="1000" data-aos="zoom-in">
             <label htmlFor="message">¿Cual es el motivo de contacto?
             <FontAwesomeIcon icon={faQuestionCircle} /> 
             </label>

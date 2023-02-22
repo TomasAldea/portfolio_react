@@ -4,12 +4,19 @@ import { ProviderContext } from '../context/ProviderContext';
 export const MouseTrack = () => {
     const {setOpenMenu,openMenu} =  useContext(ProviderContext);
 
+    var isPortfolio = document.querySelector(".section-listproyectos");
+
     let interval = 0;
     let timer = 0;
 
     let mouseX = 0
     let mouseY = 0
 
+    const openMenuTouch = () => {
+        console.log('entra function');
+        interval++;
+        setOpenMenu(true);
+    }
 
     onmousemove = (event) => {
         mouseX = event.clientX;
@@ -34,12 +41,9 @@ export const MouseTrack = () => {
                 }, 2500);
             }
         };
-    } else {
-        window.addEventListener('touchmove', e => {
-            interval++;
-            setOpenMenu(true);
-        })
-    }
+    } else if (window.innerWidth < 769) {
+        window.addEventListener('touchmove', openMenuTouch, false);
+    } 
 
     return (
         <>
