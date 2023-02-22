@@ -19,7 +19,7 @@ export const AboutMe = () => {
               hace unos años, y después de media vida como profesional de la hosteleria,
               decidí hacer de mi pasión y mi hobbie, mi profesión.<br></br>
               <br></br>
-              En la programación descubrí encontré una forma de crecimiento personal continuo.
+              En la programación encontré una forma de crecimiento personal continuo.
             </div>
           </div>
           <div className="photo">
