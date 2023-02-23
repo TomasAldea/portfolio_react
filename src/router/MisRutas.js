@@ -7,7 +7,7 @@ import { Contacto } from '../components/Contacto'
 import { Skills } from '../components/Skills'
 import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
-import { DetalleProyecto } from '../components/DetalleProyecto'
+import { Page404 } from '../components/Page404'
 
 export const MisRutas = () => {
   return (
@@ -23,8 +23,7 @@ export const MisRutas = () => {
             <Route path='/skills' element={<Skills/>}/>
             <Route path='/aboutme' element={<AboutMe/>}/>
             <Route path='/contacto' element={<Contacto/>}/>
-            <Route path='/proyecto/:id' element={<DetalleProyecto/>}/>
-            <Route path='*'element={<h1 className='heading'>Error 404</h1>}/>
+            <Route path='*'element={<Page404/>}/>
         </Routes>
 
         {/* footer */}

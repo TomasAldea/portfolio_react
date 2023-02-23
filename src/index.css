@@ -1358,6 +1358,87 @@ ul {
     }
   }
 }
+/*************************** SECTION 404 *****************************/
+.section-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-404 .row {
+  width: calc(100% - 6%);
+  align-items: center;
+}
+.section-404 .row .img-container {
+  background-image: url('../public/images/404image.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 86rem;
+}
+.section-404 .row .text-container {
+  width: 34rem;
+  height: 24rem;
+  margin-left: -14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section-404 .row .text-container .title {
+  font: 400 4rem/4.8rem "XanhMono", sans-serif;
+  letter-spacing: -0.1rem;
+}
+@media (max-width: 769px) {
+  .section-404 .row .text-container .title {
+    line-height: 4.5rem "XanhMono", sans-serif;
+  }
+}
+@media (max-width: 551px) {
+  .section-404 .row .text-container .title {
+    font: 400 3rem/3.5rem "XanhMono", sans-serif;
+  }
+}
+.section-404 .row .text-container .subtitle {
+  font: 400 4rem/4.8rem "XanhMono", sans-serif;
+  letter-spacing: -0.1rem;
+}
+@media (max-width: 769px) {
+  .section-404 .row .text-container .subtitle {
+    line-height: 4.5rem "XanhMono", sans-serif;
+  }
+}
+@media (max-width: 551px) {
+  .section-404 .row .text-container .subtitle {
+    font: 400 3rem/3.5rem "XanhMono", sans-serif;
+  }
+}
+.section-404 .row .text-container .button1 {
+  text-align: center;
+}
+@media (max-width: 1025px) {
+  .section-404 .row .text-container .title,
+  .section-404 .row .text-container .subtitle {
+    font-size: 3rem;
+  }
+  .section-404 .row .text-container .button1 {
+    font-size: 2.3rem;
+    width: fit-content;
+  }
+}
+@media (max-width: 1117px) {
+  .section-404 .row {
+    justify-content: center;
+  }
+  .section-404 .row .img-container {
+    display: none;
+  }
+  .section-404 .row .text-container {
+    align-items: center;
+    width: 53rem;
+    margin-left: 0;
+    text-align: center;
+  }
+}
 /**
  * ----------------------------------------
  * animation bounce-top
