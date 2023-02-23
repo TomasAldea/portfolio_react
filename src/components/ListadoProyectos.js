@@ -1,9 +1,11 @@
-import Carousel from 'nuka-carousel/lib/carousel.js';
 import React, { useState,useEffect, useContext } from "react";
 import { Link } from 'react-router-dom';
 import { trabajos } from '../data/trabajos.js'
 import { ProviderContext } from '../context/ProviderContext';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from 'react-responsive-carousel';
 
+//TODO eliminar nuka paquete
 
 export const ListadoProyectos = () => {
   const {setOpenMenu} =  useContext(ProviderContext);

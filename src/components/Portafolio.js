@@ -15,15 +15,11 @@ export const Portafolio = () => {
     setOpenMenu(false);
   }, [])
 
-  // reset de aos despues del slide
 
-  const beforeSlide = (e) => {
-    console.log('entra');
-  }
   return (
     <section className='section-listproyectos'>
       <div className='carrousel-container' data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-        <Carousel beforeSlide={() => {console.log('hola');}} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+        <Carousel autoplayInterval={2500} autoplay={true} wrapAround={true} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
           {
             trabajos.map(function (trabajo, i) {
               delay = 0

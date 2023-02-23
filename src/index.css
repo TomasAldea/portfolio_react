@@ -37,11 +37,9 @@
   text-transform: uppercase;
   padding: 1rem 3rem;
   border-radius: 6px;
-  cursor: url("../public/svg/icons8-react-native-dark.svg") 100 100, pointer;
-  /* 👇 PNG fallback */
-  cursor: -webkit-image-set(url("../public/svg/icons8-react-native-dark.svg") 2x) 32 32, pointer;
   transition: all 0.3s ease;
   border: none;
+  cursor: pointer;
 }
 @media (max-width: 551px) {
   .button1 {
@@ -57,10 +55,8 @@ html {
   overflow: hidden;
   font-size: 62.5%;
   margin: 0;
-  background-color: #bfdbf7ff;
-  cursor: url("../public/svg/icons8-react-native-dark.svg") 100 100, pointer;
-  /* 👇 PNG fallback */
-  cursor: -webkit-image-set(url("../public/svg/icons8-react-native-dark.svg") 2x) 32 32, pointer;
+  /* background-color: @columbia-blue; */
+  background-color: white;
 }
 html body {
   font: 14px "";
@@ -72,14 +68,9 @@ html body {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
 }
-@media (min-width: 1921px) and (max-height: 600px) {
+@media (min-width: 551px) and (max-height: 800px) {
   html {
-    font-size: 55.5%;
-  }
-}
-@media (min-width: 1280px) and (max-height: 800px) {
-  html {
-    font-size: 55.5%;
+    font-size: 50.5%;
   }
 }
 section {
@@ -123,9 +114,6 @@ ul {
   width: 100%;
   top: 0;
   box-shadow: 0px 1px 20px 3px #001821;
-  cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
-  /* 👇 PNG fallback */
-  cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
 }
 .header .mouse-follower-header {
   content: " ";
@@ -169,8 +157,6 @@ ul {
   text-transform: capitalize;
   color: #e1e5f2ff;
   transition: all 0.2s ease;
-  cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
-  cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
   padding: 2rem;
 }
 @media (max-width: 551px) {
@@ -372,8 +358,6 @@ ul {
   background-color: #022b3aff;
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
-  cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
 }
 @media (max-width: 551px) {
   .footer {
@@ -1089,7 +1073,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 90rem;
+  max-width: 80rem;
 }
 .section-contacto .section-container.hide {
   transition: all 0.5s ease-out;
@@ -1309,8 +1293,6 @@ ul {
   opacity: 1;
 }
 #loading-page {
-  cursor: url("../public/svg/icons8-react-native.svg") 100 100, pointer;
-  cursor: -webkit-image-set(url("../public/svg/icons8-react-native.svg") 2x) 32 32, pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
