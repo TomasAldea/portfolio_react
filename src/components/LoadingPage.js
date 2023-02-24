@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react'
 import { ProviderContext } from '../context/ProviderContext';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 
 export const LoadingPage = () => {
@@ -35,7 +36,7 @@ export const LoadingPage = () => {
       // TODO problema con enlace a home (no esta dentro de router)
     return (
         <>
-            <a href="http://localhost:3000/inicio"><img id="load-gif" className={`${(firstUserLoad) && 'off'}`} src={(logo) ? 'icons/main-logo.png' : 'loading-logo-vid/main.gif' } /></a>
+            <Link to="/"><img id="load-gif" className={`${(firstUserLoad) && 'off'}`} src={(logo) ? 'icons/main-logo.png' : 'loading-logo-vid/main.gif' } /></Link>
             <div id="loading-page" className={` ${(firstUserLoad) && 'off'}`}>
             </div>
         </>

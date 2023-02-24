@@ -17,8 +17,7 @@ export const MisRutas = () => {
 
         {/* contenido central */}
         <Routes>
-            <Route path='/' element={<Navigate to="/inicio"/>}/>
-            <Route path='/inicio' element={<Inicio/>}/>
+            <Route path='/' element={<Inicio/>}/>
             <Route path='/portafolio' element={<Portafolio/>}/>
             <Route path='/skills' element={<Skills/>}/>
             <Route path='/aboutme' element={<AboutMe/>}/>
