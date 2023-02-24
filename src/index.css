@@ -31,9 +31,10 @@
 .button1 {
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  font-weight: 700 !important;
   font-size: 3rem;
-  background-color: #022b3aff;
-  color: #e1e5f2ff;
+  background-color: white;
+  color: #022b3aff;
   text-transform: uppercase;
   padding: 1rem 3rem;
   border-radius: 6px;
@@ -55,8 +56,7 @@ html {
   overflow: hidden;
   font-size: 62.5%;
   margin: 0;
-  /* background-color: @columbia-blue; */
-  background-color: white;
+  background-color: #022b3aff;
 }
 html body {
   font: 14px "";
@@ -74,7 +74,7 @@ html body {
   }
 }
 section {
-  color: #022b3aff;
+  color: white;
   line-height: 1.2;
 }
 /* #root {
@@ -82,14 +82,15 @@ section {
   .basic-bg();
 } */
 section:not(.header, .footer, .burger-menu) {
-  height: calc(100vh - 14rem);
+  /* height: calc(100vh - 14rem); */
+  height: 100vh;
   position: relative;
-  margin: 8rem auto auto auto;
+  /* margin: 8rem auto auto auto; */
 }
 @media (max-width: 551px) {
   section:not(.header, .footer, .burger-menu) {
-    height: calc(100vh - 12rem);
-    margin: 6rem auto auto auto;
+    /* height: calc(100vh - 12rem);
+    margin: 6rem auto auto auto; */
   }
 }
 a {
@@ -106,14 +107,14 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #022b3aff;
+  background-color: transparent;
   padding: 4rem 3rem;
   height: 6rem;
   z-index: 2;
   position: fixed;
   width: 100%;
   top: 0;
-  box-shadow: 0px 1px 20px 3px #001821;
+  /* box-shadow: 0px 1px 20px 3px #001821; */
 }
 .header .mouse-follower-header {
   content: " ";
@@ -146,23 +147,17 @@ ul {
 .header .nav-desktop ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: end;
 }
 .header .nav-desktop ul li::marker {
   display: none;
 }
 .header .nav-desktop ul li a {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  font: 600 1.7rem/3rem "XanhMonoTextos", sans-serif;
   text-transform: capitalize;
   color: #e1e5f2ff;
   transition: all 0.2s ease;
   padding: 2rem;
-}
-@media (max-width: 551px) {
-  .header .nav-desktop ul li a {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
-  }
 }
 .header .nav-desktop ul li a.active {
   color: #64ffda;
@@ -276,6 +271,7 @@ ul {
 }
 .burger-menu .nav-mobile {
   transform: translateZ(-10px);
+  top: -16px;
   background-color: #1f7a8cff;
   position: fixed;
   height: 100vh;
@@ -319,7 +315,7 @@ ul {
 .burger-menu .nav-mobile ul li a {
   text-transform: capitalize;
   margin-top: 1rem;
-  color: #022b3aff;
+  color: white;
   transition: all 0.2s ease;
 }
 .burger-menu .nav-mobile ul li a.active {
@@ -344,7 +340,7 @@ ul {
 .footer {
   box-sizing: border-box;
   padding: 3rem 5rem 3rem 3rem;
-  box-shadow: -3px 0px 20px 3px #001821;
+  /* box-shadow: -3px 0px 20px 3px #001821; */
   width: 100%;
   position: fixed;
   margin: 0 auto;
@@ -355,7 +351,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   color: #e1e5f2ff;
-  background-color: #022b3aff;
+  background-color: transparent;
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
 }
@@ -458,7 +454,7 @@ ul {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #022b3aff, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #022b3aff);
+  background: linear-gradient(0deg, #64ffda, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #64ffda);
   --_g: #0000 90deg, #022b3aff 0;
   --_p: var(--w) var(--w) no-repeat;
   --mask: conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
@@ -476,7 +472,7 @@ ul {
   padding: 3rem 0;
 }
 .section-inicio .container .col .title-container .title {
-  font: 400 8rem/8rem "XanhMonoTitle", sans-serif;
+  font: 500 8rem/8rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
 }
 @media (max-width: 1025px) {
@@ -518,7 +514,7 @@ ul {
 .section-inicio .container .col .personal-info .row a {
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  color: #022b3aff;
+  color: white;
   opacity: 0.9;
 }
 @media (max-width: 551px) {
@@ -595,7 +591,7 @@ ul {
   padding: 7rem 7rem 7rem 0;
 }
 .section-aboutme .row .description .title {
-  font: 400 8rem/8rem "XanhMonoTitle", sans-serif;
+  font: 500 8rem/8rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
   font-size: 4rem;
 }
@@ -652,7 +648,7 @@ ul {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #022b3aff, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #022b3aff);
+  background: linear-gradient(0deg, #64ffda, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #64ffda);
   --_g: #0000 90deg, #022b3aff 0;
   --_p: var(--w) var(--w) no-repeat;
   --mask: conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
@@ -725,8 +721,7 @@ ul {
   max-width: 138rem;
 }
 .section-listproyectos .carrousel-container .slider-container .slider-control-bottomcenter {
-  position: absolute;
-  bottom: -5rem;
+  display: none;
 }
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card {
   height: 100%;
@@ -757,7 +752,7 @@ ul {
   justify-content: space-evenly;
 }
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .title {
-  font: 400 8rem/8rem "XanhMonoTitle", sans-serif;
+  font: 500 8rem/8rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
   font-size: 5rem;
 }
@@ -793,7 +788,7 @@ ul {
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .url {
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  color: #022b3aff;
+  color: white;
   font-weight: 700;
 }
 @media (max-width: 551px) {
@@ -804,6 +799,7 @@ ul {
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .button1 {
   font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  width: fit-content;
   margin-top: 1rem;
 }
 @media (max-width: 551px) {
@@ -819,7 +815,7 @@ ul {
   height: fit-content;
 }
 .section-listproyectos .carrousel-container .slider-container .slider-control-centerright button {
-  background-image: url('../public/icons/arrow-simple.svg') !important;
+  background-image: url('../public/icons/arrow-simple-blue.svg') !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   height: 6rem;
@@ -837,7 +833,7 @@ ul {
   height: fit-content;
 }
 .section-listproyectos .carrousel-container .slider-container .slider-control-centerleft button {
-  background-image: url('../public/icons/arrow-simple.svg') !important;
+  background-image: url('../public/icons/arrow-simple-blue.svg') !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   height: 6rem;
@@ -891,9 +887,6 @@ ul {
     left: 5rem;
     top: 36rem;
   }
-  .section-listproyectos .carrousel-container .slider-container .slider-control-bottomcenter {
-    display: none;
-  }
 }
 @media (max-width: 551px) {
   .section-listproyectos .carrousel-container .slider-container .slider-control-centerright {
@@ -935,7 +928,7 @@ ul {
   }
   .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-img {
     margin-bottom: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     width: 90%;
   }
 }
@@ -950,7 +943,7 @@ ul {
   background-repeat: no-repeat;
 }
 .section-skills div[role="progressbar"] span:last-child {
-  color: #022b3aff;
+  color: white;
 }
 .section-skills .row {
   width: 80%;
@@ -1068,6 +1061,7 @@ ul {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: auto;
 }
 .section-contacto .section-container {
   display: flex;
@@ -1081,7 +1075,7 @@ ul {
   display: none;
 }
 .section-contacto .section-container .title {
-  font: 400 8rem/8rem "XanhMonoTitle", sans-serif;
+  font: 500 8rem/8rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
 }
 @media (max-width: 1025px) {
@@ -1119,7 +1113,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: #022b3aff;
+  color: white;
   font-weight: 600;
   /*  @darkBlue: #022b3aff;
           @mediumBlue: #1f7a8cff;
@@ -1157,7 +1151,7 @@ ul {
 }
 .section-contacto .section-container .form-contacto .input-group input::placeholder,
 .section-contacto .section-container .form-contacto .input-group textarea::placeholder {
-  color: #022b3aff;
+  color: white;
   opacity: 0.8;
   font-size: 1.3rem;
 }
@@ -1298,7 +1292,7 @@ ul {
   align-items: center;
   justify-content: center;
   position: fixed;
-  background-color: #022b3aff;
+  background-color: white;
   height: 100vh;
   width: 100vw;
   z-index: 9;

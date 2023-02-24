@@ -16,7 +16,7 @@
 
 
 /* Gradient */
-@gradient-top: linear-gradient(0deg, #022b3aff, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #022b3aff);
+@gradient-top: linear-gradient(0deg, @electricBlue, #1f7a8cff, #bfdbf7ff, #1f7a8cff, @electricBlue);
 @gradient-right: linear-gradient(90deg, #022b3aff, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #022b3aff);
 @gradient-bottom: linear-gradient(180deg, #022b3aff, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #022b3aff);
 @gradient-left: linear-gradient(270deg, #022b3aff, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #022b3aff);
@@ -85,7 +85,7 @@
 //? Fonts
 
 .m-title() {
-  font: 400 8rem/8rem @fontTitle;
+  font: 500 8rem/8rem @fontTitle;
   letter-spacing: -0.1rem;
 
   @media @tabletH {
@@ -121,9 +121,10 @@
 
 .button1 {
   .m-text();
+  font-weight: 700 !important;
   font-size: 3rem;
-  background-color: @darkBlue;
-  color: @lavender-web;
+  background-color: white;
+  color: @darkBlue;
   text-transform: uppercase;
   padding: 1rem 3rem;
   border-radius: 6px;
@@ -142,8 +143,7 @@ html {
   overflow: hidden;
   font-size: 62.5%;
   margin: 0;
-  /* background-color: @columbia-blue; */
-  background-color: white;
+  background-color: @darkBlue;
   body {
     font: 14px "";
     width: 100%;
@@ -166,7 +166,7 @@ html {
 
 
 section {
-  color: @darkBlue;
+  color: white;
   line-height: 1.2;
 }
 
@@ -177,14 +177,15 @@ section {
 
 section:not(.header, .footer, .burger-menu) {
 
-  height: calc(100vh - 14rem);
+  /* height: calc(100vh - 14rem); */
+  height: 100vh;
   position: relative;
-  margin: 8rem auto auto auto;
+  /* margin: 8rem auto auto auto; */
 
 
   @media @mobile {
-    height: calc(100vh - 12rem);
-    margin: 6rem auto auto auto;
+    /* height: calc(100vh - 12rem);
+    margin: 6rem auto auto auto; */
   }
 }
 
@@ -205,14 +206,14 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: @darkBlue;
+  background-color: transparent;
   padding: 4rem 3rem;
   height: 6rem;
   z-index: 2;
   position: fixed;
   width: 100%;
   top: 0;
-  box-shadow: 0px 1px 20px 3px #001821;
+  /* box-shadow: 0px 1px 20px 3px #001821; */
 
   .mouse-follower-header {
     content: " ";
@@ -251,7 +252,7 @@ ul {
     ul {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: end;
 
       li {
         &::marker {
@@ -259,7 +260,7 @@ ul {
         }
 
         a {
-          .m-text();
+          font: 600 1.7rem/3rem "XanhMonoTextos", sans-serif;
           text-transform: capitalize;
           color: @lavender-web;
           transition: all 0.2s ease;
@@ -401,7 +402,7 @@ ul {
 
   .nav-mobile {
     transform: translateZ(-10px);
-
+    top: -16px;
     background-color: @mediumBlue;
     position: fixed;
     height: 100vh;
@@ -444,7 +445,7 @@ ul {
 
           text-transform: capitalize;
           margin-top: 1rem;
-          color: @darkBlue;
+          color: white;
           transition: all 0.2s ease;
 
           &.active {
@@ -477,7 +478,7 @@ ul {
 .footer {
   box-sizing: border-box;
   padding: 3rem 5rem 3rem 3rem;
-  box-shadow: -3px 0px 20px 3px #001821;
+  /* box-shadow: -3px 0px 20px 3px #001821; */
   width: 100%;
   position: fixed;
   margin: 0 auto;
@@ -487,9 +488,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: @darkBlue;
+  background-color: transparent;
   color: @lavender-web;
-  background-color: #022b3aff;
+  background-color: transparent;
   .m-text();
 
   .mouse-follower-footer {
@@ -641,7 +642,7 @@ ul {
           p,
           a {
             .m-text();
-            color: @darkBlue;
+            color: white;
             opacity: 0.9;
 
             &.strong {
@@ -878,8 +879,7 @@ ul {
       max-width: 138rem;
 
       .slider-control-bottomcenter {
-        position: absolute;
-        bottom: -5rem;
+       display: none;
       }
 
       .slider-frame {
@@ -940,13 +940,13 @@ ul {
 
                 .url {
                   .m-text();
-                  color: @darkBlue;
+                  color: white;
                   font-weight: 700;
                 }
 
                 .button1 {
                   .m-text();
-
+                  width: fit-content;
                   margin-top: 1rem;
                 }
               }
@@ -963,7 +963,7 @@ ul {
         height: fit-content;
 
         button {
-          background-image: url('../public/icons/arrow-simple.svg') !important;
+          background-image: url('../public/icons/arrow-simple-blue.svg') !important;
           background-repeat: no-repeat !important;
           background-position: center !important;
           height: 6rem;
@@ -983,7 +983,7 @@ ul {
         height: fit-content;
 
         button {
-          background-image: url('../public/icons/arrow-simple.svg') !important;
+          background-image: url('../public/icons/arrow-simple-blue.svg') !important;
           background-repeat: no-repeat !important;
           background-position: center !important;
           height: 6rem;
@@ -991,7 +991,9 @@ ul {
           background-color: #022b3aff !important;
           color: transparent !important;
           -webkit-tap-highlight-color: transparent;
+          &:hover {
 
+          }
         }
       }
     }
@@ -1051,10 +1053,6 @@ ul {
           left: 5rem;
           top: 36rem;
         }
-
-        .slider-control-bottomcenter {
-          display: none;
-        }
       }
     }
   }
@@ -1113,7 +1111,7 @@ ul {
 
           .card-img {
             margin-bottom: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 0;
            
             width: 90%;
           }
@@ -1137,7 +1135,7 @@ ul {
 
   div[role="progressbar"] {
     span:last-child {
-      color: @darkBlue;
+      color: white;
     }
   }
 
@@ -1278,7 +1276,7 @@ ul {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-
+  margin: auto;
   .section-container {
     display: flex;
     flex-direction: column;
@@ -1314,7 +1312,7 @@ ul {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          color: @darkBlue;
+          color: white;
           font-weight: 600;
 
           /*  @darkBlue: #022b3aff;
@@ -1341,7 +1339,7 @@ ul {
           }
 
           &::placeholder {
-            color: @darkBlue;
+            color: white;
             opacity: 0.8;
             font-size: 1.3rem;
 
@@ -1498,7 +1496,7 @@ ul {
   align-items: center;
   justify-content: center;
   position: fixed;
-  background-color: @darkBlue;
+  background-color: white;
   height: 100vh;
   width: 100vw;
   z-index: 9;

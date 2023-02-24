@@ -3,7 +3,6 @@ import Carousel from 'nuka-carousel/lib/carousel.js';
 import { trabajos } from '../data/trabajos.js'
 import { Link } from 'react-router-dom';
 import { ProviderContext } from '../context/ProviderContext';
-// TODO video mocka
 
 export const Portafolio = () => {
   const {setOpenMenu} =  useContext(ProviderContext);
@@ -18,7 +17,7 @@ export const Portafolio = () => {
   return (
     <section className='section-listproyectos'>
       <div className='carrousel-container' data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-        <Carousel autoplayInterval={2500} autoplay={true} wrapAround={true} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+        <Carousel autoplayInterval={3500} autoplay={true} wrapAround={true} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
           {
             trabajos.map(function (trabajo, i) {
               delay = 0
