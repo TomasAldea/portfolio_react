@@ -85,7 +85,7 @@
 //? Fonts
 
 .m-title() {
-  font: 500 8rem/8rem @fontTitle;
+  font: 500 6rem/6rem @fontTitle;
   letter-spacing: -0.1rem;
 
   @media @tabletH {
@@ -397,7 +397,7 @@ ul {
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     background-color: #0000003b;
-
+    top: -16px;
     &.active {
       display: block;
     }
@@ -574,9 +574,9 @@ ul {
   }
 }
 
-/*************************** SECTION INICIO *****************************/
+/*************************** SECTION ABOUTME *****************************/
 
-.section-inicio {
+.section-aboutme {
 
   display: flex;
   align-items: center;
@@ -587,8 +587,26 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
 
+  .btn-container {
+    display: none;
+    margin-top: 4.5rem;
 
+    .button1 {
+      svg {
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        svg {
+          -webkit-animation: bounce-top 0.9s both;
+          animation: bounce-top 0.9s both;
+        }
+      }
+    }
+  }
   .container {
+    width: calc(100% - 30%);
+
     &::before {
       content: "";
       position: absolute;
@@ -615,69 +633,37 @@ ul {
     /* space for the border */
     position:relative;
 
-
-    .col {
-      max-width: 53rem;
-
-      .title-container {
-        border-bottom: 2px solid #1f7a8c52;
-        padding: 3rem 0;
-
-        .title {
-          .m-title();
-        }
-
-        .pre-title {
-          .m-subtitle();
-        }
+    justify-content: space-between;
+    .section:first-child {
+      border-bottom: 2px solid #1f7a8c52;
+      margin-bottom: 2rem;
+    } 
+    .section:last-child {
+     
+    }
+    .section {
+      .title {
+        margin-bottom: 1.5rem;
+        .m-subtitle();
       }
+      .work {
+        .m-text();
+        font-weight: 500;
+        font-size: 1.5rem;
+        .col {
+          .info {
+            justify-content: space-between;
+            line-height: 1.3;
+            font-size: 1.8rem;
+            span {
 
-      .personal-info {
-        max-width: 53rem;
-
-        .oneline {
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-
-        .row {
-          justify-content: space-between;
-          align-items: center;
-
-          p,
-          a {
-            .m-text();
-            color: white;
-            opacity: 0.9;
-
-            &.strong {
-              font-weight: 600;
             }
-
-            &:last-child {
-              opacity: 0.8;
-            }
-
           }
-
-          a:hover {
-            opacity: 1;
-            font-weight: 600;
-          }
-        }
-
-        .btn-container {
-          margin-top: 4.5rem;
-
-          .button1 {
-            svg {
-              margin-left: 1rem;
-            }
-
-            &:hover {
-              svg {
-                -webkit-animation: bounce-top 0.9s both;
-                animation: bounce-top 0.9s both;
+          .description {
+            list-style-type: disclosure-closed;
+            li {
+              &::marker {
+                color: @electricBlue;
               }
             }
           }
@@ -705,32 +691,14 @@ ul {
       .col {
         max-width: 27rem;
 
-        .personal-info {
-          .row {
-
-            a,
-            p {
-              margin: 1rem 0;
-            }
-
-            p:last-child {
-              text-align: end;
-              max-width: 16rem;
-            }
-          }
-        }
-
-        .title-container {
-          .pre-title {}
-        }
       }
     }
   }
 }
 
-/*************************** SECTION ABOUT ME *****************************/
+/*************************** SECTION INICIO *****************************/
 
-.section-aboutme {
+.section-inicio {
   display: flex;
   place-content: center;
   align-items: center;
@@ -1357,7 +1325,7 @@ ul {
     flex-direction: column;
     align-items: center;
     max-width: 80rem;
-
+    width: calc(100% - 41%);
     &.hide {
       transition: all 0.5s ease-out;
       opacity: 0;
@@ -1366,14 +1334,62 @@ ul {
 
     .title {
       .m-title();
+      font-size: 5rem;
     }
 
-    .subtitle {
-      .m-text();
-      margin: 4rem 1rem 4rem 1rem;
-      text-align: center;
-    }
+    .personal-info {
+      margin: 2rem 0rem;
+      width: 72%;
+      padding: 1rem 4rem;
+      position: relative;
+      --b: 2px;
+      --w: 17rem;
 
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: @gradient-top;
+        --_g: #0000 90deg, #022b3aff 0;
+        --_p: var(--w) var(--w) no-repeat;
+        --mask:
+          conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+          /* conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p), */
+          /* conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p), */
+          conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+      }  
+  
+      .oneline {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .row {
+        justify-content: space-between;
+        align-items: center;
+
+        p,
+        a {
+          .m-text();
+          font-weight: 400;
+          line-height: 1rem;
+          color: white;
+          opacity: 0.9;
+          &:last-child {
+            opacity: 0.8;
+          }
+
+        }
+
+        a:hover {
+          opacity: 1;
+          font-weight: 600;
+        }
+      }
+
+    }
     .form-contacto {
       width: 100%;
 
@@ -1485,18 +1501,28 @@ ul {
 
   }
 
-  @media @tabletH {}
+  @media @tabletH {
+    
+    .section-container  {
+      width: calc(100vw - 7rem) !important;
+      .subtitle {
+        margin: 1rem 0rem 2rem;
+      }
+    }
+  }
 
   @media @tabletV {
-    width: calc(100vw - 13rem) !important;
+    
 
   }
 
   @media @mobile {
-    width: calc(100vw - 7rem) !important;
-
-    .section-container .subtitle {
-      margin: 1rem 0rem 2rem;
+    
+   .section-container .title {
+    margin-bottom: 2rem;
+   }
+    .personal-info {
+      display: none;
     }
   }
 }

@@ -55,12 +55,26 @@ export const Contacto = () => {
     <section className="section-contacto">
       <div className={`section-container ${sendSuccess ? "hide" : ""}`} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div className="title" data-aos-delay="500" data-aos-duration="1000" data-aos="fade-down">Contacto</div>
-        <div className="subtitle">
-          Crees que puedo encajar en algún proyecto? 
-          tienes alguna duda sobre mis capacidades o motivaciones?
-          No dudes en hacérmelo saber!
-        </div>
 
+        <div className='personal-info'>
+            <div className='row' data-aos-delay="1000" data-aos="zoom-in">
+              <p className='strong'>Fecha de nacimiento:</p>
+              <p className='oneline'> Abr 15, 1990 ({new Date().getFullYear() - 1991})</p>
+            </div>
+            <div className='row' data-aos-delay="1000" data-aos="zoom-in">
+              <p className='strong'>Dirección:</p>
+              <p> Covadonga 524, Sabadell, Barcelona</p>
+            </div>
+            <div className='row' data-aos-delay="1000" data-aos="zoom-in">
+              <p className='strong'>E-mail:</p>
+              <a href="mailto:tomas.sbd.5@gmail.com"> tomas.sbd.5@gmail.com</a>
+            </div>
+            <div className='row' data-aos-delay="1000" data-aos="zoom-in">
+              <p className='strong'>Teléfono:</p>
+              <a href='tel:690322287'>690322287</a>
+            </div>
+
+          </div>
         <form className="form-contacto col" onSubmit={onSubmit}>
           <div className="input-group" data-aos-delay="500" data-aos-duration="1000" data-aos="zoom-in">
             <label htmlFor="from_name">Nombre

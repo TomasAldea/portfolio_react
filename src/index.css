@@ -266,6 +266,7 @@ ul {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   background-color: #0000003b;
+  top: -16px;
 }
 .burger-menu .blur-zone.active {
   display: block;
@@ -432,8 +433,8 @@ ul {
     display: none !important;
   }
 }
-/*************************** SECTION INICIO *****************************/
-.section-inicio {
+/*************************** SECTION ABOUTME *****************************/
+.section-aboutme {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +443,19 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.section-inicio .container {
+.section-aboutme .btn-container {
+  display: none;
+  margin-top: 4.5rem;
+}
+.section-aboutme .btn-container .button1 svg {
+  margin-left: 1rem;
+}
+.section-aboutme .btn-container .button1:hover svg {
+  -webkit-animation: bounce-top 0.9s both;
+  animation: bounce-top 0.9s both;
+}
+.section-aboutme .container {
+  width: calc(100% - 30%);
   --b: 2px;
   /* thickness of the border */
   --w: 17rem;
@@ -450,8 +463,9 @@ ul {
   padding: 6rem;
   /* space for the border */
   position: relative;
+  justify-content: space-between;
 }
-.section-inicio .container::before {
+.section-aboutme .container::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -465,116 +479,68 @@ ul {
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
-.section-inicio .container .col {
-  max-width: 53rem;
-}
-.section-inicio .container .col .title-container {
+.section-aboutme .container .section:first-child {
   border-bottom: 2px solid #1f7a8c52;
-  padding: 3rem 0;
+  margin-bottom: 2rem;
 }
-.section-inicio .container .col .title-container .title {
-  font: 500 8rem/8rem "XanhMonoTitle", sans-serif;
-  letter-spacing: -0.1rem;
-}
-@media (max-width: 1025px) {
-  .section-inicio .container .col .title-container .title {
-    font: 400 5rem/5.2rem "XanhMonoTitle", sans-serif;
-  }
-}
-@media (max-width: 551px) {
-  .section-inicio .container .col .title-container .title {
-    font: 400 4rem/4.2rem "XanhMonoTitle", sans-serif;
-  }
-}
-.section-inicio .container .col .title-container .pre-title {
+.section-aboutme .container .section .title {
+  margin-bottom: 1.5rem;
   font: 400 4rem/4.8rem "XanhMono", sans-serif;
   letter-spacing: -0.1rem;
 }
 @media (max-width: 769px) {
-  .section-inicio .container .col .title-container .pre-title {
+  .section-aboutme .container .section .title {
     line-height: 4.5rem "XanhMono", sans-serif;
   }
 }
 @media (max-width: 551px) {
-  .section-inicio .container .col .title-container .pre-title {
+  .section-aboutme .container .section .title {
     font: 400 3rem/3.5rem "XanhMono", sans-serif;
   }
 }
-.section-inicio .container .col .personal-info {
-  max-width: 53rem;
-}
-.section-inicio .container .col .personal-info .oneline {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.section-inicio .container .col .personal-info .row {
-  justify-content: space-between;
-  align-items: center;
-}
-.section-inicio .container .col .personal-info .row p,
-.section-inicio .container .col .personal-info .row a {
+.section-aboutme .container .section .work {
   font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  color: white;
-  opacity: 0.9;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 @media (max-width: 551px) {
-  .section-inicio .container .col .personal-info .row p,
-  .section-inicio .container .col .personal-info .row a {
+  .section-aboutme .container .section .work {
     font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
-.section-inicio .container .col .personal-info .row p.strong,
-.section-inicio .container .col .personal-info .row a.strong {
-  font-weight: 600;
+.section-aboutme .container .section .work .col .info {
+  justify-content: space-between;
+  line-height: 1.3;
+  font-size: 1.8rem;
 }
-.section-inicio .container .col .personal-info .row p:last-child,
-.section-inicio .container .col .personal-info .row a:last-child {
-  opacity: 0.8;
+.section-aboutme .container .section .work .col .description {
+  list-style-type: disclosure-closed;
 }
-.section-inicio .container .col .personal-info .row a:hover {
-  opacity: 1;
-  font-weight: 600;
-}
-.section-inicio .container .col .personal-info .btn-container {
-  margin-top: 4.5rem;
-}
-.section-inicio .container .col .personal-info .btn-container .button1 svg {
-  margin-left: 1rem;
-}
-.section-inicio .container .col .personal-info .btn-container .button1:hover svg {
-  -webkit-animation: bounce-top 0.9s both;
-  animation: bounce-top 0.9s both;
+.section-aboutme .container .section .work .col .description li::marker {
+  color: #64ffda;
 }
 @media (max-width: 769px) {
-  .section-inicio {
+  .section-aboutme {
     padding: 0 2rem;
   }
-  .section-inicio .container {
+  .section-aboutme .container {
     padding: 2rem 3rem 6rem 3rem;
   }
 }
 @media (max-width: 551px) {
-  .section-inicio {
+  .section-aboutme {
     background-image: url('../public/svg/shapeHomeMobile.svg');
   }
-  .section-inicio .container {
+  .section-aboutme .container {
     padding: 0.4rem 2rem 2.4rem 2rem;
   }
-  .section-inicio .container .col {
+  .section-aboutme .container .col {
     max-width: 27rem;
   }
-  .section-inicio .container .col .personal-info .row a,
-  .section-inicio .container .col .personal-info .row p {
-    margin: 1rem 0;
-  }
-  .section-inicio .container .col .personal-info .row p:last-child {
-    text-align: end;
-    max-width: 16rem;
-  }
 }
-/*************************** SECTION ABOUT ME *****************************/
-.section-aboutme {
+/*************************** SECTION INICIO *****************************/
+.section-inicio {
   display: flex;
   place-content: center;
   align-items: center;
@@ -583,39 +549,39 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.section-aboutme .row {
+.section-inicio .row {
   width: calc(100% - 41%);
   align-items: center;
 }
-.section-aboutme .row .description {
+.section-inicio .row .description {
   width: 50%;
   padding: 7rem 7rem 7rem 0;
 }
-.section-aboutme .row .description .title {
-  font: 500 8rem/8rem "XanhMonoTitle", sans-serif;
+.section-inicio .row .description .title {
+  font: 500 6rem/6rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
   font-size: 4rem;
 }
 @media (max-width: 1025px) {
-  .section-aboutme .row .description .title {
+  .section-inicio .row .description .title {
     font: 400 5rem/5.2rem "XanhMonoTitle", sans-serif;
   }
 }
 @media (max-width: 551px) {
-  .section-aboutme .row .description .title {
+  .section-inicio .row .description .title {
     font: 400 4rem/4.2rem "XanhMonoTitle", sans-serif;
   }
 }
-.section-aboutme .row .description .text {
+.section-inicio .row .description .text {
   font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
 }
 @media (max-width: 551px) {
-  .section-aboutme .row .description .text {
+  .section-inicio .row .description .text {
     font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
-.section-aboutme .row .photo {
+.section-inicio .row .photo {
   width: 50%;
   height: 35rem;
   max-width: 32rem;
@@ -624,7 +590,7 @@ ul {
   padding: 6rem;
   position: relative;
 }
-.section-aboutme .row .photo .img {
+.section-inicio .row .photo .img {
   position: absolute;
   background-image: url(../public/images/testface.jpg);
   width: 70%;
@@ -634,7 +600,7 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.section-aboutme .row .photo .img .fakebg {
+.section-inicio .row .photo .img .fakebg {
   transition: all 0.5s ease;
   opacity: 0;
   background: #013a7ca1;
@@ -642,10 +608,10 @@ ul {
   border-radius: 1rem;
   height: 100%;
 }
-.section-aboutme .row .photo .img:hover .fakebg {
+.section-inicio .row .photo .img:hover .fakebg {
   opacity: 1;
 }
-.section-aboutme .row .photo::before {
+.section-inicio .row .photo::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -660,43 +626,43 @@ ul {
   mask: var(--mask);
 }
 @media (max-width: 1447px) {
-  .section-aboutme .row {
+  .section-inicio .row {
     width: calc(100% - 21%);
   }
 }
 @media (max-width: 1025px) {
-  .section-aboutme .row {
+  .section-inicio .row {
     width: calc(100% - 15%);
   }
-  .section-aboutme .row .description {
+  .section-inicio .row .description {
     padding: 5rem 1rem 7rem 0;
   }
 }
 @media (max-width: 849px) {
-  .section-aboutme .row {
+  .section-inicio .row {
     flex-direction: column-reverse;
     align-items: start;
   }
-  .section-aboutme .row .photo {
+  .section-inicio .row .photo {
     height: 15rem;
     padding: 3rem;
     width: 18rem;
     --b: 1px;
     --w: 13rem;
   }
-  .section-aboutme .row .photo .img {
+  .section-inicio .row .photo .img {
     width: 74%;
     height: 75%;
   }
-  .section-aboutme .row .description {
+  .section-inicio .row .description {
     width: auto;
     padding: 1rem 1rem 1rem 0;
   }
-  .section-aboutme .row .description .title {
+  .section-inicio .row .description .title {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
-  .section-aboutme .row .description .text {
+  .section-inicio .row .description .text {
     font-size: 1.8rem;
   }
 }
@@ -750,7 +716,7 @@ ul {
   justify-content: space-evenly;
 }
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .title {
-  font: 500 8rem/8rem "XanhMonoTitle", sans-serif;
+  font: 500 6rem/6rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
   font-size: 5rem;
 }
@@ -1125,6 +1091,7 @@ ul {
   flex-direction: column;
   align-items: center;
   max-width: 80rem;
+  width: calc(100% - 41%);
 }
 .section-contacto .section-container.hide {
   transition: all 0.5s ease-out;
@@ -1132,8 +1099,9 @@ ul {
   display: none;
 }
 .section-contacto .section-container .title {
-  font: 500 8rem/8rem "XanhMonoTitle", sans-serif;
+  font: 500 6rem/6rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
+  font-size: 5rem;
 }
 @media (max-width: 1025px) {
   .section-contacto .section-container .title {
@@ -1145,16 +1113,58 @@ ul {
     font: 400 4rem/4.2rem "XanhMonoTitle", sans-serif;
   }
 }
-.section-contacto .section-container .subtitle {
+.section-contacto .section-container .personal-info {
+  margin: 2rem 0rem;
+  width: 72%;
+  padding: 1rem 4rem;
+  position: relative;
+  --b: 2px;
+  --w: 17rem;
+}
+.section-contacto .section-container .personal-info::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #64ffda, #1f7a8cff, #bfdbf7ff, #1f7a8cff, #64ffda);
+  --_g: #0000 90deg, #022b3aff 0;
+  --_p: var(--w) var(--w) no-repeat;
+  --mask: conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+          /* conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p), */
+          /* conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p), */
+          conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+.section-contacto .section-container .personal-info .oneline {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section-contacto .section-container .personal-info .row {
+  justify-content: space-between;
+  align-items: center;
+}
+.section-contacto .section-container .personal-info .row p,
+.section-contacto .section-container .personal-info .row a {
   font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  margin: 4rem 1rem 4rem 1rem;
-  text-align: center;
+  font-weight: 400;
+  line-height: 1rem;
+  color: white;
+  opacity: 0.9;
 }
 @media (max-width: 551px) {
-  .section-contacto .section-container .subtitle {
+  .section-contacto .section-container .personal-info .row p,
+  .section-contacto .section-container .personal-info .row a {
     font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
+}
+.section-contacto .section-container .personal-info .row p:last-child,
+.section-contacto .section-container .personal-info .row a:last-child {
+  opacity: 0.8;
+}
+.section-contacto .section-container .personal-info .row a:hover {
+  opacity: 1;
+  font-weight: 600;
 }
 .section-contacto .section-container .form-contacto {
   width: 100%;
@@ -1267,17 +1277,20 @@ ul {
 .section-contacto .send-success .button1 {
   margin-top: 3rem;
 }
-@media (max-width: 769px) {
-  .section-contacto {
-    width: calc(100vw - 13rem) !important;
-  }
-}
-@media (max-width: 551px) {
-  .section-contacto {
+@media (max-width: 1025px) {
+  .section-contacto .section-container {
     width: calc(100vw - 7rem) !important;
   }
   .section-contacto .section-container .subtitle {
     margin: 1rem 0rem 2rem;
+  }
+}
+@media (max-width: 551px) {
+  .section-contacto .section-container .title {
+    margin-bottom: 2rem;
+  }
+  .section-contacto .personal-info {
+    display: none;
   }
 }
 @keyframes typing {
