@@ -29,7 +29,7 @@
   flex-direction: row;
 }
 .button1 {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   font-weight: 700 !important;
   font-size: 3rem;
@@ -44,7 +44,7 @@
 }
 @media (max-width: 551px) {
   .button1 {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .button1:hover {
@@ -265,6 +265,7 @@ ul {
   transform: translateZ(-10px);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
+  background-color: #0000003b;
 }
 .burger-menu .blur-zone.active {
   display: block;
@@ -297,7 +298,7 @@ ul {
   align-items: center;
   margin-bottom: 2rem;
   font-weight: 600 !important;
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   font-size: 2rem !important;
 }
@@ -309,7 +310,7 @@ ul {
 }
 @media (max-width: 551px) {
   .burger-menu .nav-mobile ul li {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .burger-menu .nav-mobile ul li a {
@@ -352,12 +353,12 @@ ul {
   justify-content: space-between;
   color: #e1e5f2ff;
   background-color: transparent;
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
 }
 @media (max-width: 551px) {
   .footer {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .footer .mouse-follower-footer {
@@ -375,13 +376,13 @@ ul {
   height: 100%;
 }
 .footer span {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   color: #64ffda;
 }
 @media (max-width: 551px) {
   .footer span {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 @media (max-width: 769px) {
@@ -512,7 +513,7 @@ ul {
 }
 .section-inicio .container .col .personal-info .row p,
 .section-inicio .container .col .personal-info .row a {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   color: white;
   opacity: 0.9;
@@ -520,7 +521,7 @@ ul {
 @media (max-width: 551px) {
   .section-inicio .container .col .personal-info .row p,
   .section-inicio .container .col .personal-info .row a {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-inicio .container .col .personal-info .row p.strong,
@@ -606,12 +607,12 @@ ul {
   }
 }
 .section-aboutme .row .description .text {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
 }
 @media (max-width: 551px) {
   .section-aboutme .row .description .text {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-aboutme .row .photo {
@@ -699,7 +700,7 @@ ul {
     font-size: 1.8rem;
   }
 }
-/*************************** SECTION PORTFOLIO *****************************/
+/*************************** SECTION PORTAFOLIO *****************************/
 .section-listproyectos {
   height: calc(100vh - 14rem);
   width: 100%;
@@ -777,34 +778,35 @@ ul {
   margin-right: 2rem;
 }
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .text {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  min-height: 6.9rem;
 }
 @media (max-width: 551px) {
   .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .text {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .url {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   color: white;
   font-weight: 700;
 }
 @media (max-width: 551px) {
   .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .url {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .button1 {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   width: fit-content;
   margin-top: 1rem;
 }
 @media (max-width: 551px) {
   .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .button1 {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-listproyectos .carrousel-container .slider-container .slider-control-centerright {
@@ -889,22 +891,9 @@ ul {
   }
 }
 @media (max-width: 551px) {
-  .section-listproyectos .carrousel-container .slider-container .slider-control-centerright {
-    right: 0rem;
-    top: 28rem;
-  }
-  .section-listproyectos .carrousel-container .slider-container .slider-control-centerright button {
-    height: 4rem;
-    width: 4rem;
-  }
+  .section-listproyectos .carrousel-container .slider-container .slider-control-centerright,
   .section-listproyectos .carrousel-container .slider-container .slider-control-centerleft {
-    left: 0rem;
-    top: 28rem;
-  }
-  .section-listproyectos .carrousel-container .slider-container .slider-control-centerleft button {
-    /* background-image: url('../public/icons/arrow-simple-blue.svg') !important; */
-    height: 4rem;
-    width: 4rem;
+    display: none;
   }
   .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info {
     height: auto;
@@ -930,6 +919,77 @@ ul {
     margin-bottom: 1rem;
     margin-bottom: 0;
     width: 90%;
+  }
+}
+.more-info {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  top: 0;
+  display: none;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background-color: #0000003b;
+}
+.more-info.active {
+  display: block;
+}
+.more-info .text {
+  padding: 4rem;
+  background-color: white;
+  width: 40%;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 14px 1px #0000008f;
+}
+.more-info .text svg {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 1rem;
+}
+.more-info .text .dificultades,
+.more-info .text .aprendizaje {
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
+  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+}
+@media (max-width: 551px) {
+  .more-info .text .dificultades,
+  .more-info .text .aprendizaje {
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+  }
+}
+.more-info .text .dificultades span,
+.more-info .text .aprendizaje span {
+  color: #022b3aff;
+}
+.more-info .text .dificultades ul,
+.more-info .text .aprendizaje ul {
+  margin: 0;
+  padding: 17px 0 10px 17px;
+}
+.more-info .text .dificultades ul li,
+.more-info .text .aprendizaje ul li {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  list-style-type: disc;
+}
+@media (max-width: 1025px) {
+  .more-info .text {
+    width: 65%;
+  }
+}
+@media (max-width: 551px) {
+  .more-info .text .dificultades ul li,
+  .more-info .text .aprendizaje ul li {
+    font-size: 1.4rem;
   }
 }
 /*************************** SECTION SKILLS *****************************/
@@ -993,12 +1053,12 @@ ul {
   margin-right: 1rem;
 }
 .section-skills .row .sub-section .tecnology .col .title-tecnology span {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
 }
 @media (max-width: 551px) {
   .section-skills .row .sub-section .tecnology .col .title-tecnology span {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-skills .row .separacion {
@@ -1089,14 +1149,14 @@ ul {
   }
 }
 .section-contacto .section-container .subtitle {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   margin: 4rem 1rem 4rem 1rem;
   text-align: center;
 }
 @media (max-width: 551px) {
   .section-contacto .section-container .subtitle {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-contacto .section-container .form-contacto {
@@ -1108,7 +1168,7 @@ ul {
   margin-bottom: 2rem;
 }
 .section-contacto .section-container .form-contacto .input-group label {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   display: flex;
   flex-direction: row;
@@ -1123,7 +1183,7 @@ ul {
 }
 @media (max-width: 551px) {
   .section-contacto .section-container .form-contacto .input-group label {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-contacto .section-container .form-contacto .input-group input,
@@ -1134,7 +1194,7 @@ ul {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #1f7a8c52;
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   font-weight: 600;
   color: #1f7a8cff;
@@ -1142,7 +1202,7 @@ ul {
 @media (max-width: 551px) {
   .section-contacto .section-container .form-contacto .input-group input,
   .section-contacto .section-container .form-contacto .input-group textarea {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-contacto .section-container .form-contacto .input-group input:focus-visible,
@@ -1197,14 +1257,14 @@ ul {
   width: 14rem;
 }
 .section-contacto .send-success .text {
-  font: 400 2rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   margin-top: 1rem;
   text-align: center;
 }
 @media (max-width: 551px) {
   .section-contacto .send-success .text {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-contacto .send-success .button1 {
@@ -1232,37 +1292,6 @@ ul {
   50% {
     border-color: transparent;
   }
-}
-#cortain {
-  width: 100vw;
-  height: calc(100vh - 14rem);
-  position: fixed;
-  z-index: 1;
-  margin: 0;
-  background-color: transparent;
-  /* background: transparent; */
-}
-#cortain .left-cortain {
-  position: absolute;
-  width: 50%;
-  left: 0;
-  background-color: red;
-  height: 100%;
-  transition: all 1.5s ease;
-}
-#cortain .right-cortain {
-  position: absolute;
-  width: 50%;
-  right: 0;
-  background-color: blue;
-  height: 100%;
-  transition: all 1.5s ease;
-}
-#cortain.active .right-cortain {
-  right: -80rem;
-}
-#cortain.active .left-cortain {
-  left: -80rem;
 }
 #wheel-window {
   position: fixed;

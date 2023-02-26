@@ -3,9 +3,7 @@ import { ProviderContext } from '../context/ProviderContext';
 
 export const MouseTrack = () => {
     const {setOpenMenu,openMenu} =  useContext(ProviderContext);
-
-    var isPortfolio = document.querySelector(".section-listproyectos");
-
+    
     let interval = 0;
     let timer = 0;
 
@@ -13,9 +11,9 @@ export const MouseTrack = () => {
     let mouseY = 0
 
     const openMenuTouch = () => {
-        console.log('entra function');
         interval++;
-        setOpenMenu(true);
+        var isPortfolio = document.querySelector(".carrousel-container");
+        (!isPortfolio) && setOpenMenu(true);
     }
 
     onmousemove = (event) => {
@@ -35,6 +33,7 @@ export const MouseTrack = () => {
                 document.querySelector('#wheel-window').style.left = mouseX + "px";
                 document.querySelector('#wheel-window').style.top = mouseY + "px";
                 document.querySelector('#wheel-window').classList.add("show");
+                
     
                 setTimeout(() => {
                     document.querySelector('#wheel-window').classList.remove("show");

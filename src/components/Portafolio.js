@@ -1,11 +1,10 @@
 import React, {useEffect, useContext} from 'react'
 import Carousel from 'nuka-carousel/lib/carousel.js';
 import { trabajos } from '../data/trabajos.js'
-import { Link } from 'react-router-dom';
 import { ProviderContext } from '../context/ProviderContext';
 
 export const Portafolio = () => {
-  const {setOpenMenu} =  useContext(ProviderContext);
+  const {setOpenMenu,setMoreInfo} =  useContext(ProviderContext);
 
   let delay = 0;
 
@@ -13,11 +12,15 @@ export const Portafolio = () => {
     setOpenMenu(false);
   }, [])
 
-
   return (
     <section className='section-listproyectos'>
       <div className='carrousel-container' data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-        <Carousel autoplayInterval={3500} autoplay={true} wrapAround={true} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+        <Carousel data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
+        pauseOnHover={true} 
+        autoplayInterval={3500} 
+        autoplay={false} 
+        wrapAround={true} 
+        >
           {
             trabajos.map(function (trabajo, i) {
               delay = 0
@@ -41,7 +44,7 @@ export const Portafolio = () => {
                       <a href={trabajo.url} className='url' target="_blank" rel="noopener noreferrer">{trabajo.url.replace('https://', '')}</a>
                       <div className='text'>{trabajo.descripcion}</div>
 
-                      <Link className='button1' to={`/proyecto/${trabajo.id}`}>Ver proyecto</Link>
+                      <div className="button1" onClick={() => (trabajo.longDescripcion) && setMoreInfo(trabajo.longDescripcion)}>Más info</div>
                     </div>
                   </div>
                 </div>

@@ -5,8 +5,15 @@ export const trabajos = [
         'url': 'https://www.stay-u-nique.com/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Aplicacion tipo Airbnb con API propia, buscador, contratacion, etc...'
-
+        'descripcion': 'Aplicación tipo Airbnb.',
+        'longDescripcion': {
+            'dificultades': ['Desarrollar un importador para volcar toda la información de la api a una base de datos propia.', 
+                             'Mostrar de manera dinámica los apartamentos filtrados o la localización de estos con api Google maps.', 
+                             'Crear peticiones sql sólidas y ligeras para crear todos filtros.', 
+                             'Conseguir una buena puntuación WPO en una web con este volumen de contenido.'
+                            ],
+            'aprendizaje': ['El mayor aprendizaje a sido el trabajo del importador con la bbdd, la estructura de esta y las peticiones.']
+        }
     },
     {
         'id': 'sateliot',
@@ -14,7 +21,13 @@ export const trabajos = [
         'url': 'https://sateliot.space/en/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Web internacional multidioma con efectos de css controlados por scroll'
+        'descripcion': 'Web internacional multidioma con efectos de css controlados por scroll',
+        'longDescripcion': {
+            'dificultades': ['Tener el control total de que mostrar en cada punto del scroll de la web.', 
+                             'Conectar todo el contenido (imagenes, textos, colores, videos, audios) con el cms, y hacerlo de una manera intuitiva para el usuario.',
+                            ],
+            'aprendizaje': ['El mayor aprendizaje a estado relacionado con los efectos css de la web y la puntuación de esta a nivel de rendimiento en la auditoria WPO.']
+        }
     },
     {
         'id': 'padierna',

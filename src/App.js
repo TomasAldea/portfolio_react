@@ -1,30 +1,29 @@
 import { useState } from 'react';
 import './App.css';
-import { Cortain } from './components/Cortain';
 import { LoadingPage } from './components/LoadingPage';
 import { MouseTrack } from './components/MouseTrack';
+import { MoreInfo } from './components/MoreInfo';
 import { ProviderContext } from './context/ProviderContext';
 import { MisRutas } from './router/MisRutas';
-import AOS from 'aos';
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
   const [firstUserLoad, setfirstUserLoad] = useState(false);
   const [loadPage, setLoadPage] = useState(false)
-  // 🚀temporal 
-  AOS.init( {offset: 0} );
+  const [moreInfo, setMoreInfo] = useState("")
 
   return (
     <>
       <ProviderContext.Provider value={{
         openMenu,setOpenMenu,
         firstUserLoad,setfirstUserLoad,
-        loadPage, setLoadPage
+        loadPage, setLoadPage,
+        moreInfo, setMoreInfo
         }}>
         <LoadingPage/>
-        {/* <Cortain/> */}
         <MisRutas/>
         <MouseTrack/>
+        <MoreInfo/>
       </ProviderContext.Provider>
     </>
   );
