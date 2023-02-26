@@ -5,7 +5,7 @@ export const trabajos = [
         'url': 'https://www.stay-u-nique.com/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Aplicación tipo Airbnb.',
+        'descripcion': 'Aplicación inspirada en Airbnb.',
         'longDescripcion': {
             'dificultades': ['Desarrollar un importador para volcar toda la información de la api a una base de datos propia.', 
                              'Mostrar de manera dinámica los apartamentos filtrados o la localización de estos con api Google maps.', 

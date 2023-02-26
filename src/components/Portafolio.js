@@ -24,9 +24,8 @@ export const Portafolio = () => {
           {
             trabajos.map(function (trabajo, i) {
               delay = 0
-              let odd = (i % 2 == 0) ? "reverse" : "";
               return (
-                <div className={`card row ${odd}`} key={trabajo.id}>
+                <div className="card row" key={trabajo.id}>
                   <div className='card-img' data-aos-duration="500" data-aos-delay="500" data-aos="zoom-in" style={{ backgroundImage: `url(/images/${trabajo.id}.png)` }}></div>
                   <div className='card-info'>
                     <div className='container'>
@@ -43,8 +42,9 @@ export const Portafolio = () => {
                       </div>
                       <a href={trabajo.url} className='url' target="_blank" rel="noopener noreferrer">{trabajo.url.replace('https://', '')}</a>
                       <div className='text'>{trabajo.descripcion}</div>
-
-                      <div className="button1" onClick={() => (trabajo.longDescripcion) && setMoreInfo(trabajo.longDescripcion)}>Más info</div>
+                        {
+                          (trabajo.longDescripcion) && <div className="button1" onClick={() => setMoreInfo(trabajo.longDescripcion)}>Más info</div>
+                        }
                     </div>
                   </div>
                 </div>
