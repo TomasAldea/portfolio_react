@@ -115,7 +115,7 @@
   letter-spacing: 0.05rem @fontTexto;
 
   @media @mobile {
-    font: 600 1.5rem/2.3rem @fontTexto;
+    font: 400 1.5rem/2.3rem @fontTexto;
   }
 }
 
@@ -172,10 +172,6 @@ section {
   line-height: 1.2;
 }
 
-/* #root {
-  background-image: url('../public/svg/animatedShapeHome.svg');
-  .basic-bg();
-} */
 
 section:not(.header, .footer, .burger-menu) {
 
@@ -398,6 +394,7 @@ ul {
     backdrop-filter: blur(3px);
     background-color: #0000003b;
     top: -16px;
+
     &.active {
       display: block;
     }
@@ -485,7 +482,7 @@ ul {
   width: 100%;
   position: fixed;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 1;
   bottom: 0;
   height: 57px;
   display: flex;
@@ -582,30 +579,14 @@ ul {
   align-items: center;
   justify-content: center;
 
-  background-image: url('../public/svg/animatedShapeHome.svg');
+  background-image: url(../public/svg/animatedShapeAboutme.svg);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 
-  .btn-container {
-    display: none;
-    margin-top: 4.5rem;
-
-    .button1 {
-      svg {
-        margin-left: 1rem;
-      }
-
-      &:hover {
-        svg {
-          -webkit-animation: bounce-top 0.9s both;
-          animation: bounce-top 0.9s both;
-        }
-      }
-    }
-  }
   .container {
-    width: calc(100% - 30%);
+    width: calc(100% - 15%);
+    max-width: 124rem;
 
     &::before {
       content: "";
@@ -616,52 +597,47 @@ ul {
       --_p: var(--w) var(--w) no-repeat;
       --mask:
         conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
-        /* conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p), */
-        /* conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p), */
         conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
       -webkit-mask: var(--mask);
       mask: var(--mask);
     }
 
     --b: 2px;
-    /* thickness of the border */
     --w: 17rem;
-    /* width of border */
-
-
-    padding: 6rem;
-    /* space for the border */
+    padding: 2rem 6rem;
     position:relative;
-
     justify-content: space-between;
-    .section:first-child {
-      border-bottom: 2px solid #1f7a8c52;
-      margin-bottom: 2rem;
-    } 
-    .section:last-child {
-     
-    }
+
     .section {
       .title {
-        margin-bottom: 1.5rem;
         .m-subtitle();
       }
+
       .work {
+        &.border {
+          border-bottom: 2px solid #1f7a8c52;
+        }
+
+        margin-top: 2rem;
         .m-text();
         font-weight: 500;
         font-size: 1.5rem;
+
         .col {
           .info {
             justify-content: space-between;
             line-height: 1.3;
             font-size: 1.8rem;
-            span {
 
-            }
+            span {}
           }
+
           .description {
             list-style-type: disclosure-closed;
+
             li {
+              max-width: 50rem;
+
               &::marker {
                 color: @electricBlue;
               }
@@ -672,26 +648,39 @@ ul {
     }
   }
 
-  @media @tabletH {}
-
-  @media @tabletV {
-    padding: 0 2rem;
-
+  @media @tabletH {
     .container {
-      padding: 2rem 3rem 6rem 3rem;
+      justify-content: center;
+      width: auto;
+    .title {
+      display: none;
     }
+      .section:not(:first-child) {
+        display: none;
+      }
+    }
+
   }
 
-  @media @mobile {
+
+  @media (max-width: 596px) {
     background-image: url('../public/svg/shapeHomeMobile.svg');
 
     .container {
-      padding: 0.4rem 2rem 2.4rem 2rem;
+      width: calc(100% - 15%);
+      padding: 0rem 2rem;
 
-      .col {
-        max-width: 27rem;
-
-      }
+      .section .work {
+        &:last-child {
+          display: none;
+        }
+        /* &:not(:first-child) {
+          border-bottom: none;
+        } */
+        .col .info {
+          font-size: 1.3rem;
+        }
+      } 
     }
   }
 }
@@ -702,7 +691,7 @@ ul {
   display: flex;
   place-content: center;
   align-items: center;
-  background-image: url(../public/svg/animatedShapeAboutme.svg);
+  background-image: url('../public/svg/animatedShapeHome.svg');
   .basic-bg();
 
   .row {
@@ -721,6 +710,24 @@ ul {
 
       .text {
         .m-text();
+      }
+      .btn-container {
+        margin-top: 4.5rem;
+    
+        .button1 {
+          width: fit-content;
+          font-size: 2rem;
+          svg {
+            margin-left: 1rem;
+          }
+    
+          &:hover {
+            svg {
+              -webkit-animation: bounce-top 0.9s both;
+              animation: bounce-top 0.9s both;
+            }
+          }
+        }
       }
     }
 
@@ -786,6 +793,7 @@ ul {
 
   @media @tabletH {
     background-image: url(../public/svg/animatedShapeHomeMbl.svg);
+
     .row {
       width: calc(100% - 15%);
 
@@ -971,6 +979,7 @@ ul {
 
   @media @tabletH {
     background-image: url('../public/svg/animatedShapePortfolioMbl.svg');
+
     .carrousel-container {
 
       .slider-container {
@@ -1040,10 +1049,12 @@ ul {
   @media @mobile {
     .carrousel-container {
       .slider-container {
-        .slider-control-centerright, .slider-control-centerleft {
+
+        .slider-control-centerright,
+        .slider-control-centerleft {
           display: none;
         }
-        
+
 
         .slider-frame .slider-list .card {
           .card-info {
@@ -1148,12 +1159,13 @@ ul {
 
   @media @mobile {
     .text {
+
       .dificultades,
       .aprendizaje {
         ul {
           li {
             font-size: 1.4rem;
-            
+
           }
         }
       }
@@ -1330,6 +1342,7 @@ ul {
     align-items: center;
     max-width: 80rem;
     width: calc(100% - 41%);
+
     &.hide {
       transition: all 0.5s ease-out;
       opacity: 0;
@@ -1363,8 +1376,8 @@ ul {
           conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
         -webkit-mask: var(--mask);
         mask: var(--mask);
-      }  
-  
+      }
+
       .oneline {
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -1381,6 +1394,7 @@ ul {
           line-height: 1rem;
           color: white;
           opacity: 0.9;
+
           &:last-child {
             opacity: 0.8;
           }
@@ -1394,6 +1408,7 @@ ul {
       }
 
     }
+
     .form-contacto {
       width: 100%;
 
@@ -1508,24 +1523,23 @@ ul {
   @media @tabletH {
     background-image: url('../public/svg/animatedShapeContactoMbl.svg');
 
-    .section-container  {
+    .section-container {
       width: calc(100vw - 7rem) !important;
+
       .subtitle {
         margin: 1rem 0rem 2rem;
       }
     }
   }
 
-  @media @tabletV {
-    
-
-  }
+  @media @tabletV {}
 
   @media @mobile {
-    
-   .section-container .title {
-    margin-bottom: 2rem;
-   }
+
+    .section-container .title {
+      margin-bottom: 2rem;
+    }
+
     .personal-info {
       display: none;
     }
@@ -1592,7 +1606,7 @@ ul {
 
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    z-index: 99;
+    z-index: 2;
   }
 
   &.hide {

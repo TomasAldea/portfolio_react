@@ -52,7 +52,7 @@ export const Contacto = () => {
   };
 
   return (
-    <section className="section-contacto">
+    <section className="section-contacto" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
       <div className={`section-container ${sendSuccess ? "hide" : ""}`} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div className="title" data-aos-delay="500" data-aos-duration="1000" data-aos="fade-down">Contacto</div>
 

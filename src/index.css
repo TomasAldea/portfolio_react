@@ -44,7 +44,7 @@
 }
 @media (max-width: 551px) {
   .button1 {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .button1:hover {
@@ -77,10 +77,6 @@ section {
   color: white;
   line-height: 1.2;
 }
-/* #root {
-  background-image: url('../public/svg/animatedShapeHome.svg');
-  .basic-bg();
-} */
 section:not(.header, .footer, .burger-menu) {
   /* height: calc(100vh - 14rem); */
   height: 100vh;
@@ -311,7 +307,7 @@ ul {
 }
 @media (max-width: 551px) {
   .burger-menu .nav-mobile ul li {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .burger-menu .nav-mobile ul li a {
@@ -346,7 +342,7 @@ ul {
   width: 100%;
   position: fixed;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 1;
   bottom: 0;
   height: 57px;
   display: flex;
@@ -359,7 +355,7 @@ ul {
 }
 @media (max-width: 551px) {
   .footer {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .footer .mouse-follower-footer {
@@ -383,7 +379,7 @@ ul {
 }
 @media (max-width: 551px) {
   .footer span {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 @media (max-width: 769px) {
@@ -438,30 +434,17 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../public/svg/animatedShapeHome.svg');
+  background-image: url(../public/svg/animatedShapeAboutme.svg);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.section-aboutme .btn-container {
-  display: none;
-  margin-top: 4.5rem;
-}
-.section-aboutme .btn-container .button1 svg {
-  margin-left: 1rem;
-}
-.section-aboutme .btn-container .button1:hover svg {
-  -webkit-animation: bounce-top 0.9s both;
-  animation: bounce-top 0.9s both;
-}
 .section-aboutme .container {
-  width: calc(100% - 30%);
+  width: calc(100% - 15%);
+  max-width: 124rem;
   --b: 2px;
-  /* thickness of the border */
   --w: 17rem;
-  /* width of border */
-  padding: 6rem;
-  /* space for the border */
+  padding: 2rem 6rem;
   position: relative;
   justify-content: space-between;
 }
@@ -473,18 +456,11 @@ ul {
   --_g: #0000 90deg, #022b3aff 0;
   --_p: var(--w) var(--w) no-repeat;
   --mask: conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
-        /* conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p), */
-        /* conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p), */
         conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
-.section-aboutme .container .section:first-child {
-  border-bottom: 2px solid #1f7a8c52;
-  margin-bottom: 2rem;
-}
 .section-aboutme .container .section .title {
-  margin-bottom: 1.5rem;
   font: 400 4rem/4.8rem "XanhMono", sans-serif;
   letter-spacing: -0.1rem;
 }
@@ -499,14 +475,18 @@ ul {
   }
 }
 .section-aboutme .container .section .work {
+  margin-top: 2rem;
   font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
 }
+.section-aboutme .container .section .work.border {
+  border-bottom: 2px solid #1f7a8c52;
+}
 @media (max-width: 551px) {
   .section-aboutme .container .section .work {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-aboutme .container .section .work .col .info {
@@ -517,26 +497,42 @@ ul {
 .section-aboutme .container .section .work .col .description {
   list-style-type: disclosure-closed;
 }
+.section-aboutme .container .section .work .col .description li {
+  max-width: 50rem;
+}
 .section-aboutme .container .section .work .col .description li::marker {
   color: #64ffda;
 }
-@media (max-width: 769px) {
-  .section-aboutme {
-    padding: 0 2rem;
-  }
+@media (max-width: 1025px) {
   .section-aboutme .container {
-    padding: 2rem 3rem 6rem 3rem;
+    justify-content: center;
+    width: auto;
+  }
+  .section-aboutme .container .title {
+    display: none;
+  }
+  .section-aboutme .container .section:not(:first-child) {
+    display: none;
   }
 }
-@media (max-width: 551px) {
+@media (max-width: 596px) {
   .section-aboutme {
     background-image: url('../public/svg/shapeHomeMobile.svg');
   }
   .section-aboutme .container {
-    padding: 0.4rem 2rem 2.4rem 2rem;
+    width: calc(100% - 15%);
+    padding: 0rem 2rem;
   }
-  .section-aboutme .container .col {
-    max-width: 27rem;
+  .section-aboutme .container .section .work {
+    /* &:not(:first-child) {
+          border-bottom: none;
+        } */
+  }
+  .section-aboutme .container .section .work:last-child {
+    display: none;
+  }
+  .section-aboutme .container .section .work .col .info {
+    font-size: 1.3rem;
   }
 }
 /*************************** SECTION INICIO *****************************/
@@ -544,7 +540,7 @@ ul {
   display: flex;
   place-content: center;
   align-items: center;
-  background-image: url(../public/svg/animatedShapeAboutme.svg);
+  background-image: url('../public/svg/animatedShapeHome.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -578,8 +574,22 @@ ul {
 }
 @media (max-width: 551px) {
   .section-inicio .row .description .text {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
+}
+.section-inicio .row .description .btn-container {
+  margin-top: 4.5rem;
+}
+.section-inicio .row .description .btn-container .button1 {
+  width: fit-content;
+  font-size: 2rem;
+}
+.section-inicio .row .description .btn-container .button1 svg {
+  margin-left: 1rem;
+}
+.section-inicio .row .description .btn-container .button1:hover svg {
+  -webkit-animation: bounce-top 0.9s both;
+  animation: bounce-top 0.9s both;
 }
 .section-inicio .row .photo {
   width: 50%;
@@ -750,7 +760,7 @@ ul {
 }
 @media (max-width: 551px) {
   .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .text {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .url {
@@ -761,7 +771,7 @@ ul {
 }
 @media (max-width: 551px) {
   .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .url {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .button1 {
@@ -772,7 +782,7 @@ ul {
 }
 @media (max-width: 551px) {
   .section-listproyectos .carrousel-container .slider-container .slider-frame .slider-list .card .card-info .container .button1 {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-listproyectos .carrousel-container .slider-container .slider-control-centerright {
@@ -932,7 +942,7 @@ ul {
 @media (max-width: 551px) {
   .more-info .text .dificultades,
   .more-info .text .aprendizaje {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .more-info .text .dificultades span,
@@ -1027,7 +1037,7 @@ ul {
 }
 @media (max-width: 551px) {
   .section-skills .row .sub-section .tecnology .col .title-tecnology span {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-skills .row .separacion {
@@ -1166,7 +1176,7 @@ ul {
 @media (max-width: 551px) {
   .section-contacto .section-container .personal-info .row p,
   .section-contacto .section-container .personal-info .row a {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-contacto .section-container .personal-info .row p:last-child,
@@ -1201,7 +1211,7 @@ ul {
 }
 @media (max-width: 551px) {
   .section-contacto .section-container .form-contacto .input-group label {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-contacto .section-container .form-contacto .input-group input,
@@ -1220,7 +1230,7 @@ ul {
 @media (max-width: 551px) {
   .section-contacto .section-container .form-contacto .input-group input,
   .section-contacto .section-container .form-contacto .input-group textarea {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-contacto .section-container .form-contacto .input-group input:focus-visible,
@@ -1282,7 +1292,7 @@ ul {
 }
 @media (max-width: 551px) {
   .section-contacto .send-success .text {
-    font: 600 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
   }
 }
 .section-contacto .send-success .button1 {
@@ -1370,7 +1380,7 @@ ul {
   animation: diagonal 1.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  z-index: 99;
+  z-index: 2;
 }
 #load-gif.hide {
   transition: all 0.5s ease-out;

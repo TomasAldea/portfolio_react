@@ -12,7 +12,7 @@ export const Skills = () => {
   }, []);
 
   return (
-    <section className="section-skills col">
+    <section className="section-skills col" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
       <div className="row" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div className="sub-section frontend">
           <span className="title"  data-aos-duration="1500" data-aos="zoom-in">Front-end</span>
@@ -24,8 +24,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={50} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -38,8 +38,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={75} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -52,8 +52,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={65} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -66,8 +66,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={85} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -80,8 +80,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={80} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -99,8 +99,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={70} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -115,8 +115,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={65} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -131,8 +131,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={35} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -153,8 +153,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={55} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -169,8 +169,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={40} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -188,8 +188,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={80} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"
@@ -204,8 +204,8 @@ export const Skills = () => {
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
-                customLabel={<CountUp end={60} suffix="%" />}
-                bgColor="#1f7a8cff"
+                customLabel=" "
+                bgColor="#64ffda"
                 isLabelVisible={true}
                 animateOnRender={true}
                 transitionDuration="2s"

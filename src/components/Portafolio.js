@@ -13,7 +13,7 @@ export const Portafolio = () => {
   }, [])
 
   return (
-    <section className='section-listproyectos'>
+    <section className='section-listproyectos' data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
       <div className='carrousel-container' data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <Carousel data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
         pauseOnHover={true} 

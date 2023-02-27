@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import TouchSweep from 'touchsweep'
 import { ProviderContext } from '../context/ProviderContext';
 
 export const MouseTrack = () => {
-    const { setOpenMenu, openMenu } = useContext(ProviderContext);
+    const {setOpenMenu,openMenu} =  useContext(ProviderContext);
 
     let mouseX = 0
     let mouseY = 0
@@ -16,7 +16,11 @@ export const MouseTrack = () => {
         document.querySelector('.mouse-follower-footer').style.left = mouseX - 50 + "px";
     };
 
-
+    
+    const openMenuTouch = () => {
+        var isPortfolio = document.querySelector(".carrousel-container");
+        (!isPortfolio) && setOpenMenu(true);
+    }
 
     if (window.innerWidth > 769) {
         // pasar de menu desktop
@@ -29,31 +33,34 @@ export const MouseTrack = () => {
             }
         };
     } else if (window.innerWidth < 769) {
-        const drag = document.getElementById('root');
+
+        window.addEventListener('touchmove', openMenuTouch, false);
+
+        // TODO esto mola pero en mobile falla
+        /* const drag = document.getElementById('root');
 
         const data = {
             value: 1
         };
-        const touchThreshold = 20;
 
+        const touchThreshold = 20;
 
         const touchSweepInstance = new TouchSweep(drag, data, touchThreshold);
 
         drag.addEventListener('swipeup', movePageNext, false);
         drag.addEventListener('swipeleft', movePageNext2, false);
         drag.addEventListener('swipedown', movePagePrev, false);
-        drag.addEventListener('swiperight', movePagePrev2, false);
+        drag.addEventListener('swiperight', movePagePrev2, false); */
     }
 
 
-    function movePageNext() {
-        var element = document.querySelector('.active-menu-mbl');
-        element.parentNode.nextSibling?.childNodes[1].click();
-    }
-
-    function movePagePrev() {
+    /* function movePageNext() {
         var element = document.querySelector('.active-menu-mbl');
         element.parentNode.previousSibling?.childNodes[1].click();
+    }
+    function movePagePrev() {
+        var element = document.querySelector('.active-menu-mbl');
+        element.parentNode.nextSibling?.childNodes[1].click();
     }
     function movePageNext2() {
         var isPortfolio = document.querySelector(".carrousel-container");
@@ -62,14 +69,13 @@ export const MouseTrack = () => {
             element.parentNode.nextSibling?.childNodes[1].click();
         }
     }
-
     function movePagePrev2() {
         var isPortfolio = document.querySelector(".carrousel-container");
         if (!isPortfolio) {
             var element = document.querySelector('.active-menu-mbl');
             element.parentNode.previousSibling?.childNodes[1].click();
         }
-    }
+    } */
 
 
     return (
