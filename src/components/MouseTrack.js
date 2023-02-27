@@ -24,6 +24,20 @@ export const MouseTrack = () => {
         document.querySelector('.mouse-follower-footer').style.left = mouseX-50 + "px";
     };
 
+    /* 
+        window.addEventListener('wheel', function(event)
+    {
+        var element = document.querySelector('.active-menu');
+    if (event.deltaY < 0)
+    {
+        element.parentNode.nextElementSibling.childNodes[0].click(); // #foo3
+    }
+    else if (event.deltaY > 0)
+    {
+    console.log('scrolling down');
+    }
+    });
+    */
     if (window.innerWidth > 769) {
         onwheel = () => {
             interval++;
