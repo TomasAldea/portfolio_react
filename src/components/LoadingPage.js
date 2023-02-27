@@ -35,7 +35,7 @@ export const LoadingPage = () => {
       // TODO problema con enlace a home (no esta dentro de router)
     return (
         <>
-            <a ><img id="load-gif" className={`${(firstUserLoad) && 'off'}`} src={(logo) ? 'icons/main-logo.png' : 'loading-logo-vid/main.gif' } /></a>
+            <a ><img alt="main-logo" id="load-gif" className={`${(firstUserLoad) && 'off'}`} src={(logo) ? 'icons/main-logo.png' : 'loading-logo-vid/main.gif' } /></a>
             <div id="loading-page" className={` ${(firstUserLoad) && 'off'}`}>
             </div>
         </>

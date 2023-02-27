@@ -67,11 +67,11 @@ export const Contacto = () => {
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
               <p className='strong'>E-mail:</p>
-              <a href="mailto:tomas.sbd.5@gmail.com"> tomas.sbd.5@gmail.com</a>
+              <a aria-label="mailto" href="mailto:tomas.sbd.5@gmail.com"> tomas.sbd.5@gmail.com</a>
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
               <p className='strong'>Teléfono:</p>
-              <a href='tel:690322287'>690322287</a>
+              <a aria-label="phoneto" href='tel:690322287'>690322287</a>
             </div>
 
           </div>

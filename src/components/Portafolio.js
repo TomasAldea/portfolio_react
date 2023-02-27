@@ -35,12 +35,12 @@ export const Portafolio = () => {
                         {
                           trabajo.tecnologias.map(function (tecnologia, index) {
                             delay += 250;
-                            return <img alt="project-img" key={index} data-aos-duration="500" data-aos-delay={delay} data-aos="zoom-in" className='icon' src={`/icons/${tecnologia}.svg`}></img>
+                            return <img alt={`logo-${tecnologia}`} key={index} data-aos-duration="500" data-aos-delay={delay} data-aos="zoom-in" className='icon' src={`/icons/${tecnologia}.svg`}></img>
                           }
                           )
                         }
                       </div>
-                      <a href={trabajo.url} className='url' target="_blank" rel="noopener noreferrer">{trabajo.url.replace('https://', '')}</a>
+                      <a aria-label={`Link to: ${trabajo.id} page`} href={trabajo.url} className='url' target="_blank" rel="noopener noreferrer">{trabajo.url.replace('https://', '')}</a>
                       <div className='text'>{trabajo.descripcion}</div>
                         {
                           (trabajo.longDescripcion) && <div className="button1" onClick={() => setMoreInfo(trabajo.longDescripcion)}>Más info</div>
