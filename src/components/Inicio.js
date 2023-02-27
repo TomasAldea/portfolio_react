@@ -9,8 +9,8 @@ export const Inicio = () => {
   }, [])
   
   return (
-    <section className='section-inicio' data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-        <div className="row">
+    <section className='section-inicio'>
+        <div className="row" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
           <div className="description col">
             <div className="title" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-down">Hola, mi nombre es Tomás</div>
             <div className="text" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-right">
