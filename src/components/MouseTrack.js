@@ -1,68 +1,79 @@
 import React, { useContext, useState } from 'react'
+import TouchSweep from 'touchsweep'
 import { ProviderContext } from '../context/ProviderContext';
 
 export const MouseTrack = () => {
-    const {setOpenMenu,openMenu} =  useContext(ProviderContext);
-    
-    let interval = 0;
-    let timer = 0;
+    const { setOpenMenu, openMenu } = useContext(ProviderContext);
 
     let mouseX = 0
     let mouseY = 0
-
-    const openMenuTouch = () => {
-        interval++;
-        var isPortfolio = document.querySelector(".carrousel-container");
-        (!isPortfolio) && setOpenMenu(true);
-    }
 
     onmousemove = (event) => {
         mouseX = event.clientX;
         mouseY = event.clientY;
 
-        document.querySelector('.mouse-follower-header').style.left = mouseX-50 + "px";
-        document.querySelector('.mouse-follower-footer').style.left = mouseX-50 + "px";
+        document.querySelector('.mouse-follower-header').style.left = mouseX - 50 + "px";
+        document.querySelector('.mouse-follower-footer').style.left = mouseX - 50 + "px";
     };
 
-    /* 
-        window.addEventListener('wheel', function(event)
-    {
-        var element = document.querySelector('.active-menu');
-    if (event.deltaY < 0)
-    {
-        element.parentNode.nextElementSibling.childNodes[0].click(); // #foo3
-    }
-    else if (event.deltaY > 0)
-    {
-    console.log('scrolling down');
-    }
-    });
-    */
+
+
     if (window.innerWidth > 769) {
-        onwheel = () => {
-            interval++;
-    
-            if (interval >= timer) {
-                timer += 15;
-                document.querySelector('#wheel-window').style.left = mouseX + "px";
-                document.querySelector('#wheel-window').style.top = mouseY + "px";
-                document.querySelector('#wheel-window').classList.add("show");
-                
-    
-                setTimeout(() => {
-                    document.querySelector('#wheel-window').classList.remove("show");
-                }, 2500);
+        // pasar de menu desktop
+        onwheel = (event) => {
+            var element = document.querySelector('.active-menu-desk');
+            if (event.deltaY < 0) {
+                element.parentNode.nextSibling?.childNodes[0].click();
+            } else if (event.deltaY > 0) {
+                element.parentNode.previousSibling?.childNodes[0].click();
             }
         };
     } else if (window.innerWidth < 769) {
-        window.addEventListener('touchmove', openMenuTouch, false);
-    } 
+        const drag = document.getElementById('root');
+
+        const data = {
+            value: 1
+        };
+        const touchThreshold = 20;
+
+
+        const touchSweepInstance = new TouchSweep(drag, data, touchThreshold);
+
+        drag.addEventListener('swipeup', movePageNext, false);
+        drag.addEventListener('swipeleft', movePageNext2, false);
+        drag.addEventListener('swipedown', movePagePrev, false);
+        drag.addEventListener('swiperight', movePagePrev2, false);
+    }
+
+
+    function movePageNext() {
+        var element = document.querySelector('.active-menu-mbl');
+        element.parentNode.nextSibling?.childNodes[1].click();
+    }
+
+    function movePagePrev() {
+        var element = document.querySelector('.active-menu-mbl');
+        element.parentNode.previousSibling?.childNodes[1].click();
+    }
+    function movePageNext2() {
+        var isPortfolio = document.querySelector(".carrousel-container");
+        if (!isPortfolio) {
+            var element = document.querySelector('.active-menu-mbl');
+            element.parentNode.nextSibling?.childNodes[1].click();
+        }
+    }
+
+    function movePagePrev2() {
+        var isPortfolio = document.querySelector(".carrousel-container");
+        if (!isPortfolio) {
+            var element = document.querySelector('.active-menu-mbl');
+            element.parentNode.previousSibling?.childNodes[1].click();
+        }
+    }
+
 
     return (
         <>
-            <div id="wheel-window">
-                En esta web no existen los scrolls...
-            </div>
         </>
     )
 }

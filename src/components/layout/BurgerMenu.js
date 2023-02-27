@@ -20,25 +20,25 @@ export const BurgerMenu = () => {
           <li>
             <span>01.</span>
             <NavLink
-              id="inicioMb" className={({ isActive }) => (isActive ? "active" : "")} to="/">
+              id="inicioMb" className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} to="/">
               Inicio
             </NavLink>
           </li>
           <li>
             <span>02.</span>
-            <NavLink id="portafolioMb" to="/portafolio">Portafolio</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="portafolioMb" to="/portafolio">Portafolio</NavLink>
           </li>
           <li>
             <span>03.</span>
-            <NavLink id="skillsMb" to="/skills">Skills</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="skillsMb" to="/skills">Skills</NavLink>
           </li>
           <li>
             <span>04.</span>
-            <NavLink id="aboutmeMb" to="/aboutme">Sobre mi</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="aboutmeMb" to="/aboutme">Sobre mi</NavLink>
           </li>
           <li>
             <span>05.</span>
-            <NavLink id="contactoMb" to="/contacto">Contacto</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="contactoMb" to="/contacto">Contacto</NavLink>
           </li>
         </ul>
       </nav>

@@ -159,11 +159,11 @@ ul {
   transition: all 0.2s ease;
   padding: 2rem;
 }
-.header .nav-desktop ul li a.active {
+.header .nav-desktop ul li a.active-menu-desk {
   color: #64ffda;
 }
 .header .nav-desktop ul li a:hover {
-  color: #1f7a8cff;
+  color: #64ffda;
 }
 @media (max-width: 1250px) {
   .header .nav-desktop {
@@ -320,7 +320,7 @@ ul {
   color: white;
   transition: all 0.2s ease;
 }
-.burger-menu .nav-mobile ul li a.active {
+.burger-menu .nav-mobile ul li a.active-menu-mbl {
   color: #64ffda;
 }
 @media (min-width: 769px) {
@@ -631,6 +631,9 @@ ul {
   }
 }
 @media (max-width: 1025px) {
+  .section-inicio {
+    background-image: url(../public/svg/animatedShapeHomeMbl.svg);
+  }
   .section-inicio .row {
     width: calc(100% - 15%);
   }
@@ -808,6 +811,9 @@ ul {
   -webkit-tap-highlight-color: transparent;
 }
 @media (max-width: 1025px) {
+  .section-listproyectos {
+    background-image: url('../public/svg/animatedShapePortfolioMbl.svg');
+  }
   .section-listproyectos .carrousel-container .slider-container {
     width: calc(100vw - 11%);
   }
@@ -1028,6 +1034,11 @@ ul {
   width: 100%;
   height: 1rem;
   background-color: red;
+}
+@media (max-width: 1025px) {
+  .section-skills {
+    background-image: url('../public/svg/animatedShapeSkillsMbl.svg');
+  }
 }
 @media (max-width: 551px) {
   .section-skills .row {
@@ -1278,6 +1289,9 @@ ul {
   margin-top: 3rem;
 }
 @media (max-width: 1025px) {
+  .section-contacto {
+    background-image: url('../public/svg/animatedShapeContactoMbl.svg');
+  }
   .section-contacto .section-container {
     width: calc(100vw - 7rem) !important;
   }

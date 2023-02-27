@@ -17,21 +17,33 @@ export const Header = () => {
         <ul>
           <li>
             <NavLink
-              id="inicio" className={({ isActive }) => (isActive ? "active-menu" : "")} to="/">
+              className={({ isActive }) => (isActive ? "active-menu-desk" : "")} 
+              id="inicio"  to="/">
               Inicio
             </NavLink>
           </li>
           <li>
-            <NavLink id="portafolio" to="/portafolio">Portafolio</NavLink>
+            <NavLink   
+            className={({ isActive }) => (isActive ? "active-menu-desk" : "")} 
+            id="portafolio" to="/portafolio">Portafolio</NavLink>
           </li>
           <li>
-            <NavLink id="skills" to="/skills">Skills</NavLink>
+            <NavLink   
+            className={({ isActive }) => (isActive ? "active-menu-desk" : "")} 
+            id="skills" to="/skills">Skills
+            </NavLink>
           </li>
           <li>
-            <NavLink id="aboutme" to="/aboutme">Sobre mi</NavLink>
+            <NavLink   
+            className={({ isActive }) => (isActive ? "active-menu-desk" : "")} 
+            id="aboutme" to="/aboutme">Sobre mi
+            </NavLink>
           </li>
           <li>
-            <NavLink id="contacto" to="/contacto">Contacto</NavLink>
+            <NavLink   
+            className={({ isActive }) => (isActive ? "active-menu-desk" : "")} 
+            id="contacto" to="/contacto">Contacto
+            </NavLink>
           </li>
         </ul>
       </nav>
