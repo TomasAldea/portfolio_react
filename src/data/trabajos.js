@@ -7,12 +7,12 @@ export const trabajos = [
         'categorias': 'frontend',
         'descripcion': 'Aplicación inspirada en Airbnb.',
         'longDescripcion': {
-            'dificultades': ['Desarrollar un importador para volcar toda la información de la api a una base de datos propia.', 
+            'dificultades': ['Desarrollo del importador para volcar toda la información de la api a una base de datos propia.', 
                              'Mostrar de manera dinámica los apartamentos filtrados o la localización de estos con api Google maps.', 
-                             'Crear peticiones sql sólidas y ligeras para crear todos filtros.', 
-                             'Conseguir una buena puntuación WPO en una web con este volumen de contenido.'
+                             'Crear peticiones sql sólidas y ligeras para todos filtros.', 
+                             'Optimización del rendimiento Seo.'
                             ],
-            'aprendizaje': ['El mayor aprendizaje a sido el trabajo del importador con la bbdd, la estructura de esta y las peticiones.']
+            'aprendizaje': ['El trabajo del importador con la bbdd, la estructura de esta y las peticiones.']
         }
     },
     {
@@ -23,10 +23,12 @@ export const trabajos = [
         'categorias': 'frontend',
         'descripcion': 'Web internacional multidioma con efectos de css controlados por scroll',
         'longDescripcion': {
-            'dificultades': ['Tener el control total de que mostrar en cada punto del scroll de la web.', 
-                             'Conectar todo el contenido (imagenes, textos, colores, videos, audios) con el cms, y hacerlo de una manera intuitiva para el usuario.',
+            'dificultades': ['Animaciones asociadas al scroll en toda la web.', 
+                             'Habilitar al cliente las herramientas necesarias para una gestión cómoda del contenido de la web.',
                             ],
-            'aprendizaje': ['El mayor aprendizaje a estado relacionado con los efectos css de la web y la puntuación de esta a nivel de rendimiento en la auditoria WPO.']
+            'aprendizaje': ['Animaciones y efectos css avanzados.', 
+                            'Optimización del rendimiento Seo'
+                           ]
         }
     },
     {

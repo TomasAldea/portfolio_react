@@ -18,7 +18,7 @@ export const MoreInfo = () => {
             <FontAwesomeIcon icon={faClose}/> 
         </div>
             <div className='dificultades'>
-                <span>Dificultades</span>
+                <span>Retos</span>
                 <ul>
                 {
                    (moreInfo.dificultades) && moreInfo.dificultades.map(function (texto, i) { 
@@ -28,7 +28,7 @@ export const MoreInfo = () => {
                 </ul>
             </div>
             <div className='aprendizaje'>
-                <span>Aprendizaje</span>
+                <span>Hitos</span>
                 <ul>
                 {
                    (moreInfo.aprendizaje) && moreInfo.aprendizaje.map(function (texto, i) { 
