@@ -1216,6 +1216,7 @@ ul {
 }
 .section-contacto .section-container .form-contacto .input-group input,
 .section-contacto .section-container .form-contacto .input-group textarea {
+  resize: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 1rem 1rem;
