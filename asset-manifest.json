@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio_react/static/css/main.8ff129e1.css",
+    "main.js": "/portfolio_react/static/js/main.ea28749e.js",
+    "static/media/testface.jpg": "/portfolio_react/static/media/testface.04a993b719402a8db1db.jpg",
+    "static/media/404image.png": "/portfolio_react/static/media/404image.1111a95dca938e97cf44.png",
+    "static/media/XanhMono-Regular-textos.ttf": "/portfolio_react/static/media/XanhMono-Regular-textos.ce431304b01d5b802d8a.ttf",
+    "static/media/XanhMono-Regular-title.ttf": "/portfolio_react/static/media/XanhMono-Regular-title.ce431304b01d5b802d8a.ttf",
+    "static/media/XanhMono-Regular.ttf": "/portfolio_react/static/media/XanhMono-Regular.ce431304b01d5b802d8a.ttf",
+    "index.html": "/portfolio_react/index.html",
+    "static/media/shapeHomeMobile.svg": "/portfolio_react/static/media/shapeHomeMobile.ed4080695548d4ce7fc4.svg",
+    "static/media/animatedShapeSkills.svg": "/portfolio_react/static/media/animatedShapeSkills.7a6fc4cf09821564f506.svg",
+    "static/media/animatedShapeAboutme.svg": "/portfolio_react/static/media/animatedShapeAboutme.5b220561422b1de9348d.svg",
+    "static/media/animatedShapeHomeMbl.svg": "/portfolio_react/static/media/animatedShapeHomeMbl.273c66e9eae304e3ed0e.svg",
+    "static/media/animatedShapeContactoMbl.svg": "/portfolio_react/static/media/animatedShapeContactoMbl.65d6c1af7d3d74ce228a.svg",
+    "static/media/animatedShapeHome.svg": "/portfolio_react/static/media/animatedShapeHome.0d42e7f19fc34e1a0323.svg",
+    "static/media/animatedShapeContacto.svg": "/portfolio_react/static/media/animatedShapeContacto.c59e9fb908bfbf47c143.svg",
+    "static/media/animatedShapePortfolio.svg": "/portfolio_react/static/media/animatedShapePortfolio.3ad4a963c906bb65b734.svg",
+    "static/media/animatedShapePortfolioMbl.svg": "/portfolio_react/static/media/animatedShapePortfolioMbl.b983492396811605c8d9.svg",
+    "static/media/animatedShapeSkillsMbl.svg": "/portfolio_react/static/media/animatedShapeSkillsMbl.9d7cbe13e0471d34a596.svg",
+    "static/media/arrow-simple-blue.svg": "/portfolio_react/static/media/arrow-simple-blue.80a693658889e4af5a08.svg",
+    "main.8ff129e1.css.map": "/portfolio_react/static/css/main.8ff129e1.css.map",
+    "main.ea28749e.js.map": "/portfolio_react/static/js/main.ea28749e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ff129e1.css",
+    "static/js/main.ea28749e.js"
+  ]
+}
