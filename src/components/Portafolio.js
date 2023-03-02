@@ -1,13 +1,14 @@
 import React, {useEffect, useContext} from 'react'
 import Carousel from 'nuka-carousel/lib/carousel.js';
-import { trabajos } from '../data/trabajos.js'
+import { trabajos } from '../data/trabajos.js';
+import { trabajosEn } from '../data/trabajosEn.js';
 import { ProviderContext } from '../context/ProviderContext';
 
 export const Portafolio = () => {
-  const {setOpenMenu,setMoreInfo} =  useContext(ProviderContext);
+  const {setOpenMenu,setMoreInfo,languaje} =  useContext(ProviderContext);
 
   let delay = 0;
-
+  let data = (languaje) ? trabajos : trabajosEn;
   useEffect(() => {
     setOpenMenu(false);
   }, [])
@@ -22,7 +23,7 @@ export const Portafolio = () => {
         wrapAround={true} 
         >
           {
-            trabajos.map(function (trabajo, i) {
+            data.map(function (trabajo, i) {
               delay = 0
               return (
                 <div className="card row" key={trabajo.id}>

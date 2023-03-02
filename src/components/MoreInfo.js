@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 export const MoreInfo = () => {
-  const {moreInfo,setMoreInfo} =  useContext(ProviderContext);
+  const {moreInfo,setMoreInfo,languaje} =  useContext(ProviderContext);
 
   useEffect(() => {
     console.log(moreInfo.dificultades);
@@ -18,7 +18,7 @@ export const MoreInfo = () => {
             <FontAwesomeIcon icon={faClose}/> 
         </div>
             <div className='dificultades'>
-                <span>Retos</span>
+                <span>{(languaje) ? 'Retos' : 'Challenges'}</span>
                 <ul>
                 {
                    (moreInfo.dificultades) && moreInfo.dificultades.map(function (texto, i) { 
@@ -28,7 +28,7 @@ export const MoreInfo = () => {
                 </ul>
             </div>
             <div className='aprendizaje'>
-                <span>Hitos</span>
+                <span>{(languaje) ? 'Hitos' : 'Milestones'}</span>
                 <ul>
                 {
                    (moreInfo.aprendizaje) && moreInfo.aprendizaje.map(function (texto, i) { 
