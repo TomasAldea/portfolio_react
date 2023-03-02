@@ -137,6 +137,13 @@ ul {
   width: 100%;
   height: 100%;
 }
+.header .language {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.header .language:hover {
+  color: #64ffda;
+}
 .header .nav-desktop {
   width: 59%;
 }
@@ -169,6 +176,11 @@ ul {
 @media (max-width: 769px) {
   .header {
     justify-content: space-between;
+  }
+  .header .language {
+    position: absolute;
+    right: 10rem;
+    color: #64ffda;
   }
   .header .nav-desktop {
     display: none;
@@ -586,10 +598,6 @@ ul {
 }
 .section-inicio .row .description .btn-container .button1 svg {
   margin-left: 1rem;
-}
-.section-inicio .row .description .btn-container .button1:hover svg {
-  -webkit-animation: bounce-top 0.9s both;
-  animation: bounce-top 0.9s both;
 }
 .section-inicio .row .photo {
   width: 50%;

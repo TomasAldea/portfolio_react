@@ -4,7 +4,7 @@ import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Inicio = () => {
-  const { setOpenMenu } = useContext(ProviderContext);
+  const { setOpenMenu, languaje } = useContext(ProviderContext);
 
   useEffect(() => {
     setOpenMenu(false);
@@ -21,12 +21,12 @@ export const Inicio = () => {
       })
     })
   }
-
+  
   return (
     <section className='section-inicio' data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
       <div className="row" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div className="description col">
-          <div className="title" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-down">Hola, mi nombre es Tomás</div>
+          <div className="title" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-down">{(languaje) ? 'Hola, mi nombre es Tomás' : 'Hello, my name is Tomás Aldea'}</div>
           <div className="text" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-right">
             Soy una persona impulsada por los retos.<br></br>
             <br></br>

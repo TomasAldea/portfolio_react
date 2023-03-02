@@ -9,7 +9,7 @@ import { ProviderContext } from '../context/ProviderContext';
 export const Contacto = () => {
   const [sendButton, setSendButton] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
-  const {setOpenMenu,firstUserLoad} =  useContext(ProviderContext);
+  const {setOpenMenu, languaje} =  useContext(ProviderContext);
 
 
   const [toSend, setToSend] = useState({
@@ -54,15 +54,15 @@ export const Contacto = () => {
   return (
     <section className="section-contacto" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
       <div className={`section-container ${sendSuccess ? "hide" : ""}`} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-        <div className="title" data-aos-delay="500" data-aos-duration="1000" data-aos="fade-down">Contacto</div>
+        <div className="title" data-aos-delay="500" data-aos-duration="1000" data-aos="fade-down">{(languaje) ? 'Contacto' : 'Contact'}</div>
 
         <div className='personal-info'>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
-              <p className='strong'>Fecha de nacimiento:</p>
-              <p className='oneline'> Abr 15, 1990 ({new Date().getFullYear() - 1991})</p>
+              <p className='strong'>{(languaje) ? 'Fecha de nacimiento:' : 'Date of birth:'}</p>
+              <p className='oneline'> {(languaje) ? 'Abr' : 'Apr'} 15, 1990 ({new Date().getFullYear() - 1991})</p>
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
-              <p className='strong'>Dirección:</p>
+              <p className='strong'>{(languaje) ? 'Dirección:' : 'Street address:'}</p>
               <p> Covadonga 524, Sabadell, Barcelona</p>
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
@@ -70,20 +70,20 @@ export const Contacto = () => {
               <a aria-label="mailto" href="mailto:tomas.sbd.5@gmail.com"> tomas.sbd.5@gmail.com</a>
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
-              <p className='strong'>Teléfono:</p>
+              <p className='strong'>{(languaje) ? 'Teléfono:' : 'Telephone:'}</p>
               <a aria-label="phoneto" href='tel:690322287'>690322287</a>
             </div>
 
           </div>
         <form className="form-contacto col" onSubmit={onSubmit}>
           <div className="input-group" data-aos-delay="500" data-aos-duration="1000" data-aos="zoom-in">
-            <label htmlFor="from_name">Nombre
+            <label htmlFor="from_name">{(languaje) ? 'Nombre' : 'Name'}
               <FontAwesomeIcon icon={faUser} /> 
             </label>
             <input
               required
               type="text"
-              placeholder="Nombre"
+              placeholder={(languaje) ? 'Nombre' : 'Name'}
               id="nombre"
               name="from_name"
               onChange={handleChange}
@@ -105,32 +105,34 @@ export const Contacto = () => {
             />
           </div>
           <div className="input-group" data-aos-delay="500" data-aos-duration="1000" data-aos="zoom-in">
-            <label htmlFor="message">¿Cual es el motivo de contacto?
+            <label htmlFor="message">{(languaje) ? '¿Cual es el motivo de contacto?' : 'What is the reason for contact?'}
             <FontAwesomeIcon icon={faQuestionCircle} /> 
             </label>
             <textarea
               required
               id="msg"
-              placeholder="Motivo de contacto"
+              placeholder={(languaje) ? 'Motivo de contacto' : 'Reason for contact'}
               name="message"
               onChange={handleChange}
               value={toSend.message}
             ></textarea>
           </div>
           <button className="submit button1">
-            <div className={`static ${sendButton ? "hide" : ""}`}>Enviar</div>
+            <div className={`static ${sendButton ? "hide" : ""}`}>{(languaje) ? 'Enviar' : 'Send'}</div>
             <div className={`typing ${sendButton ? "active" : ""}`}>
-              Enviando...
+            {(languaje) ? 'Enviando..' : 'Sending...'}.
             </div>
           </button>
         </form>
       </div>
         <div className={`send-success ${sendSuccess ? "show" : ""}`} data-aos-duration="300" data-aos="zoom-in">
           <div className="text">
-            ¡Gracias! tu email se ha enviado correctamente. <br></br> en breve me pondre en contacto contigo!
+          {(languaje) ? '¡Gracias! tu email se ha enviado correctamente.' : 'Thank you! your email has been sent correctly.'}  
+          <br></br>
+          {(languaje) ? 'en breve me pondré en contacto contigo!' : 'I will contact you shortly!'} 
           </div>
           <Link to="/inicio" className="button1">
-            Volver al inicio
+          {(languaje) ? 'Volver al inicio' : 'Back to top'} 
           </Link>
         </div>
     </section>

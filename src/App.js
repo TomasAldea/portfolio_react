@@ -9,8 +9,9 @@ import { MisRutas } from './router/MisRutas';
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
   const [firstUserLoad, setfirstUserLoad] = useState(false);
-  const [loadPage, setLoadPage] = useState(false)
-  const [moreInfo, setMoreInfo] = useState("")
+  const [loadPage, setLoadPage] = useState(false);
+  const [moreInfo, setMoreInfo] = useState("");
+  const [languaje, setLanguaje] = useState(true);
 
   return (
     <>
@@ -18,7 +19,8 @@ function App() {
         openMenu,setOpenMenu,
         firstUserLoad,setfirstUserLoad,
         loadPage, setLoadPage,
-        moreInfo, setMoreInfo
+        moreInfo, setMoreInfo,
+        languaje, setLanguaje
         }}>
         <LoadingPage/>
         <MisRutas/>

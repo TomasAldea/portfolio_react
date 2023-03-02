@@ -27,9 +27,9 @@ export const MouseTrack = () => {
         onwheel = (event) => {
             var element = document.querySelector('.active-menu-desk');
             if (event.deltaY < 0) {
-                element.parentNode.nextSibling?.childNodes[0].click();
-            } else if (event.deltaY > 0) {
                 element.parentNode.previousSibling?.childNodes[0].click();
+            } else if (event.deltaY > 0) {
+                element.parentNode.nextSibling?.childNodes[0].click();
             }
         };
     } else if (window.innerWidth < 769) {

@@ -244,6 +244,15 @@ ul {
     }
   }
 
+  .language {
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: @electricBlue;
+    }
+  }
+
   .nav-desktop {
     width: 59%;
 
@@ -284,8 +293,11 @@ ul {
 
   @media @tabletV {
     justify-content: space-between;
-
-
+    .language {
+      position: absolute;
+      right: 10rem;
+      color: @electricBlue;
+    }
     .nav-desktop {
       display: none;
     }
@@ -652,9 +664,11 @@ ul {
     .container {
       justify-content: center;
       width: auto;
-    .title {
-      display: none;
-    }
+
+      .title {
+        display: none;
+      }
+
       .section:not(:first-child) {
         display: none;
       }
@@ -674,13 +688,14 @@ ul {
         &:last-child {
           display: none;
         }
+
         /* &:not(:first-child) {
           border-bottom: none;
         } */
         .col .info {
           font-size: 1.3rem;
         }
-      } 
+      }
     }
   }
 }
@@ -711,21 +726,16 @@ ul {
       .text {
         .m-text();
       }
+
       .btn-container {
         margin-top: 4.5rem;
-    
+
         .button1 {
           width: fit-content;
           font-size: 2rem;
+
           svg {
             margin-left: 1rem;
-          }
-    
-          &:hover {
-            svg {
-              -webkit-animation: bounce-top 0.9s both;
-              animation: bounce-top 0.9s both;
-            }
           }
         }
       }
