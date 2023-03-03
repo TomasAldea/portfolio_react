@@ -16,18 +16,38 @@ export const trabajosEn = [
         }
     },
     {
+        'id': '7portes',
+        'nombre': '7 Portes',
+        'url': 'https://7portes.com/es/',
+        'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
+        'categorias': 'frontend',
+        'descripcion': 'Famous restaurant in Barcelona with small online ecommerce.',
+        'longDescripcion': {
+            'dificultades': ['Development of small ecommerce and gift cards.', 
+                             'Crear una cesta de la compra que persista navegando por la web.',
+                             'Enable and develop the client the necessary tools to create price ranges by product weight and shipping destination.',
+                             'Sending personalized email with buyer and beneficiary data for gift cards.',
+                             'Integration with Redsys payment gateway.',
+                            ],
+            'aprendizaje': ['Reading and compression of external API.', 
+                            'Development of more complex mathematical calculations.',
+                            'Development of dynamic form with automatic selection of locality according to province, ID validation.'
+                           ]
+        }
+    },
+    {
         'id': 'sateliot',
         'nombre': 'Sateliot',
         'url': 'https://sateliot.space/en/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Web internacional multidioma con efectos de css controlados por scroll',
+        'descripcion': 'International multilanguage website with CSS effects controlled by scroll.',
         'longDescripcion': {
-            'dificultades': ['Animaciones asociadas al scroll en toda la web.', 
-                             'Habilitar al cliente las herramientas necesarias para una gestión cómoda del contenido de la web.',
+            'dificultades': ['Animations associated with scrolling throughout the web.', 
+                             'Provide the client with the necessary tools for a comfortable management of the content of the web.',
                             ],
-            'aprendizaje': ['Animaciones y efectos css avanzados.', 
-                            'Optimización del rendimiento Seo'
+            'aprendizaje': ['Advanced CSS animations and effects.', 
+                            'SEO performance optimization.'
                            ]
         }
     },
@@ -37,8 +57,16 @@ export const trabajosEn = [
         'url': 'https://www.villapadierna.es/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Web de gran hotel con seguimiento de torneos, inscripciónes, blog, pequeño ecommerce'
-
+        'descripcion': 'Great hotel with tournament monitoring, registration, blog, small ecommerce.',
+        'longDescripcion': {
+            'dificultades': ['Create an organized and scalable code structure.', 
+                             'Develop and make coexist a large number of forms.',
+                             'Provide the client with the necessary tools for a comfortable management of the content of the web.',
+                            ],
+            'aprendizaje': ['Work under great pressure and against the clock without interfering with quality.', 
+                            'SEO performance optimization.'
+                           ]
+        }
     },
     {
         'id': 'valentin',
@@ -46,16 +74,15 @@ export const trabajosEn = [
         'url': 'https://www.valentinmaya.com/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Web de hotel en riviera maya con reserva online.'
-
-    },
-    {
-        'id': '7portes',
-        'nombre': '7 Portes',
-        'url': 'https://7portes.com/es/',
-        'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
-        'categorias': 'frontend',
-        'descripcion': 'Web de famoso restaurante en Barcelona con pequeño ecommerce online'
-
+        'descripcion': 'Hotel in Riviera Maya with online booking.',
+        'longDescripcion': {
+            'dificultades': ['Development related to the integration of the web and API of online reservations.', 
+                             'Responsive and pixel perfect CSS development.',
+                            ],
+            'aprendizaje': ['Advanced CSS animations and effects.', 
+                            'SEO performance optimization.',
+                            'Development and understanding of external API documentation.'
+                           ]
+        }
     },
 ]

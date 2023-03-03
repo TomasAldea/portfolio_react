@@ -16,18 +16,39 @@ export const trabajos = [
         }
     },
     {
+        'id': '7portes',
+        'nombre': '7 Portes',
+        'url': 'https://7portes.com/es/',
+        'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
+        'categorias': 'frontend',
+        'descripcion': 'Famoso restaurante en Barcelona con pequeño ecommerce online',
+        'longDescripcion': {
+            'dificultades': ['Desarrollo de pequeño ecommerce y tarjetas regalo.', 
+                             'Create a shopping cart that persists browsing the web.',
+                             'Habilitar y desarrollar al cliente las herramientas necesarias para crear rangos de precio por peso de producto y destino de envio.',
+                             'Envio de email personalizado con datos de comprador y beneficiario para targetas regalo.',
+                             'Integración con pasarela de pago Redsys.',
+                            ],
+            'aprendizaje': ['Lectura y compresion de API externa.', 
+                            'Desarrollo de calculos matematicos mas complejos.',
+                            'Desarrollo de formulario dinamico con seleccion automatica de localidad segun provincia, validación de dni.'
+                           ]
+        }
+
+    },
+    {
         'id': 'sateliot',
         'nombre': 'Sateliot',
         'url': 'https://sateliot.space/en/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Web internacional multidioma con efectos de css controlados por scroll',
+        'descripcion': 'Web internacional multiidioma con efectos de CSS controlados por scroll.',
         'longDescripcion': {
             'dificultades': ['Animaciones asociadas al scroll en toda la web.', 
                              'Habilitar al cliente las herramientas necesarias para una gestión cómoda del contenido de la web.',
                             ],
-            'aprendizaje': ['Animaciones y efectos css avanzados.', 
-                            'Optimización del rendimiento Seo'
+            'aprendizaje': ['Animaciones y efectos CSS avanzados.', 
+                            'Optimización del rendimiento Seo.'
                            ]
         }
     },
@@ -37,8 +58,16 @@ export const trabajos = [
         'url': 'https://www.villapadierna.es/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Web de gran hotel con seguimiento de torneos, inscripciónes, blog, pequeño ecommerce'
-
+        'descripcion': 'Gran hotel con seguimiento de torneos, inscripciónes, blog, pequeño ecommerce.',
+        'longDescripcion': {
+            'dificultades': ['Crear una estructura de código organizada y escalable.', 
+                             'Desarrollar y hacer convivir una gran cantidad de formularios.',
+                             'Habilitar al cliente las herramientas necesarias para una gestión cómoda del contenido de la web.',
+                            ],
+            'aprendizaje': ['Trabajar bajo gran presión y a contrarreloj sin interferir en la calidad.', 
+                            'Optimización del rendimiento Seo.'
+                           ]
+        }
     },
     {
         'id': 'valentin',
@@ -46,16 +75,17 @@ export const trabajos = [
         'url': 'https://www.valentinmaya.com/es/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Web de hotel en riviera maya con reserva online.'
-
+        'descripcion': 'Hotel en riviera maya con reserva online.',
+        'longDescripcion': {
+            'dificultades': ['Desarrollo relacionado con la integración de la web y API de reservas online.', 
+                             'Optimización del rendimiento Seo.',
+                             'Desarrollo CSS responsive y píxel perfect.',
+                            ],
+            'aprendizaje': ['Animaciones y efectos CSS avanzados.', 
+                            'Optimización del rendimiento Seo.',
+                            'Desarrollo y comprensión de la documentación de API externa.'
+                           ]
+        }
     },
-    {
-        'id': '7portes',
-        'nombre': '7 Portes',
-        'url': 'https://7portes.com/es/',
-        'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
-        'categorias': 'frontend',
-        'descripcion': 'Web de famoso restaurante en Barcelona con pequeño ecommerce online'
 
-    },
 ]

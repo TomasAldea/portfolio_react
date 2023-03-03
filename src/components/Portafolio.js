@@ -44,7 +44,7 @@ export const Portafolio = () => {
                       <a aria-label={`Link to: ${trabajo.id} page`} href={trabajo.url} className='url' target="_blank" rel="noopener noreferrer">{trabajo.url.replace('https://', '')}</a>
                       <div className='text'>{trabajo.descripcion}</div>
                         {
-                          (trabajo.longDescripcion) && <div className="button1" onClick={() => setMoreInfo(trabajo.longDescripcion)}>Más info</div>
+                          (trabajo.longDescripcion) && <div className="button1" onClick={() => setMoreInfo(trabajo.longDescripcion)}>{(languaje) ? 'Más info' : 'More info'}</div>
                         }
                     </div>
                   </div>

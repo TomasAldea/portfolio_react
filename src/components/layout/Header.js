@@ -4,7 +4,7 @@ import { BurgerMenu } from "./BurgerMenu";
 import { ProviderContext } from '../../context/ProviderContext';
 
 export const Header = () => {
-  const { setOpenMenu, languaje, setLanguaje } = useContext(ProviderContext);
+  const { languaje, setLanguaje } = useContext(ProviderContext);
 
   return (
     <section className="header">
@@ -19,13 +19,13 @@ export const Header = () => {
             <NavLink
               className={({ isActive }) => (isActive ? "active-menu-desk" : "")}
               id="inicio" to="/">
-              Inicio
+              {(languaje) ? 'Inicio' : 'Start'}
             </NavLink>
           </li>
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active-menu-desk" : "")}
-              id="portafolio" to="/portafolio">Portafolio</NavLink>
+              id="portafolio" to="/portafolio">{(languaje) ? 'Portafolio' : 'Portfolio'}</NavLink>
           </li>
           <li>
             <NavLink
@@ -36,13 +36,13 @@ export const Header = () => {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active-menu-desk" : "")}
-              id="aboutme" to="/aboutme">Sobre mi
+              id="aboutme" to="/aboutme">{(languaje) ? 'Sobre mi' : 'About me'}
             </NavLink>
           </li>
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active-menu-desk" : "")}
-              id="contacto" to="/contacto">Contacto
+              id="contacto" to="/contacto">{(languaje) ? 'Contacto' : 'Contact'}
             </NavLink>
           </li>
         </ul>
