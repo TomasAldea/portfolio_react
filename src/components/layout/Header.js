@@ -4,7 +4,7 @@ import { BurgerMenu } from "./BurgerMenu";
 import { ProviderContext } from '../../context/ProviderContext';
 
 export const Header = () => {
-  const { languaje, setLanguaje } = useContext(ProviderContext);
+  const { languaje, setLanguaje, openMenu } = useContext(ProviderContext);
 
   return (
     <section className="header">
@@ -47,7 +47,7 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className="language" onClick={() => setLanguaje(!languaje)}>{(languaje) ? 'EN' : 'ES'}</div>
+      <div className={`language ${(openMenu) ? 'hide' : ''}`} onClick={() => setLanguaje(!languaje)}>{(languaje) ? 'EN' : 'ES'}</div>
 
     </section>
   );

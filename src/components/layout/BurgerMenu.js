@@ -4,8 +4,10 @@ import { ProviderContext } from '../../context/ProviderContext';
 
 
 export const BurgerMenu = () => {
-  const {setOpenMenu,openMenu} =  useContext(ProviderContext);
+  const { setOpenMenu, openMenu, languaje, setLanguaje } =  useContext(ProviderContext);
  
+  // {(languaje) ? '' : ''}
+
   return (
     <section className="burger-menu">
       <div id="nav-icon3" onClick={() => setOpenMenu(!openMenu)} className={(openMenu) ? 'open': 'close'}>
@@ -21,24 +23,32 @@ export const BurgerMenu = () => {
             <span>01.</span>
             <NavLink
               id="inicioMb" className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} to="/">
-              Inicio
+              {(languaje) ? 'Inicio' : 'Start'}
             </NavLink>
           </li>
           <li>
             <span>02.</span>
-            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="portafolioMb" to="/portafolio">Portafolio</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="portafolioMb" to="/portafolio">
+              {(languaje) ? 'Portafolio' : 'Portfolio'}
+            </NavLink>
           </li>
           <li>
             <span>03.</span>
-            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="skillsMb" to="/skills">Skills</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="skillsMb" to="/skills">
+              Skills
+            </NavLink>
           </li>
           <li>
             <span>04.</span>
-            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="aboutmeMb" to="/aboutme">Sobre mi</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="aboutmeMb" to="/aboutme">
+              {(languaje) ? 'Sobre mi' : 'About me'}
+            </NavLink>
           </li>
           <li>
             <span>05.</span>
-            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="contactoMb" to="/contacto">Contacto</NavLink>
+            <NavLink className={({ isActive }) => (isActive ? "active-menu-mbl" : "")} id="contactoMb" to="/contacto">
+              {(languaje) ? 'Contacto' : 'Contact'}
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -144,6 +144,9 @@ ul {
 .header .language:hover {
   color: #64ffda;
 }
+.header .language.hide {
+  display: none;
+}
 .header .nav-desktop {
   width: 59%;
 }
