@@ -11,6 +11,7 @@
 @lavender-web: #e1e5f2ff;
 @white: #f5f5f5;
 @electricBlue: #64ffda;
+@grey: #EAE0D5;
 
 // paleta de colores
 
@@ -37,6 +38,10 @@
 @fontTitle: "XanhMonoTitle", sans-serif;
 @fontSubtitle: "XanhMono", sans-serif;
 @fontTexto: "XanhMonoTextos", sans-serif;
+@fontTitle2: "Anton", sans-serif;
+@lobster: "Lobster", sans-serif;
+@kanit: "Kanit", sans-serif;
+@arvo: "Arvo", sans-serif;
 
 @transition1: 0.3s ease;
 @transition1_delay: 0.3s 0.3s ease;
@@ -48,6 +53,39 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Arvo";
+  src: url("./fonts/Arvo-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kanit";
+  src: url("./fonts/Kanit-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "lobster";
+  src: url("./fonts/Lobster-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url("./fonts/Anton-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @font-face {
   font-family: "XanhMonoTextos";
@@ -94,6 +132,18 @@
 
   @media @mobile {
     font: 400 4rem/4.2rem @fontTitle;
+  }
+}
+
+.m-title2() {
+  font: 500 6rem/3rem @arvo;
+
+  @media @tabletH {
+    font: 400 5rem/5.2rem @arvo;
+  }
+
+  @media @mobile {
+    font: 400 4rem/4.2rem @arvo ;
   }
 }
 
@@ -251,6 +301,7 @@ ul {
     &:hover {
       color: @electricBlue;
     }
+
     &.hide {
       display: none;
     }
@@ -270,12 +321,12 @@ ul {
         }
 
         a {
-          font: 600 1.7rem/3rem "XanhMonoTextos", sans-serif;
+          font: 600 2.7rem/3rem @kanit;
           text-transform: capitalize;
           color: @lavender-web;
           transition: all 0.2s ease;
           padding: 2rem;
-
+          text-shadow: 0 0 2px black;
           &.active-menu-desk {
             color: @electricBlue;
           }
@@ -296,11 +347,13 @@ ul {
 
   @media @tabletV {
     justify-content: space-between;
+
     .language {
       position: absolute;
       right: 10rem;
       color: @electricBlue;
     }
+
     .nav-desktop {
       display: none;
     }
@@ -464,7 +517,7 @@ ul {
           transition: all 0.2s ease;
 
           &.active-menu-mbl {
-            color: @electricBlue;
+            color: @grey;
           }
         }
       }
@@ -721,13 +774,15 @@ ul {
       width: 50%;
       padding: 7rem 7rem 7rem 0;
 
+
       .title {
         .m-title();
         font-size: 4rem;
       }
 
       .text {
-        .m-text();
+        .m-title();
+
       }
 
       .btn-container {
@@ -757,14 +812,14 @@ ul {
 
       .img {
         position: absolute;
-        
-        background-image: url(../public/images/definitiva.png);
+        background-image: url(../public/images/mainphotoyellow.png);
         width: 70%;
         height: 74%;
         border-radius: 1rem;
-        .basic-bg();
+        background-repeat: no-repeat;
+        background-size: contain;
 
-        .fakebg {
+        /* .fakebg {
           transition: all 0.5s ease;
           opacity: 0;
           background: #013a7ca1;
@@ -778,6 +833,7 @@ ul {
             opacity: 1;
           }
         }
+        */
       }
 
       &::before {

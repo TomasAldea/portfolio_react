@@ -7,6 +7,34 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Arvo";
+  src: url("fonts/Arvo-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kanit";
+  src: url("fonts/Kanit-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "lobster";
+  src: url("fonts/Lobster-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Anton";
+  src: url("fonts/Anton-Regular.ttf") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "XanhMonoTextos";
   src: url("fonts/XanhMono-Regular-textos.ttf") format("woff2");
   font-weight: 400;
@@ -159,11 +187,12 @@ ul {
   display: none;
 }
 .header .nav-desktop ul li a {
-  font: 600 1.7rem/3rem "XanhMonoTextos", sans-serif;
+  font: 600 2.7rem/3rem "Kanit", sans-serif;
   text-transform: capitalize;
   color: #e1e5f2ff;
   transition: all 0.2s ease;
   padding: 2rem;
+  text-shadow: 0 0 2px black;
 }
 .header .nav-desktop ul li a.active-menu-desk {
   color: #64ffda;
@@ -332,7 +361,7 @@ ul {
   transition: all 0.2s ease;
 }
 .burger-menu .nav-mobile ul li a.active-menu-mbl {
-  color: #64ffda;
+  color: #EAE0D5;
 }
 @media (min-width: 769px) {
   .burger-menu {
@@ -584,12 +613,17 @@ ul {
   }
 }
 .section-inicio .row .description .text {
-  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  font: 500 6rem/6rem "XanhMonoTitle", sans-serif;
+  letter-spacing: -0.1rem;
+}
+@media (max-width: 1025px) {
+  .section-inicio .row .description .text {
+    font: 400 5rem/5.2rem "XanhMonoTitle", sans-serif;
+  }
 }
 @media (max-width: 551px) {
   .section-inicio .row .description .text {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 4rem/4.2rem "XanhMonoTitle", sans-serif;
   }
 }
 .section-inicio .row .description .btn-container {
@@ -613,24 +647,27 @@ ul {
 }
 .section-inicio .row .photo .img {
   position: absolute;
-  background-image: url(../public/images/definitiva.png);
+  background-image: url(../public/images/mainphotoyellow.png);
   width: 70%;
   height: 74%;
   border-radius: 1rem;
-  background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
-}
-.section-inicio .row .photo .img .fakebg {
-  transition: all 0.5s ease;
-  opacity: 0;
-  background: #013a7ca1;
-  width: 100%;
-  border-radius: 1rem;
-  height: 100%;
-}
-.section-inicio .row .photo .img:hover .fakebg {
-  opacity: 1;
+  background-size: contain;
+  /* .fakebg {
+          transition: all 0.5s ease;
+          opacity: 0;
+          background: #013a7ca1;
+          width: 100%;
+          border-radius: 1rem;
+          height: 100%;
+        }
+
+        &:hover {
+          .fakebg {
+            opacity: 1;
+          }
+        }
+        */
 }
 .section-inicio .row .photo::before {
   content: "";
