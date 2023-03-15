@@ -1,8 +1,11 @@
 import React, {useEffect, useContext} from 'react'
-import Carousel from 'nuka-carousel/lib/carousel.js';
+/* import Carousel from 'nuka-carousel/lib/carousel.js'; */
 import { trabajos } from '../data/trabajos.js';
 import { trabajosEn } from '../data/trabajosEn.js';
 import { ProviderContext } from '../context/ProviderContext';
+import Slider from "react-slick";
+
+
 
 export const Portafolio = () => {
   const {setOpenMenu,setMoreInfo,languaje} =  useContext(ProviderContext);
@@ -14,13 +17,18 @@ export const Portafolio = () => {
   }, [])
 
   return (
-    <section className='section-listproyectos' data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-      <div className='carrousel-container' data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-        <Carousel data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"
-        pauseOnHover={true} 
+      <div className='section-portfolio'>
+        <Slider 
+        autoplay={true}
+        autoplaySpeed={3500}
+        touchMove={false}
+        pauseOnHover={true}
+        infinite={true}
+        speed={1000}
+        /* pauseOnHover={true} 
         autoplayInterval={3500} 
         autoplay={false} 
-        wrapAround={true} 
+        wrapAround={true} */ 
         >
           {
             data.map(function (trabajo, i) {
@@ -52,8 +60,7 @@ export const Portafolio = () => {
               )
             })
           }
-        </Carousel>
+        </Slider >
       </div>
-    </section>
   )
 }

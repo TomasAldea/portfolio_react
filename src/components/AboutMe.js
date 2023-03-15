@@ -26,14 +26,17 @@ export const AboutMe = () => {
                 <li>
                   Full stack developer.
                 </li>
+
                 <li>
                 {(languaje) ? 'Creación de manuales y formación a clientes.' : 'Creation of manuals and customer training.'}
                 </li>
+
                 <li>
                 {(languaje) ? 'Seguimiento y mejora de las características WPO.' : 'Monitoring and improvement of WPO features.'}
+                </li>
+
                 <li>
                 {(languaje) ? 'Apoyo técnico en mejoras y propuestas con cliente.' : 'Technical support in improvements and proposals with client.'}
-                </li>
                 </li>
               </ol>
             </div>
@@ -51,12 +54,15 @@ export const AboutMe = () => {
                 <li>
                 {(languaje) ? 'Gestión del personal.' : 'Staff management.'}
                 </li>
+
                 <li>
                 {(languaje) ? 'Gestión de presupuestos y compras.' : 'Management of budgets and purchases.'}
                 </li>
+
                 <li>
                 {(languaje) ? 'Presupuestar ofertas culinarias y gestionar eventos gastronómicos.' : 'Budget culinary offers and manage gastronomic events.'}
                 </li>
+                
                 <li>
                 {(languaje) ? 'Reuniones de seguimiento semanales con cliente.' : 'Weekly follow-up meetings with client.'}
                 </li>
