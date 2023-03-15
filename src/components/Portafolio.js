@@ -25,6 +25,7 @@ export const Portafolio = () => {
         pauseOnHover={true}
         infinite={true}
         speed={1000}
+        draggable={true}
         /* pauseOnHover={true} 
         autoplayInterval={3500} 
         autoplay={false} 
