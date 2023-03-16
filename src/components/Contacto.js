@@ -21,7 +21,7 @@ export const Contacto = () => {
 
   useEffect(() => {
     setOpenMenu(false);
-  }, [])
+  }, [setOpenMenu])
 
 
   const onSubmit = (e) => {
@@ -67,7 +67,7 @@ export const Contacto = () => {
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
               <p className='strong'>E-mail:</p>
-              <a aria-label="mailto" href="mailto:tomas.sbd.5@gmail.com"> tomas.sbd.5@gmail.com</a>
+              <a aria-label="mailto" href="mailto:taldea.dev@gmail.com"> taldea.dev@gmail.com</a>
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
               <p className='strong'>{(languaje) ? 'Teléfono:' : 'Telephone:'}</p>

@@ -21,13 +21,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "lobster";
-  src: url("fonts/Lobster-Regular.ttf") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Anton";
   src: url("fonts/Anton-Regular.ttf") format("woff2");
   font-weight: 400;
@@ -76,8 +69,7 @@
   }
 }
 .button1:hover {
-  color: #ffffff;
-  background-color: #1f7a8cff;
+  background-color: #64ffda;
 }
 html {
   -webkit-tap-highlight-color: transparent;
@@ -111,16 +103,8 @@ section {
   line-height: 1.2;
 }
 section:not(.header, .footer, .burger-menu) {
-  /* height: calc(100vh - 14rem); */
   height: 100vh;
   position: relative;
-  /* margin: 8rem auto auto auto; */
-}
-@media (max-width: 551px) {
-  section:not(.header, .footer, .burger-menu) {
-    /* height: calc(100vh - 12rem);
-    margin: 6rem auto auto auto; */
-  }
 }
 a {
   text-decoration: none;
@@ -143,7 +127,6 @@ ul {
   position: fixed;
   width: 100%;
   top: 0;
-  /* box-shadow: 0px 1px 20px 3px #001821; */
 }
 .header .mouse-follower-header {
   content: " ";
@@ -154,7 +137,6 @@ ul {
   bottom: 0;
   border-radius: 9px 9px 0 0;
   transition-timing-function: ease;
-  /* Also the same as */
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .header #logo {
@@ -408,7 +390,6 @@ ul {
 .footer {
   box-sizing: border-box;
   padding: 3rem 5rem 3rem 3rem;
-  /* box-shadow: -3px 0px 20px 3px #001821; */
   width: 100%;
   position: fixed;
   margin: 0 auto;
@@ -699,7 +680,7 @@ ul {
   --_g: #0000 90deg, #022b3aff 0;
   --_p: var(--w) var(--w) no-repeat;
   --mask: conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
-            conic-gradient(
+          conic-gradient(
               from -90deg at bottom var(--b) right var(--b),
               var(--_g)
             )
@@ -1443,22 +1424,28 @@ ul {
   transition: all 0.5s ease-out;
   opacity: 0;
 }
+.main-logo {
+  width: 100%;
+  max-width: 18rem;
+}
 #load-gif {
-  width: 18rem;
-  z-index: 90;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-86%, -64%);
+  z-index: 99;
+  pointer-events: none;
 }
 #load-gif.off {
+  pointer-events: all;
   -webkit-animation: diagonal 1.3s;
   -moz-animation: diagonal 1.3s;
   -o-animation: diagonal 1.3s;
   animation: diagonal 1.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  z-index: 2;
+  z-index: 9;
 }
 #load-gif.hide {
   transition: all 0.5s ease-out;

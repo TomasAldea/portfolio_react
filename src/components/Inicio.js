@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { ProviderContext } from '../context/ProviderContext';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +8,7 @@ export const Inicio = () => {
 
   useEffect(() => {
     setOpenMenu(false);
-  }, [])
+  }, [setOpenMenu])
 
   const cvDownload = () => {
     fetch('CV_TomasAldea-2023.pdf').then(response => {

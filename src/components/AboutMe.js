@@ -6,7 +6,7 @@ export const AboutMe = () => {
 
   useEffect(() => {
     setOpenMenu(false);
-  }, [])
+  }, [setOpenMenu])
 
   return (
     <section className='section-aboutme' data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
