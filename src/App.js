@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import { LoadingPage } from './components/LoadingPage';
 import { MouseTrack } from './components/MouseTrack';
 import { MoreInfo } from './components/MoreInfo';

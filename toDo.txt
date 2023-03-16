@@ -1,4 +1,0 @@
-
-- Instalar AOS por npm y exportarlo a los components para inciarlo en el useEftect OK
-- Ordenar y refactoriar el css del efecto de vuelta
--service_xqn96xi email Servide ID

@@ -17,7 +17,7 @@ export const LoadingPage = () => {
         setTimeout(() => {           
             setLogo(true);
         }, 4300);
-    }, [])
+    }, [firstUserLoad, setfirstUserLoad])
 
     useEffect(() => {
 
@@ -35,7 +35,9 @@ export const LoadingPage = () => {
       // TODO problema con enlace a home (no esta dentro de router)
     return (
         <>
-            <div><img alt="main-logo" id="load-gif" className={`${(firstUserLoad) && 'off'}`} src={(logo) ? 'icons/main-logo.png' : 'loading-logo-vid/main.gif' } /></div>
+            <a id="load-gif" className={`main-a ${(firstUserLoad) && 'off'}`} href="https://tomasaldea.com/">
+                <img className='main-logo' alt="main-logo" src={(logo) ? 'icons/main-logo.png' : 'loading-logo-vid/main.gif' } />
+            </a>
             <div id="loading-page" className={` ${(firstUserLoad) && 'off'}`}>
             </div>
         </>
