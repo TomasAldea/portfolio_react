@@ -26,18 +26,31 @@ export const Inicio = () => {
     <section className='section-inicio' data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
       <div className="row" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
         <div className="description col">
-          <div className="title" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-down">{(languaje) ? 'Hola, mi nombre es Tomás' : 'Hello, my name is Tomás Aldea'}</div>
+          <div className="title" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-down">
+            {(languaje) ? 'Hola, mi nombre és' : 'Hello, my name is'}
+            <span>{(languaje) ? ' Tomás' : ' Tomás'}</span>
+          </div>
           <div className="text" data-aos-delay="300" data-aos-duration="1000" data-aos="fade-right">
-            Soy una persona impulsada por los retos.<br></br>
-            <br></br>
-            hace unos años, y después de media vida como profesional de la hosteleria,
-            decidí hacer de mi pasión y mi hobbie, mi profesión.<br></br>
-            <br></br>
-            En la programación encontré una forma de crecimiento personal continuo.
+            <p>
+            {(languaje) ? 'Bienvenidos a mi portfolio.' : 'Welcome to my portfolio.'}
+            </p>
+            <p>
+            {(languaje) ? 'Desde que mi padre me compro mi primer pentium 3, no he dejado nunca de trastear con la informática.' : 'Since my father bought me my first pentium 3, I have never stopped tinkering with computers.'}
+            </p>
+            <p>
+            {(languaje) ? 'Es por esto, que hace unos años, y después de media vida como profesional de la hostelería (mi otra pasión), decidí hacer de mi hobbie, mi profesión.' : 'This is why, a few years ago, and after half my life as a hospitality professional (my other passion), I decided to make my hobby my profession.'}
+            </p>
+            <p>
+            {(languaje) ? 'Además de la tecnología, me encanta el deporte y la música.' : 'Besides technology, I love sports and music.'}
+            </p>
+            <p>
+            {(languaje) ? 'En la programación he descubierto un lugar donde saciar mi infinita curiosidad.' : 'In programming I have discovered a place to satisfy my infinite curiosity.'}
+            </p>
           </div>
 
           <div className='btn-container' delay="500" data-aos-duration="2000" data-aos="fade-up">
-            <div onClick={cvDownload} className='button1'>Descargar cv
+            <div onClick={cvDownload} className='button1'>
+            {(languaje) ? 'Currículum' : 'resume'}
               <FontAwesomeIcon icon={faFileDownload} />
             </div>
           </div>
