@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c5612ee6.css",
-    "main.js": "/static/js/main.b65dca26.js",
+    "main.css": "/static/css/main.f02cd59b.css",
+    "main.js": "/static/js/main.27d0a4d9.js",
     "static/media/mainphotogrey.png": "/static/media/mainphotogrey.923f3d18dd72e96543a7.png",
     "static/media/Lobster-Regular.ttf": "/static/media/Lobster-Regular.03c38496322925fec242.ttf",
     "static/media/Kanit-Regular.ttf": "/static/media/Kanit-Regular.f3bae13d78ced30b6ea3.ttf",
@@ -23,11 +23,11 @@
     "static/media/animatedShapeSkillsMbl.svg": "/static/media/animatedShapeSkillsMbl.9d7cbe13e0471d34a596.svg",
     "index.html": "/index.html",
     "static/media/arrow-simple-blue.svg": "/static/media/arrow-simple-blue.80a693658889e4af5a08.svg",
-    "main.c5612ee6.css.map": "/static/css/main.c5612ee6.css.map",
-    "main.b65dca26.js.map": "/static/js/main.b65dca26.js.map"
+    "main.f02cd59b.css.map": "/static/css/main.f02cd59b.css.map",
+    "main.27d0a4d9.js.map": "/static/js/main.27d0a4d9.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5612ee6.css",
-    "static/js/main.b65dca26.js"
+    "static/css/main.f02cd59b.css",
+    "static/js/main.27d0a4d9.js"
   ]
 }
