@@ -20,16 +20,12 @@ export const Portafolio = () => {
       <div className='section-portfolio'>
         <Slider 
         autoplay={true}
-        autoplaySpeed={3500}
+        autoplaySpeed={4500}
         touchMove={false}
         pauseOnHover={true}
         infinite={true}
         speed={1000}
         draggable={true}
-        /* pauseOnHover={true} 
-        autoplayInterval={3500} 
-        autoplay={false} 
-        wrapAround={true} */ 
         >
           {
             data.map(function (trabajo, i) {

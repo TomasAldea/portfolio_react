@@ -177,12 +177,12 @@ ul {
 }
 @media (max-width: 1025px) {
   .header .language {
-    font: 400 2rem/5.2rem "Kanit", sans-serif;
+    font: 400 2rem/3rem "Kanit", sans-serif;
   }
 }
 @media (max-width: 551px) {
   .header .language {
-    font: 400 1.5rem/4.2rem "Kanit", sans-serif;
+    font: 400 1.5rem/2rem "Kanit", sans-serif;
   }
 }
 .header .language:hover {
@@ -212,12 +212,12 @@ ul {
 }
 @media (max-width: 1025px) {
   .header .nav-desktop ul li a {
-    font: 400 2rem/5.2rem "Kanit", sans-serif;
+    font: 400 2rem/3rem "Kanit", sans-serif;
   }
 }
 @media (max-width: 551px) {
   .header .nav-desktop ul li a {
-    font: 400 1.5rem/4.2rem "Kanit", sans-serif;
+    font: 400 1.5rem/2rem "Kanit", sans-serif;
   }
 }
 .header .nav-desktop ul li a.active-menu-desk {
@@ -594,11 +594,6 @@ ul {
     width: calc(100% - 15%);
     padding: 0rem 2rem;
   }
-  .section-aboutme .container .section .work {
-    /* &:not(:first-child) {
-          border-bottom: none;
-        } */
-  }
   .section-aboutme .container .section .work:last-child {
     display: none;
   }
@@ -617,7 +612,7 @@ ul {
   background-repeat: no-repeat;
 }
 .section-inicio .row {
-  width: calc(100% - 41%);
+  width: calc(100% - 19%);
   align-items: center;
 }
 .section-inicio .row .description {
@@ -628,6 +623,7 @@ ul {
   font: 500 6rem/6rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
   font-size: 4rem;
+  text-shadow: 0 0 2px black;
 }
 @media (max-width: 1025px) {
   .section-inicio .row .description .title {
@@ -639,13 +635,32 @@ ul {
     font: 400 4rem/4.2rem "XanhMonoTitle", sans-serif;
   }
 }
+.section-inicio .row .description .title span {
+  position: relative;
+}
+.section-inicio .row .description .title span::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 55%;
+  height: 5px;
+  z-index: -9;
+  background-color: #64ffda;
+  right: 0;
+}
 .section-inicio .row .description .text {
-  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  font: 500 2.5rem/3rem "Kanit", sans-serif;
+  font-size: 2.2rem;
+  text-shadow: 0 0 2px black;
+}
+@media (max-width: 1025px) {
+  .section-inicio .row .description .text {
+    font: 400 2rem/3rem "Kanit", sans-serif;
+  }
 }
 @media (max-width: 551px) {
   .section-inicio .row .description .text {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2rem "Kanit", sans-serif;
   }
 }
 .section-inicio .row .description .btn-container {
@@ -660,8 +675,8 @@ ul {
 }
 .section-inicio .row .photo {
   width: 50%;
-  height: 35rem;
-  max-width: 32rem;
+  height: 38rem;
+  max-width: 37rem;
   --b: 2px;
   --w: 17rem;
   padding: 6rem;
@@ -675,21 +690,6 @@ ul {
   border-radius: 1rem;
   background-repeat: no-repeat;
   background-size: contain;
-  /* .fakebg {
-          transition: all 0.5s ease;
-          opacity: 0;
-          background: #013a7ca1;
-          width: 100%;
-          border-radius: 1rem;
-          height: 100%;
-        }
-
-        &:hover {
-          .fakebg {
-            opacity: 1;
-          }
-        }
-        */
 }
 .section-inicio .row .photo::before {
   content: "";
@@ -699,8 +699,6 @@ ul {
   --_g: #0000 90deg, #022b3aff 0;
   --_p: var(--w) var(--w) no-repeat;
   --mask: conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
-          /* conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p), */
-            /* conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p), */
             conic-gradient(
               from -90deg at bottom var(--b) right var(--b),
               var(--_g)
@@ -711,15 +709,19 @@ ul {
 }
 @media (max-width: 1447px) {
   .section-inicio .row {
-    width: calc(100% - 21%);
+    width: calc(100% - 8%);
+  }
+  .section-inicio .row .description .title {
+    font-size: 3rem;
+  }
+  .section-inicio .row .description .text p {
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
   }
 }
 @media (max-width: 1025px) {
   .section-inicio {
     background-image: url(../public/svg/animatedShapeHomeMbl.svg);
-  }
-  .section-inicio .row {
-    width: calc(100% - 15%);
   }
   .section-inicio .row .description {
     padding: 5rem 1rem 7rem 0;
@@ -731,9 +733,9 @@ ul {
     align-items: start;
   }
   .section-inicio .row .photo {
-    height: 15rem;
-    padding: 3rem;
-    width: 18rem;
+    height: 11rem;
+    padding: 2rem;
+    width: 12rem;
     --b: 1px;
     --w: 13rem;
   }
@@ -742,6 +744,7 @@ ul {
     height: 75%;
   }
   .section-inicio .row .description {
+    max-width: 59rem;
     width: auto;
     padding: 1rem 1rem 1rem 0;
   }
@@ -751,6 +754,9 @@ ul {
   }
   .section-inicio .row .description .text {
     font-size: 1.8rem;
+  }
+  .section-inicio .row .description .btn-container {
+    margin-top: 2rem;
   }
 }
 /*************************** SECTION PORTAFOLIO *****************************/
@@ -775,7 +781,7 @@ ul {
   flex-direction: row;
 }
 .section-portfolio .slick-slider .card .card-img {
-  padding-left: 11rem;
+  margin-left: 3rem;
   width: 50%;
   height: 100%;
   background-size: contain;
@@ -823,25 +829,34 @@ ul {
   margin-right: 2rem;
 }
 .section-portfolio .slick-slider .card .card-info .container .text {
-  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  font: 500 2.5rem/3rem "Kanit", sans-serif;
+  font-size: 2.2rem;
   min-height: 6.9rem;
   color: white;
 }
+@media (max-width: 1025px) {
+  .section-portfolio .slick-slider .card .card-info .container .text {
+    font: 400 2rem/3rem "Kanit", sans-serif;
+  }
+}
 @media (max-width: 551px) {
   .section-portfolio .slick-slider .card .card-info .container .text {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2rem "Kanit", sans-serif;
   }
 }
 .section-portfolio .slick-slider .card .card-info .container .url {
-  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  font: 500 2.5rem/3rem "Kanit", sans-serif;
+  font-size: 2.2rem;
   color: white;
-  font-weight: 700;
+}
+@media (max-width: 1025px) {
+  .section-portfolio .slick-slider .card .card-info .container .url {
+    font: 400 2rem/3rem "Kanit", sans-serif;
+  }
 }
 @media (max-width: 551px) {
   .section-portfolio .slick-slider .card .card-info .container .url {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2rem "Kanit", sans-serif;
   }
 }
 .section-portfolio .slick-slider .card .card-info .container .button1 {
@@ -856,7 +871,7 @@ ul {
   }
 }
 .section-portfolio .slick-slider .slick-arrow.slick-next {
-  width: 4rem;
+  width: 5rem;
   background-image: url("../public/icons/arrow-simple-blue.svg") !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -866,7 +881,7 @@ ul {
   content: "";
 }
 .section-portfolio .slick-slider .slick-arrow.slick-prev {
-  width: 4rem;
+  width: 5rem;
   background-image: url("../public/icons/arrow-simple-blue.svg") !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -884,7 +899,7 @@ ul {
     height: auto;
   }
   .section-portfolio .slick-slider .card .card-img {
-    padding-left: 0;
+    margin-left: 0;
     width: 70%;
     height: 26rem;
   }
@@ -988,18 +1003,24 @@ ul {
 }
 .more-info .text .dificultades,
 .more-info .text .aprendizaje {
-  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  font: 500 2.5rem/3rem "Kanit", sans-serif;
+  font-size: 2.5rem;
+}
+@media (max-width: 1025px) {
+  .more-info .text .dificultades,
+  .more-info .text .aprendizaje {
+    font: 400 2rem/3rem "Kanit", sans-serif;
+  }
 }
 @media (max-width: 551px) {
   .more-info .text .dificultades,
   .more-info .text .aprendizaje {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2rem "Kanit", sans-serif;
   }
 }
 .more-info .text .dificultades span,
 .more-info .text .aprendizaje span {
-  color: #022b3aff;
+  color: #1f7a8cff;
 }
 .more-info .text .dificultades ul,
 .more-info .text .aprendizaje ul {
@@ -1008,7 +1029,7 @@ ul {
 }
 .more-info .text .dificultades ul li,
 .more-info .text .aprendizaje ul li {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1.8;
   list-style-type: disc;
 }
