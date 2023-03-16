@@ -800,6 +800,7 @@ ul {
   font: 500 6rem/6rem "XanhMonoTitle", sans-serif;
   letter-spacing: -0.1rem;
   font-size: 5rem;
+  color: white;
 }
 @media (max-width: 1025px) {
   .section-portfolio .slick-slider .card .card-info .container .title {
@@ -825,6 +826,7 @@ ul {
   font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
   letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   min-height: 6.9rem;
+  color: white;
 }
 @media (max-width: 551px) {
   .section-portfolio .slick-slider .card .card-info .container .text {
