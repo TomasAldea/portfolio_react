@@ -665,7 +665,7 @@ ul {
 }
 .section-inicio .row .photo .img {
   position: absolute;
-  background-image: url(../public/images/mainphotogrey.png);
+  background-image: url(../public/images/mainphotogrey.webp);
   width: 70%;
   height: 74%;
   border-radius: 1rem;
@@ -1491,7 +1491,7 @@ ul {
   align-items: center;
 }
 .section-404 .row .img-container {
-  background-image: url("../public/images/404image.png");
+  background-image: url("../public/images/404image.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
