@@ -36,7 +36,7 @@ export const LoadingPage = () => {
     return (
         <>
             <a id="load-gif" className={`main-a ${(firstUserLoad) && 'off'}`} href="https://tomasaldea.com/">
-                <img className='main-logo' alt="main-logo" src={(logo) ? 'icons/main-logo.png' : 'icons/main-logo.png' } />
+            <img className='main-logo' alt="main-logo" src={(logo) ? 'icons/main-logo.png' : 'loading-logo-vid/main.gif' } />
             </a>
             <div id="loading-page" className={` ${(firstUserLoad) && 'off'}`}>
             </div>

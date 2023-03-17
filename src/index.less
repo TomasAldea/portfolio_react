@@ -59,7 +59,6 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: "Anton";
   src: url("./fonts/Anton-Regular.ttf") format("woff2");
@@ -115,15 +114,16 @@
   }
 }
 
+// buttons
 .m-title2() {
-  font: 500 6rem/3rem @arvo;
+  font: 400 2.3rem/0 @arvo;
 
   @media @tabletH {
-    font: 400 4rem/3rem @arvo;
+    font: 300 1.6rem/0 @arvo;
   }
 
   @media @mobile {
-    font: 400 4rem/3rem @arvo;
+    font: 300 1.6rem/0 @arvo;
   }
 }
 
@@ -162,20 +162,22 @@
 }
 
 .button1 {
-  .m-text();
-  font-weight: 700 !important;
-  font-size: 3rem;
+  .m-title2();
   background-color: white;
   color: @darkBlue;
   text-transform: uppercase;
-  padding: 1rem 3rem;
+  padding: 2.5rem 3rem;
   border-radius: 6px;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-
+  width: fit-content;
   &:hover {
     background-color: @electricBlue;
+  }
+  @media @mobile {
+    padding: 2.3rem 2.5rem;
+
   }
 }
 
@@ -658,11 +660,13 @@ ul {
         &.border {
           border-bottom: 2px solid #1f7a8c52;
         }
-
+        &.hide-desktop {
+          display: none;
+        }
         margin-top: 2rem;
-        .m-text();
+        .m-title3();
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 2rem;
 
         .col {
           .info {
@@ -695,7 +699,9 @@ ul {
       .title {
         display: none;
       }
-
+      .section .work.hide-desktop {
+        display: flex;
+      }
       .section:not(:first-child) {
         display: none;
       }
@@ -759,25 +765,19 @@ ul {
       }
 
       .text {
-        //.m-text();
-        //.m-title2();
         .m-title3();
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         text-shadow: 0 0 2px black;
       }
 
-      .btn-container {
-        margin-top: 4.5rem;
-
+        
         .button1 {
-          width: fit-content;
-          font-size: 2rem;
-
+          padding: 2rem 3rem;
           svg {
             margin-left: 1rem;
           }
         }
-      }
+      
     }
 
     .photo {
@@ -881,8 +881,9 @@ ul {
         .text {
           font-size: 1.8rem;
         }
-        .btn-container {
-          margin-top: 2rem;
+        .button1 {
+          padding: 1.4rem 2rem;
+          margin-top: .5rem;
         }
       }
     }
@@ -963,7 +964,6 @@ ul {
           }
 
           .button1 {
-            .m-text();
             width: fit-content;
             margin-top: 1rem;
           }
@@ -1586,7 +1586,7 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-86%, -64%);
+  transform: translate(-50%, -50%);
   z-index: 99;
   pointer-events: none;
   &.off {
@@ -1599,6 +1599,10 @@ ul {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     z-index: 9;
+    transform: translate(-89%, -64%);
+    @media @mobile {
+      transform: translate(-86%, -57%);
+    }
   }
 
   &.hide {
@@ -1688,7 +1692,6 @@ ul {
         }
 
         .button1 {
-          font-size: 2.3rem;
           width: fit-content;
         }
       }
@@ -1711,7 +1714,6 @@ ul {
       }
     }
   }
-
 }
 
 // keyframes

@@ -35,25 +35,23 @@ export const Inicio = () => {
             {(languaje) ? 'Bienvenidos a mi portfolio.' : 'Welcome to my portfolio.'}
             </p>
             <p>
-            {(languaje) ? 'Desde que mi padre me compro mi primer pentium 3, no he dejado nunca de trastear con la informática.' : 'Since my father bought me my first pentium 3, I have never stopped tinkering with computers.'}
+            {(languaje) ? 'Desde que mi padre me regaló mi primer pentium 100, nunca he parado de trastear con la informática.' : 'Since my father gave me my first pentium 100, I have never stopped tinkering with computers.'}
             </p>
             <p>
-            {(languaje) ? 'Es por esto, que hace unos años, y después de media vida como profesional de la hostelería (mi otra pasión), decidí hacer de mi hobbie, mi profesión.' : 'This is why, a few years ago, and after half my life as a hospitality professional (my other passion), I decided to make my hobby my profession.'}
+            {(languaje) ? 'Es por esto que hace unos años, y después de media vida como profesional de la hostelería (mi otra pasión), decidí hacer de mi hobbie, mi profesión.' : 'This is why a few years ago, and after half my life as a hospitality professional (my other passion), I decided to make my hobby my profession.'}
             </p>
             <p>
             {(languaje) ? 'Además de la tecnología, me encanta el deporte y la música.' : 'Besides technology, I love sports and music.'}
             </p>
             <p>
-            {(languaje) ? 'En la programación he descubierto un lugar donde saciar mi infinita curiosidad.' : 'In programming I have discovered a place to satisfy my infinite curiosity.'}
+            {(languaje) ? 'En la programación descubrí un lugar donde saciar mi infinita curiosidad.' : 'In programming I discovered a place to satisfy my infinite curiosity.'}
             </p>
           </div>
 
-          <div className='btn-container' delay="500" data-aos-duration="2000" data-aos="fade-up">
-            <div onClick={cvDownload} className='button1'>
+            <div onClick={cvDownload} className='button1' delay="500" data-aos-duration="2000" data-aos="fade-up">
             {(languaje) ? 'Currículum' : 'resume'}
               <FontAwesomeIcon icon={faFileDownload} />
             </div>
-          </div>
         </div>
         <div className="photo">
           <div className="img">

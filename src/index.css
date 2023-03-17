@@ -50,26 +50,34 @@
   flex-direction: row;
 }
 .button1 {
-  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
-  font-weight: 700 !important;
-  font-size: 3rem;
+  font: 400 2.3rem/0 "Arvo", sans-serif;
   background-color: white;
   color: #022b3aff;
   text-transform: uppercase;
-  padding: 1rem 3rem;
+  padding: 2.5rem 3rem;
   border-radius: 6px;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  width: fit-content;
+}
+@media (max-width: 1025px) {
+  .button1 {
+    font: 300 1.6rem/0 "Arvo", sans-serif;
+  }
 }
 @media (max-width: 551px) {
   .button1 {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 300 1.6rem/0 "Arvo", sans-serif;
   }
 }
 .button1:hover {
   background-color: #64ffda;
+}
+@media (max-width: 551px) {
+  .button1 {
+    padding: 2.3rem 2.5rem;
+  }
 }
 html {
   -webkit-tap-highlight-color: transparent;
@@ -528,17 +536,24 @@ ul {
 }
 .section-aboutme .container .section .work {
   margin-top: 2rem;
-  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
+  font: 500 2.5rem/3rem "Kanit", sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .section-aboutme .container .section .work.border {
   border-bottom: 2px solid #1f7a8c52;
 }
+.section-aboutme .container .section .work.hide-desktop {
+  display: none;
+}
+@media (max-width: 1025px) {
+  .section-aboutme .container .section .work {
+    font: 400 2rem/3rem "Kanit", sans-serif;
+  }
+}
 @media (max-width: 551px) {
   .section-aboutme .container .section .work {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
+    font: 400 1.5rem/2rem "Kanit", sans-serif;
   }
 }
 .section-aboutme .container .section .work .col .info {
@@ -562,6 +577,9 @@ ul {
   }
   .section-aboutme .container .title {
     display: none;
+  }
+  .section-aboutme .container .section .work.hide-desktop {
+    display: flex;
   }
   .section-aboutme .container .section:not(:first-child) {
     display: none;
@@ -631,7 +649,7 @@ ul {
 }
 .section-inicio .row .description .text {
   font: 500 2.5rem/3rem "Kanit", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   text-shadow: 0 0 2px black;
 }
 @media (max-width: 1025px) {
@@ -644,14 +662,10 @@ ul {
     font: 400 1.5rem/2rem "Kanit", sans-serif;
   }
 }
-.section-inicio .row .description .btn-container {
-  margin-top: 4.5rem;
+.section-inicio .row .description .button1 {
+  padding: 2rem 3rem;
 }
-.section-inicio .row .description .btn-container .button1 {
-  width: fit-content;
-  font-size: 2rem;
-}
-.section-inicio .row .description .btn-container .button1 svg {
+.section-inicio .row .description .button1 svg {
   margin-left: 1rem;
 }
 .section-inicio .row .photo {
@@ -736,8 +750,9 @@ ul {
   .section-inicio .row .description .text {
     font-size: 1.8rem;
   }
-  .section-inicio .row .description .btn-container {
-    margin-top: 2rem;
+  .section-inicio .row .description .button1 {
+    padding: 1.4rem 2rem;
+    margin-top: 0.5rem;
   }
 }
 /*************************** SECTION PORTAFOLIO *****************************/
@@ -841,15 +856,8 @@ ul {
   }
 }
 .section-portfolio .slick-slider .card .card-info .container .button1 {
-  font: 600 2rem/3rem "XanhMonoTextos", sans-serif;
-  letter-spacing: 0.05rem "XanhMonoTextos", sans-serif;
   width: fit-content;
   margin-top: 1rem;
-}
-@media (max-width: 551px) {
-  .section-portfolio .slick-slider .card .card-info .container .button1 {
-    font: 400 1.5rem/2.3rem "XanhMonoTextos", sans-serif;
-  }
 }
 .section-portfolio .slick-slider .slick-arrow.slick-next {
   width: 5rem;
@@ -1433,7 +1441,7 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-86%, -64%);
+  transform: translate(-50%, -50%);
   z-index: 99;
   pointer-events: none;
 }
@@ -1446,6 +1454,12 @@ ul {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   z-index: 9;
+  transform: translate(-89%, -64%);
+}
+@media (max-width: 551px) {
+  #load-gif.off {
+    transform: translate(-86%, -57%);
+  }
 }
 #load-gif.hide {
   transition: all 0.5s ease-out;
@@ -1543,7 +1557,6 @@ ul {
     font-size: 3rem;
   }
   .section-404 .row .text-container .button1 {
-    font-size: 2.3rem;
     width: fit-content;
   }
 }

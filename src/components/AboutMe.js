@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import { ProviderContext } from '../context/ProviderContext';
 
 export const AboutMe = () => {
-  const { setOpenMenu,languaje } = useContext(ProviderContext);
+  const { setOpenMenu, languaje } = useContext(ProviderContext);
 
   useEffect(() => {
     setOpenMenu(false);
@@ -22,26 +22,26 @@ export const AboutMe = () => {
                 </div>
                 <span>2021 - {(languaje) ? 'Actualidad' : 'Present'}</span>
               </div>
-              <ol className='description'>  
+              <ol className='description'>
                 <li>
                   Full stack developer.
                 </li>
 
                 <li>
-                {(languaje) ? 'Creación de manuales y formación a clientes.' : 'Creation of manuals and customer training.'}
+                  {(languaje) ? 'Creación de manuales y formación a clientes.' : 'Creation of manuals and customer training.'}
                 </li>
 
                 <li>
-                {(languaje) ? 'Seguimiento y mejora de las características WPO.' : 'Monitoring and improvement of WPO features.'}
+                  {(languaje) ? 'Seguimiento y mejora de las características WPO.' : 'Monitoring and improvement of WPO features.'}
                 </li>
 
                 <li>
-                {(languaje) ? 'Apoyo técnico en mejoras y propuestas con cliente.' : 'Technical support in improvements and proposals with client.'}
+                  {(languaje) ? 'Apoyo técnico en mejoras y propuestas con cliente.' : 'Technical support in improvements and proposals with client.'}
                 </li>
               </ol>
             </div>
           </div>
-          <div className={`work ${(window.innerWidth > 596) && "border"}`}>
+          <div className='work'>
             <div className='col'>
               <div className='info row'>
                 <div className='col'>
@@ -52,24 +52,24 @@ export const AboutMe = () => {
               </div>
               <ol className='description'>
                 <li>
-                {(languaje) ? 'Gestión del personal.' : 'Staff management.'}
+                  {(languaje) ? 'Gestión del personal.' : 'Staff management.'}
                 </li>
 
                 <li>
-                {(languaje) ? 'Gestión de presupuestos y compras.' : 'Management of budgets and purchases.'}
+                  {(languaje) ? 'Gestión de presupuestos y compras.' : 'Management of budgets and purchases.'}
                 </li>
 
                 <li>
-                {(languaje) ? 'Presupuestar ofertas culinarias y gestionar eventos gastronómicos.' : 'Budget culinary offers and manage gastronomic events.'}
+                  {(languaje) ? 'Presupuestar ofertas culinarias y gestionar eventos gastronómicos.' : 'Budget culinary offers and manage gastronomic events.'}
                 </li>
-                
+
                 <li>
-                {(languaje) ? 'Reuniones de seguimiento semanales con cliente.' : 'Weekly follow-up meetings with client.'}
+                  {(languaje) ? 'Reuniones de seguimiento semanales con cliente.' : 'Weekly follow-up meetings with client.'}
                 </li>
               </ol>
             </div>
           </div>
-          <div className='work'>
+          <div className='work hide-desktop'>
             <div className='col'>
               <div className='info row'>
                 <div className='col'>
@@ -80,13 +80,29 @@ export const AboutMe = () => {
               </div>
               <ol className='description'>
                 <li>
-                {(languaje) ? 'Desde 2006, y de manera ininterrumpida, trabajé en distintas empresas del sector como cocinero y jefe de cocina.' : 'Since 2006, and without interruption, I have worked in different companies in the sector as chef and chef.'}
+                  {(languaje) ? 'Desde 2006, y de manera ininterrumpida, trabajé en distintas empresas del sector como cocinero y jefe de cocina.' : 'Since 2006, and without interruption, I have worked in different companies in the sector as chef and chef.'}
                 </li>
               </ol>
             </div>
           </div>
         </div >
         <div className='col section estudios'>
+          <div className='work border'>
+            <div className='col'>
+              <div className='info row'>
+                <div className='col'>
+                  <span>"Full stack" {(languaje) ? 'en hostelería' : 'in business restaurant'}</span>
+                  <span>{(languaje) ? 'Diversas empresas del sector' : 'Various companies in the sector'}</span>
+                </div>
+                <span>2006 - 2015</span>
+              </div>
+              <ol className='description'>
+                <li>
+                  {(languaje) ? 'Desde 2006, y de manera ininterrumpida, trabajé en distintas empresas del sector como cocinero y jefe de cocina.' : 'Since 2006, and without interruption, I have worked in different companies in the sector as chef and chef.'}
+                </li>
+              </ol>
+            </div>
+          </div>
           <div className='title' data-aos-delay="300" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">{(languaje) ? 'Estudios' : 'Studies'}</div>
           <div className='work'>
             <div className='col'>
@@ -99,7 +115,7 @@ export const AboutMe = () => {
               </div>
               <ol className='description'>
                 <li>
-                {(languaje) ? 'Bootcamp en desarrollo web full stack.' : 'Bootcamp in full stack web development.'}
+                  {(languaje) ? 'Bootcamp en desarrollo web full stack.' : 'Bootcamp in full stack web development.'}
                 </li>
                 <li>
                   Javascript, MongoDB, Express, React, NodeJS, HTML y CSS.
