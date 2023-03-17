@@ -32,7 +32,7 @@ export const Portafolio = () => {
               delay = 0
               return (
                 <div className="card row" key={trabajo.id}>
-                  <div className='card-img' data-aos-duration="500" data-aos-delay="500" data-aos="zoom-in" style={{ backgroundImage: `url(/images/${trabajo.id}.png)` }}></div>
+                  <div className='card-img' data-aos-duration="500" data-aos-delay="500" data-aos="zoom-in" style={{ backgroundImage: `url(/images/${trabajo.id}.webp)` }}></div>
                   <div className='card-info'>
                     <div className='container'>
                       <div className='title' data-aos-duration="500" data-aos-delay="500" data-aos="zoom-in">{trabajo.nombre}</div>
