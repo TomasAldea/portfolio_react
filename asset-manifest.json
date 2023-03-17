@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b006a68.css",
-    "main.js": "/static/js/main.34937f38.js",
+    "main.css": "/static/css/main.a0fd1a83.css",
+    "main.js": "/static/js/main.1412aeee.js",
     "static/media/mainphotogrey.webp": "/static/media/mainphotogrey.5657a7c6ecb458953290.webp",
     "static/media/Kanit-Regular.ttf": "/static/media/Kanit-Regular.f3bae13d78ced30b6ea3.ttf",
     "static/media/Anton-Regular.ttf": "/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
@@ -22,11 +22,11 @@
     "static/media/animatedShapeSkillsMbl.svg": "/static/media/animatedShapeSkillsMbl.9d7cbe13e0471d34a596.svg",
     "index.html": "/index.html",
     "static/media/arrow-simple-blue.svg": "/static/media/arrow-simple-blue.80a693658889e4af5a08.svg",
-    "main.6b006a68.css.map": "/static/css/main.6b006a68.css.map",
-    "main.34937f38.js.map": "/static/js/main.34937f38.js.map"
+    "main.a0fd1a83.css.map": "/static/css/main.a0fd1a83.css.map",
+    "main.1412aeee.js.map": "/static/js/main.1412aeee.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b006a68.css",
-    "static/js/main.34937f38.js"
+    "static/css/main.a0fd1a83.css",
+    "static/js/main.1412aeee.js"
   ]
 }
