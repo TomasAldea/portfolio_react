@@ -62,10 +62,6 @@ export const Contacto = () => {
               <p className='oneline'> {(languaje) ? 'Abr' : 'Apr'} 15, 1990 ({new Date().getFullYear() - 1991})</p>
             </div>
             <div className='row' data-aos-delay="1000" data-aos="zoom-in">
-              <p className='strong'>{(languaje) ? 'Dirección:' : 'Street address:'}</p>
-              <p> Covadonga 524, Sabadell, Barcelona</p>
-            </div>
-            <div className='row' data-aos-delay="1000" data-aos="zoom-in">
               <p className='strong'>E-mail:</p>
               <a aria-label="mailto" href="mailto:taldea.dev@gmail.com"> taldea.dev@gmail.com</a>
             </div>
