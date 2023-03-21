@@ -7,10 +7,10 @@ export const trabajos = [
         'categorias': 'frontend',
         'descripcion': 'Aplicación inspirada en Airbnb.',
         'longDescripcion': {
-            'dificultades': ['Desarrollo del importador para volcar toda la información de la api a una base de datos propia.', 
-                             'Mostrar de manera dinámica los apartamentos filtrados o la localización de estos con api Google maps.', 
-                             'Crear peticiones sql sólidas y ligeras para todos filtros.', 
-                             'Optimización del rendimiento Seo.'
+            'dificultades': ['Desarrollo del importador para volcar toda la información de la API a una base de datos propia.', 
+                             'Mostrar de manera dinámica los apartamentos filtrados o la localización de estos con API Google maps.', 
+                             'Crear peticiones SQL sólidas y ligeras para todos filtros.', 
+                             'Optimización del rendimiento SEO.'
                             ],
             'aprendizaje': ['El trabajo del importador con la bbdd, la estructura de esta y las peticiones.']
         }
@@ -24,14 +24,14 @@ export const trabajos = [
         'descripcion': 'Famoso restaurante en Barcelona con pequeño ecommerce online',
         'longDescripcion': {
             'dificultades': ['Desarrollo de pequeño ecommerce y tarjetas regalo.', 
-                             'Create a shopping cart that persists browsing the web.',
-                             'Habilitar y desarrollar al cliente las herramientas necesarias para crear rangos de precio por peso de producto y destino de envio.',
-                             'Envio de email personalizado con datos de comprador y beneficiario para targetas regalo.',
+                             'Crear una cesta de la compra que persista navegando por la web.',
+                             'Habilitar y desarrollar al cliente las herramientas necesarias para crear rangos de precio por peso de producto y destino de envío.',
+                             'Envío de email personalizado con datos de comprador y beneficiario para targetas regalo.',
                              'Integración con pasarela de pago Redsys.',
                             ],
             'aprendizaje': ['Lectura y compresion de API externa.', 
-                            'Desarrollo de calculos matematicos mas complejos.',
-                            'Desarrollo de formulario dinamico con seleccion automatica de localidad segun provincia, validación de dni.'
+                            'Desarrollo de cálculos matemáticos mas complejos.',
+                            'Desarrollo de formulario dinámico con selección automática de localidad según provincia, validación de dni.'
                            ]
         }
 
@@ -42,13 +42,13 @@ export const trabajos = [
         'url': 'https://sateliot.space/en/',
         'tecnologias': ['html', 'less', 'php', 'js', 'mysql', 'api'],
         'categorias': 'frontend',
-        'descripcion': 'Web internacional multiidioma con efectos de CSS controlados por scroll.',
+        'descripcion': 'Web internacional multiidioma con efectos CSS controlados por scroll.',
         'longDescripcion': {
             'dificultades': ['Animaciones asociadas al scroll en toda la web.', 
                              'Habilitar al cliente las herramientas necesarias para una gestión cómoda del contenido de la web.',
                             ],
             'aprendizaje': ['Animaciones y efectos CSS avanzados.', 
-                            'Optimización del rendimiento Seo.'
+                            'Optimización del rendimiento SEO.'
                            ]
         }
     },
@@ -65,7 +65,7 @@ export const trabajos = [
                              'Habilitar al cliente las herramientas necesarias para una gestión cómoda del contenido de la web.',
                             ],
             'aprendizaje': ['Trabajar bajo gran presión y a contrarreloj sin interferir en la calidad.', 
-                            'Optimización del rendimiento Seo.'
+                            'Optimización del rendimiento SEO.'
                            ]
         }
     },
@@ -78,11 +78,11 @@ export const trabajos = [
         'descripcion': 'Hotel en riviera maya con reserva online.',
         'longDescripcion': {
             'dificultades': ['Desarrollo relacionado con la integración de la web y API de reservas online.', 
-                             'Optimización del rendimiento Seo.',
+                             'Optimización del rendimiento SEO.',
                              'Desarrollo CSS responsive y píxel perfect.',
                             ],
             'aprendizaje': ['Animaciones y efectos CSS avanzados.', 
-                            'Optimización del rendimiento Seo.',
+                            'Optimización del rendimiento SEO.',
                             'Desarrollo y comprensión de la documentación de API externa.'
                            ]
         }

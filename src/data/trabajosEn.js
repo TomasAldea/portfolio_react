@@ -7,7 +7,7 @@ export const trabajosEn = [
         'categorias': 'frontend',
         'descripcion': 'Airbnb inspired app.',
         'longDescripcion': {
-            'dificultades': ['Development of the importer to dump all the information from the api to an own database.', 
+            'dificultades': ['Development of the importer to dump all the information from the API to an own database.', 
                              'Dynamically display the filtered apartments or their location with Google maps api.', 
                              'Create strong and lightweight sql requests for all filters.', 
                              'SEO performance optimization.'
@@ -24,7 +24,7 @@ export const trabajosEn = [
         'descripcion': 'Famous restaurant in Barcelona with small online ecommerce.',
         'longDescripcion': {
             'dificultades': ['Development of small ecommerce and gift cards.', 
-                             'Crear una cesta de la compra que persista navegando por la web.',
+                             'Create a shopping cart that persists browsing the web.',
                              'Enable and develop the client the necessary tools to create price ranges by product weight and shipping destination.',
                              'Sending personalized email with buyer and beneficiary data for gift cards.',
                              'Integration with Redsys payment gateway.',

@@ -18,7 +18,7 @@ export const MouseTrack = () => {
 
     
     const openMenuTouch = () => {
-        var isPortfolio = document.querySelector(".carrousel-container");
+        var isPortfolio = document.querySelector(".section-portfolio");
         (!isPortfolio) && setOpenMenu(true);
     }
 

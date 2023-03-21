@@ -19,9 +19,9 @@ export const Portafolio = () => {
   return (
       <div className='section-portfolio'>
         <Slider 
-        autoplay={true}
+        autoplay={false}
         autoplaySpeed={4500}
-        touchMove={false}
+        touchMove={true}
         pauseOnHover={true}
         infinite={true}
         speed={1000}
