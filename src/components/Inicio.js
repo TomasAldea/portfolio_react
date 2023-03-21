@@ -38,7 +38,7 @@ export const Inicio = () => {
             {(languaje) ? 'Desde que mi padre me regaló mi primer pentium 100, nunca he parado de trastear con la informática.' : 'Since my father gave me my first pentium 100, I have never stopped tinkering with computers.'}
             </p>
             <p>
-            {(languaje) ? 'Es por esto que hace unos años, y después de media vida como profesional de la hostelería (mi otra pasión), decidí hacer de mi hobbie, mi profesión.' : 'This is why a few years ago, and after half my life as a hospitality professional (my other passion), I decided to make my hobby my profession.'}
+            {(languaje) ? 'Es por esto que hace unos años, y después de media vida como profesional de la hostelería (mi otra pasión), decidí hacer de mi hobbie, mi profesión.' : 'This is why a few years ago, and after half my life as a hostelry professional (my other passion), I decided to make my hobby my profession.'}
             </p>
             <p>
             {(languaje) ? 'Además de la tecnología, me encanta el deporte y la música.' : 'Besides technology, I love sports and music.'}

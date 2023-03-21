@@ -134,7 +134,7 @@ export const AboutMe = () => {
               </div>
               <ol className='description'>
                 <li>
-                  {(languaje) ? 'Ciclo superior en restauración.' : 'Superior cycle in restoration.'}
+                  {(languaje) ? 'Ciclo superior en restauración.' : 'Superior cycle in hostelry.'}
                 </li>
               </ol>
             </div>
