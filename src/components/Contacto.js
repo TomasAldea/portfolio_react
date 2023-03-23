@@ -127,7 +127,7 @@ export const Contacto = () => {
           <br></br>
           {(languaje) ? 'en breve me pondré en contacto contigo!' : 'I will contact you shortly!'} 
           </div>
-          <Link to="/inicio" className="button1">
+          <Link to="/" className="button1">
           {(languaje) ? 'Volver al inicio' : 'Back to top'} 
           </Link>
         </div>
