@@ -11,7 +11,7 @@ export const Inicio = () => {
   }, [setOpenMenu])
 
   const cvDownload = () => {
-    fetch('CV_TomasAldea-2023.pdf').then(response => {
+    fetch('/CV_TomasAldea-2023.pdf').then(response => {
       response.blob().then(blob => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement('a');
