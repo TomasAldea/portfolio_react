@@ -22,11 +22,11 @@ export const Header = () => {
               {(languaje) ? 'Inicio' : 'Start'}
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active-menu-desk" : "")}
               id="portafolio" to="/portafolio">{(languaje) ? 'Portafolio' : 'Portfolio'}</NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active-menu-desk" : "")}

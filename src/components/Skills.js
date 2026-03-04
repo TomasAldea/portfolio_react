@@ -20,7 +20,7 @@ export const Skills = () => {
             <div className="col">
               <span className="title-tecnology"><img alt="react" src="/icons/react.svg"></img><span>- ReactJS</span></span>
               <ProgressBar
-                completed={50}
+                completed={100}
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
@@ -34,7 +34,7 @@ export const Skills = () => {
             <div className="col">
               <span className="title-tecnology"><img alt="less" src="/icons/less.svg"></img><span>- CSS/LESS</span></span>
               <ProgressBar
-                completed={75}
+                completed={100}
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
@@ -48,7 +48,7 @@ export const Skills = () => {
             <div className="col">
               <span className="title-tecnology"><img alt="html" src="/icons/html.svg"></img><span>- HTML</span></span>
               <ProgressBar
-                completed={65}
+                completed={100}
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
@@ -76,7 +76,7 @@ export const Skills = () => {
             <div className="col">
               <span className="title-tecnology"><img alt="js" src="/icons/js.svg"></img><span>- JavaScript</span></span>
               <ProgressBar
-                completed={80}
+                completed={100}
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"
@@ -109,7 +109,7 @@ export const Skills = () => {
           </div>
           <div className="tecnology">
             <div className="col">
-              <span className="title-tecnology"><img alt="codeigniter" src="/icons/codeigniter.svg"></img><span>- Codeigniter 4</span></span>
+              <span className="title-tecnology"><img alt="codeigniter" src="/icons/codeigniter.svg"></img><span>- Laravel</span></span>
               <ProgressBar
                 completed={65}
                 maxCompleted={100}
@@ -127,7 +127,7 @@ export const Skills = () => {
             <div className="col">
               <span className="title-tecnology"><img alt="node" src="/icons/node.svg"></img><span>- Node.js</span></span>
               <ProgressBar
-                completed={35}
+                completed={85}
                 maxCompleted={100}
                  height="15px"
                 baseBgColor="grey"

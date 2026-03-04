@@ -20,7 +20,7 @@ export const AboutMe = () => {
                   <span>Full stack web developer </span>
                   <span>Dabasystem, Sabadell (Barcelona)</span>
                 </div>
-                <span>2021 - {(languaje) ? 'Actualidad' : 'Present'}</span>
+                <span>2021 - 2026</span>
               </div>
               <ol className='description'>
                 <li>
